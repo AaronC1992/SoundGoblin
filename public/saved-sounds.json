@@ -1,0 +1,7055 @@
+{
+  "files": [
+    {
+      "type": "music",
+      "name": "a christmas miracle music",
+      "file": "Saved sounds/A Christmas Miracle-music- - One Man Quartet.mp3",
+      "keywords": [
+        "christmas",
+        "miracle",
+        "music",
+        "holiday",
+        "festive",
+        "winter",
+        "carol",
+        "joyful",
+        "celebration",
+        "magical"
+      ]
+    },
+    {
+      "type": "music",
+      "name": "acoustic calm",
+      "file": "Saved sounds/eliveta-acoustic-473981.mp3",
+      "keywords": [
+        "acoustic",
+        "calm",
+        "gentle",
+        "guitar",
+        "peaceful",
+        "soft",
+        "relaxing"
+      ],
+      "loop": true
+    },
+    {
+      "type": "music",
+      "name": "adventures ahead music",
+      "file": "Saved sounds/Adventures Ahead-music - Christoffer Moe Ditlevsen.mp3",
+      "keywords": [
+        "adventures",
+        "ahead",
+        "music",
+        "adventure",
+        "epic",
+        "journey",
+        "heroic",
+        "quest",
+        "bold",
+        "inspiring"
+      ]
+    },
+    {
+      "type": "music",
+      "name": "afternoon in hammock music",
+      "file": "Saved sounds/Afternoon in Hammock-music - Franz Gordon.mp3",
+      "keywords": [
+        "afternoon",
+        "hammock",
+        "music",
+        "calm",
+        "gentle",
+        "peaceful",
+        "lazy",
+        "summer",
+        "relax",
+        "serene"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "alarm clock",
+      "file": "Saved sounds/alarm-clock.mp3",
+      "keywords": [
+        "alarm",
+        "clock",
+        "bell",
+        "wake",
+        "morning",
+        "ring",
+        "beep",
+        "alert",
+        "buzzer",
+        "ringing"
+      ]
+    },
+    {
+      "type": "music",
+      "name": "alive in the shadows music",
+      "file": "Saved sounds/Alive in the Shadows-music - Ludvig Moulin.mp3",
+      "keywords": [
+        "alive",
+        "shadows",
+        "music",
+        "horror",
+        "dark",
+        "scary",
+        "eerie",
+        "sinister",
+        "haunting",
+        "suspense"
+      ]
+    },
+    {
+      "type": "music",
+      "name": "ambient atmosphere",
+      "file": "Saved sounds/paulyudin-ambient-ambient-music-482398.mp3",
+      "keywords": [
+        "ambient",
+        "atmosphere",
+        "calm",
+        "soft",
+        "meditation",
+        "gentle",
+        "relaxing"
+      ],
+      "loop": true
+    },
+    {
+      "type": "sfx",
+      "name": "anvil being struck",
+      "file": "Saved sounds/anvil-being-struck.mp3",
+      "keywords": [
+        "anvil",
+        "hammer",
+        "metal",
+        "strike",
+        "blacksmith",
+        "forge",
+        "clang",
+        "iron",
+        "smithy",
+        "bang"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "arrow near miss",
+      "file": "Saved sounds/arrow_near-miss.mp3",
+      "keywords": [
+        "arrow",
+        "near miss",
+        "whiz",
+        "flyby",
+        "weapon",
+        "swoosh",
+        "projectile",
+        "shot",
+        "dodge",
+        "miss"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "arrow nearmiss",
+      "file": "Saved sounds/arrow-nearmiss.mp3",
+      "keywords": [
+        "arrow",
+        "nearmiss",
+        "weapon",
+        "whoosh",
+        "miss",
+        "fly",
+        "projectile",
+        "dodge",
+        "pass",
+        "shot"
+      ]
+    },
+    {
+      "type": "music",
+      "name": "Lullaby",
+      "file": "Saved sounds/backgroundmusicforvideos-lullaby-baby-sleep-music-388567.mp3",
+      "keywords": [
+        "lullaby",
+        "calm",
+        "gentle",
+        "sleep",
+        "peaceful",
+        "soothing",
+        "soft",
+        "ambient",
+        "relaxing"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "bark, exterior, small dog, courtyard, close",
+      "file": "Saved sounds/Bark, Exterior, Small Dog, Courtyard, Close - Epidemic Sound.mp3",
+      "keywords": [
+        "bark",
+        "exterior",
+        "small",
+        "dog",
+        "courtyard",
+        "close"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "battlefield, modern, close, low intensity 03",
+      "file": "Saved sounds/Battlefield, Modern, Close, Low Intensity 03 - Epidemic Sound.mp3",
+      "keywords": [
+        "battlefield",
+        "modern",
+        "close",
+        "low",
+        "intensity",
+        "combat",
+        "weapon",
+        "war"
+      ]
+    },
+    {
+      "type": "music",
+      "name": "beige music",
+      "file": "Saved sounds/Beige-music - Martin Gauffin.mp3",
+      "keywords": [
+        "calm",
+        "gentle",
+        "soft",
+        "ambient",
+        "neutral",
+        "relaxing",
+        "background",
+        "music"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "big explosion",
+      "file": "Saved sounds/big_explosion.mp3",
+      "keywords": [
+        "explosion",
+        "blast",
+        "boom",
+        "bang"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "bird whistling chirping",
+      "file": "Saved sounds/bird_whistling_chirping.mp3",
+      "keywords": [
+        "bird",
+        "chirp",
+        "whistle",
+        "nature"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "boom, distant explosion 01",
+      "file": "Saved sounds/ES_Boom, Distant Explosion 01 - Epidemic Sound v3.mp3",
+      "keywords": [
+        "boom",
+        "distant",
+        "explosion",
+        "blast",
+        "cannon"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "boom, distant explosion, low, muffled 03",
+      "file": "Saved sounds/ES_Boom, Distant Explosion, Low, Muffled 03 - Epidemic Sound.mp3",
+      "keywords": [
+        "boom",
+        "distant",
+        "explosion",
+        "low",
+        "muffled",
+        "blast",
+        "rumble"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "bow shot",
+      "file": "Saved sounds/bow_shot.mp3",
+      "keywords": [
+        "bow",
+        "arrow",
+        "shot",
+        "twang",
+        "weapon"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "bubbles underwater",
+      "file": "Saved sounds/liecio-bubbles-underwater-258281.mp3",
+      "keywords": [
+        "bubble",
+        "bubbles",
+        "underwater",
+        "water",
+        "fizz",
+        "submerged"
+      ],
+      "loop": false
+    },
+    {
+      "type": "sfx",
+      "name": "bullet or arrow near miss",
+      "file": "Saved sounds/bullet-or-arrow-nearmiss.mp3",
+      "keywords": [
+        "bullet",
+        "arrow",
+        "near miss",
+        "whiz",
+        "flyby",
+        "weapon"
+      ]
+    },
+    {
+      "type": "music",
+      "name": "bumper car ride music",
+      "file": "Saved sounds/ES_Bumper Car Ride-music - The Fly Guy Five.mp3",
+      "keywords": [
+        "carnival",
+        "circus",
+        "fun",
+        "quirky",
+        "comedy",
+        "upbeat",
+        "playful",
+        "music"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "campfire, night, wood burning medium, crickets in background",
+      "file": "Saved sounds/ES_Campfire, Night, Wood Burning Medium, Crickets In Background - Epidemic Sound.mp3",
+      "keywords": [
+        "campfire",
+        "night",
+        "wood",
+        "burning",
+        "medium",
+        "crickets",
+        "background",
+        "door",
+        "fire"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "car engine start",
+      "file": "Saved sounds/car-engine-start.mp3",
+      "keywords": [
+        "car",
+        "engine",
+        "start",
+        "vehicle"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "cat meow",
+      "file": "Saved sounds/cat-meow.mp3",
+      "keywords": [
+        "cat",
+        "meow",
+        "kitten",
+        "feline",
+        "purr",
+        "animal",
+        "pet",
+        "mew",
+        "domestic",
+        "cry"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "cat screech",
+      "file": "Saved sounds/cat-screech.mp3",
+      "keywords": [
+        "cat",
+        "screech",
+        "screaming",
+        "feline",
+        "hissing",
+        "startled",
+        "scared",
+        "yowl",
+        "fight",
+        "shriek"
+      ]
+    },
+    {
+      "type": "music",
+      "name": "caught in a gust of wind music",
+      "file": "Saved sounds/ES_Caught in a Gust of Wind-music - Rikard From.mp3",
+      "keywords": [
+        "caught",
+        "gust",
+        "wind",
+        "music",
+        "breezy",
+        "mysterious",
+        "ambient",
+        "swirling",
+        "ethereal",
+        "soft"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "cave monster screams v1",
+      "file": "Saved sounds/ES_Cave Monster Screams - Epidemic Sound v1.mp3",
+      "keywords": [
+        "cave",
+        "monster",
+        "screams",
+        "creature",
+        "scream"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "cave monster screams v2",
+      "file": "Saved sounds/ES_Cave Monster Screams - Epidemic Sound v2.mp3",
+      "keywords": [
+        "cave",
+        "monster",
+        "screams",
+        "creature",
+        "scream"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "cave monster screams v3",
+      "file": "Saved sounds/ES_Cave Monster Screams - Epidemic Sound v3.mp3",
+      "keywords": [
+        "cave",
+        "monster",
+        "screams",
+        "creature",
+        "scream"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "cave monster screams v4",
+      "file": "Saved sounds/ES_Cave Monster Screams - Epidemic Sound v4.mp3",
+      "keywords": [
+        "cave",
+        "monster",
+        "screams",
+        "creature",
+        "scream"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "cave monster screams v5",
+      "file": "Saved sounds/ES_Cave Monster Screams - Epidemic Sound v5.mp3",
+      "keywords": [
+        "cave",
+        "monster",
+        "screams",
+        "creature",
+        "scream"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "cave monster screams v6",
+      "file": "Saved sounds/ES_Cave Monster Screams - Epidemic Sound v6.mp3",
+      "keywords": [
+        "cave",
+        "monster",
+        "screams",
+        "creature",
+        "scream"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "chicken bawking",
+      "file": "Saved sounds/chicken-bawking.mp3",
+      "keywords": [
+        "chicken",
+        "bawking",
+        "cluck",
+        "farm",
+        "hen",
+        "poultry",
+        "squawk",
+        "rooster",
+        "bawk",
+        "animal"
+      ]
+    },
+    {
+      "type": "music",
+      "name": "christmas celebration music",
+      "file": "Saved sounds/ES_Christmas Celebration-music - PW.mp3",
+      "keywords": [
+        "christmas",
+        "celebration",
+        "music",
+        "holiday",
+        "festive"
+      ]
+    },
+    {
+      "type": "music",
+      "name": "christmas magic music",
+      "file": "Saved sounds/ES_Christmas Magic-music - Megan Wofford.mp3",
+      "keywords": [
+        "christmas",
+        "magic",
+        "music",
+        "holiday",
+        "festive"
+      ]
+    },
+    {
+      "type": "music",
+      "name": "christmas music box",
+      "file": "Saved sounds/christmas_music_box_music.mp3",
+      "keywords": [
+        "christmas",
+        "music box",
+        "holiday",
+        "gentle",
+        "calm",
+        "festive",
+        "music"
+      ]
+    },
+    {
+      "type": "music",
+      "name": "christmas parade music",
+      "file": "Saved sounds/ES_Christmas Parade-music - Home for the Holidays.mp3",
+      "keywords": [
+        "christmas",
+        "parade",
+        "music",
+        "holiday",
+        "festive"
+      ]
+    },
+    {
+      "type": "music",
+      "name": "christmas piano music",
+      "file": "Saved sounds/christmas_piano_music.mp3",
+      "keywords": [
+        "christmas",
+        "piano",
+        "music",
+        "holiday",
+        "festive",
+        "folk",
+        "traditional"
+      ]
+    },
+    {
+      "type": "music",
+      "name": "christmas waltz music",
+      "file": "Saved sounds/ES_Christmas Waltz-music - Von Meyer.mp3",
+      "keywords": [
+        "christmas",
+        "waltz",
+        "music",
+        "holiday",
+        "festive"
+      ]
+    },
+    {
+      "type": "music",
+      "name": "cinematic dramatic",
+      "file": "Saved sounds/prettyjohn1-cinematic-cinematic-music-491630.mp3",
+      "keywords": [
+        "cinematic",
+        "dramatic",
+        "epic",
+        "orchestral",
+        "tension",
+        "intense"
+      ],
+      "loop": true
+    },
+    {
+      "type": "music",
+      "name": "close the door please scary ambience music",
+      "file": "Saved sounds/ES_Close the Door Please-scary ambience music - Lennon Hutton.mp3",
+      "keywords": [
+        "close",
+        "door",
+        "please",
+        "scary",
+        "ambience",
+        "music",
+        "horror",
+        "dark",
+        "ambient"
+      ]
+    },
+    {
+      "type": "music",
+      "name": "coco begins his journey music",
+      "file": "Saved sounds/ES_Coco Begins His Journey-music - David Celeste.mp3",
+      "keywords": [
+        "adventure",
+        "epic",
+        "journey",
+        "hero",
+        "quest",
+        "orchestral",
+        "music"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "coin clink drop gold",
+      "file": "Saved sounds/coin-clink_drop_gold_collect.mp3",
+      "keywords": [
+        "coin",
+        "clink",
+        "drop",
+        "gold",
+        "collect",
+        "money"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "concert crowd, stadium, large, interior, long swell, call to encore, the forum stadium, applause",
+      "file": "Saved sounds/ES_Concert Crowd, Stadium, Large, Interior, Long Swell, Call To Encore, The Forum Stadium, Applause - Epidemic Sound.mp3",
+      "keywords": [
+        "concert",
+        "crowd",
+        "stadium",
+        "large",
+        "interior",
+        "long",
+        "swell",
+        "call",
+        "encore",
+        "forum",
+        "applause",
+        "celebration"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "concert, girls, teenagers, squealing, artist enters, bell centre, montreal, canada",
+      "file": "Saved sounds/ES_Concert, Girls, Teenagers, Squealing, Artist Enters, Bell Centre, Montreal, Canada - Epidemic Sound.mp3",
+      "keywords": [
+        "concert",
+        "girls",
+        "teenagers",
+        "squealing",
+        "artist",
+        "enters",
+        "bell",
+        "centre",
+        "montreal",
+        "canada",
+        "crowd",
+        "celebration"
+      ]
+    },
+    {
+      "type": "music",
+      "name": "conquer the battle 3 music",
+      "file": "Saved sounds/ES_Conquer The Battle 3-music - Fredrik Ekstrom.mp3",
+      "keywords": [
+        "conquer",
+        "battle",
+        "music",
+        "epic",
+        "war",
+        "combat",
+        "victory",
+        "heroic",
+        "intense",
+        "triumphant"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "cows mooing",
+      "file": "Saved sounds/cows-mooing.mp3",
+      "keywords": [
+        "cow",
+        "moo",
+        "farm",
+        "cattle"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "creature slurps and eating  02",
+      "file": "Saved sounds/ES_Creature Slurps and eating  02 - Epidemic Sound.mp3",
+      "keywords": [
+        "creature",
+        "slurps",
+        "eating",
+        "gobble",
+        "monster",
+        "devouring",
+        "bite",
+        "horror"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "creatures, humanoid, zombie, group, ext roar, scream, shriek",
+      "file": "Saved sounds/ES_Creatures, Humanoid, Zombie, Group, Ext Roar, Scream, Shriek - Epidemic Sound.mp3",
+      "keywords": [
+        "creatures",
+        "humanoid",
+        "zombie",
+        "group",
+        "roar",
+        "scream",
+        "shriek",
+        "undead",
+        "horde",
+        "horror"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "creatures, humanoid, zombie, rabid panting, growls, roaring",
+      "file": "Saved sounds/ES_Creatures, Humanoid, Zombie, Rabid Panting, Growls, Roaring - Epidemic Sound.mp3",
+      "keywords": [
+        "creatures",
+        "humanoid",
+        "zombie",
+        "rabid",
+        "panting",
+        "growls",
+        "roaring",
+        "creature",
+        "monster"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "crow call",
+      "file": "Saved sounds/crow-call.mp3",
+      "keywords": [
+        "crow",
+        "call",
+        "bird",
+        "raven",
+        "caw",
+        "dark",
+        "ominous",
+        "screech",
+        "croak",
+        "animal"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "crowd cheering",
+      "file": "Saved sounds/modern_crowd_cheering.mp3",
+      "keywords": [
+        "crowd",
+        "cheering",
+        "applause",
+        "audience",
+        "stadium",
+        "fans",
+        "roar",
+        "chanting",
+        "celebration",
+        "noise"
+      ]
+    },
+    {
+      "type": "music",
+      "name": "crowned kings music",
+      "file": "Saved sounds/ES_Crowned Kings-music - Dream Cave.mp3",
+      "keywords": [
+        "crowned",
+        "kings",
+        "music",
+        "fantasy",
+        "medieval",
+        "dnd"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "Crystal",
+      "file": "Saved sounds/scratchonix-idea-stirring-up-423281.mp3",
+      "keywords": [
+        "arcade",
+        "pickup",
+        "collect",
+        "diamond",
+        "coin",
+        "reward",
+        "power up",
+        "level up",
+        "achievement",
+        "chime"
+      ]
+    },
+    {
+      "type": "music",
+      "name": "curiosity kills music",
+      "file": "Saved sounds/ES_Curiosity Kills-music - Stationary Sign.mp3",
+      "keywords": [
+        "curiosity",
+        "kills",
+        "music",
+        "suspense",
+        "tension"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "Dark Magic",
+      "file": "Saved sounds/yodguard-dark-magic-6-378652.mp3",
+      "keywords": [
+        "dark",
+        "magic",
+        "curse",
+        "hex",
+        "dispel",
+        "shadow",
+        "evil",
+        "corrupt",
+        "fantasy",
+        "sinister"
+      ]
+    },
+    {
+      "type": "music",
+      "name": "dead ground scary ambience",
+      "file": "Saved sounds/ES_Dead Ground-scary ambience - Phoenix Tail.mp3",
+      "keywords": [
+        "dead",
+        "ground",
+        "scary",
+        "ambience",
+        "horror",
+        "dark",
+        "ambient",
+        "music"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "deep sea underwater ambience",
+      "file": "Saved sounds/dragon-studio-deep-sea-underwater-ambience-472383.mp3",
+      "keywords": [
+        "underwater",
+        "deep",
+        "sea",
+        "ocean",
+        "ambience",
+        "water",
+        "submerged"
+      ],
+      "loop": false
+    },
+    {
+      "type": "sfx",
+      "name": "ding shop bell v2",
+      "file": "Saved sounds/ding_shop-bell-v2.mp3",
+      "keywords": [
+        "ding",
+        "shop",
+        "bell",
+        "store",
+        "arrival",
+        "notification",
+        "chime",
+        "entrance"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "dog, howl",
+      "file": "Saved sounds/ES_Dog, Howl - Epidemic Sound.mp3",
+      "keywords": [
+        "dog",
+        "howl",
+        "canine",
+        "hound",
+        "bark",
+        "whine",
+        "night",
+        "bay",
+        "yowl",
+        "animal"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "dragon growl",
+      "file": "Saved sounds/dragon_growl.ogg",
+      "keywords": [
+        "dragon",
+        "growl",
+        "monster",
+        "roar",
+        "creature"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "draw sword",
+      "file": "Saved sounds/draw-sword.mp3",
+      "keywords": [
+        "draw",
+        "sword",
+        "unsheath",
+        "metal",
+        "combat",
+        "weapon"
+      ]
+    },
+    {
+      "type": "music",
+      "name": "drifting emotions music",
+      "file": "Saved sounds/ES_Drifting Emotions-music - Howard Harper-Barnes.mp3",
+      "keywords": [
+        "emotional",
+        "sad",
+        "melancholy",
+        "reflection",
+        "piano",
+        "contemplative",
+        "music"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "droplets in a cave",
+      "file": "Saved sounds/dragon-studio-droplets-in-a-cave-482871.mp3",
+      "keywords": [
+        "drip",
+        "droplet",
+        "cave",
+        "water",
+        "echo",
+        "dripping"
+      ],
+      "loop": false
+    },
+    {
+      "type": "music",
+      "name": "eastern ambient",
+      "file": "Saved sounds/studiokolomna-ramadan-ramadan-music-154006.mp3",
+      "keywords": [
+        "eastern",
+        "ambient",
+        "calm",
+        "spiritual",
+        "peaceful",
+        "gentle",
+        "soft"
+      ],
+      "loop": true
+    },
+    {
+      "type": "music",
+      "name": "echoes of illumination music",
+      "file": "Saved sounds/ES_Echoes of Illumination-music - Megan Wofford.mp3",
+      "keywords": [
+        "ethereal",
+        "magical",
+        "ambient",
+        "fantasy",
+        "mystical",
+        "light",
+        "music"
+      ]
+    },
+    {
+      "type": "music",
+      "name": "echos of the mead hall music",
+      "file": "Saved sounds/echos-of-the-mead-hall_music.mp3",
+      "keywords": [
+        "medieval",
+        "tavern",
+        "dnd",
+        "fantasy",
+        "celtic",
+        "folk",
+        "ambience",
+        "music"
+      ]
+    },
+    {
+      "type": "music",
+      "name": "eerie forest ambience",
+      "file": "Saved sounds/eerie_forest_ambience.mp3",
+      "keywords": [
+        "eerie",
+        "forest",
+        "ambience",
+        "ambient",
+        "horror",
+        "dark",
+        "mysterious",
+        "dnd",
+        "night",
+        "music"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "elevator chime",
+      "file": "Saved sounds/elevator-chime.mp3",
+      "keywords": [
+        "elevator",
+        "chime",
+        "bell",
+        "ding",
+        "floor",
+        "lift",
+        "notification",
+        "arrive",
+        "hotel",
+        "lobby"
+      ]
+    },
+    {
+      "type": "music",
+      "name": "enter the realm of shadows music",
+      "file": "Saved sounds/ES_Enter the Realm of Shadows-music - Christoffer Moe Ditlevsen.mp3",
+      "keywords": [
+        "enter",
+        "realm",
+        "shadows",
+        "music",
+        "horror",
+        "dark",
+        "scary",
+        "fantasy",
+        "medieval",
+        "dnd"
+      ]
+    },
+    {
+      "type": "music",
+      "name": "every detail music",
+      "file": "Saved sounds/ES_Every Detail-music - Johannes Bornlof.mp3",
+      "keywords": [
+        "suspense",
+        "tension",
+        "cinematic",
+        "dramatic",
+        "thriller",
+        "score",
+        "music"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "evil beast, growl, snarl",
+      "file": "Saved sounds/ES_Evil Beast, Growl, Snarl - Epidemic Sound.mp3",
+      "keywords": [
+        "evil",
+        "beast",
+        "growl",
+        "snarl",
+        "creature",
+        "monster"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "explosion, real, cannon blast, airy v1",
+      "file": "Saved sounds/ES_Explosion, Real, Cannon Blast, Airy - Epidemic Sound v1.mp3",
+      "keywords": [
+        "explosion",
+        "real",
+        "cannon",
+        "blast",
+        "airy"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "explosion, real, cannon blast, airy v2",
+      "file": "Saved sounds/ES_Explosion, Real, Cannon Blast, Airy - Epidemic Sound v2.mp3",
+      "keywords": [
+        "explosion",
+        "real",
+        "cannon",
+        "blast",
+        "airy"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "explosion, real, cannon blast, airy v3",
+      "file": "Saved sounds/ES_Explosion, Real, Cannon Blast, Airy - Epidemic Sound v3.mp3",
+      "keywords": [
+        "explosion",
+        "real",
+        "cannon",
+        "blast",
+        "airy"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "explosion, real, cannon blast, airy v4",
+      "file": "Saved sounds/ES_Explosion, Real, Cannon Blast, Airy - Epidemic Sound v4.mp3",
+      "keywords": [
+        "explosion",
+        "real",
+        "cannon",
+        "blast",
+        "airy"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "fire spell impact",
+      "file": "Saved sounds/dragon-studio-fire-spell-impact-448565.mp3",
+      "keywords": [
+        "fire",
+        "spell",
+        "magic",
+        "impact",
+        "fireball",
+        "cast",
+        "flame"
+      ],
+      "loop": false
+    },
+    {
+      "type": "sfx",
+      "name": "fireplace",
+      "file": "Saved sounds/fireplace.mp3",
+      "keywords": [
+        "fireplace",
+        "fire",
+        "crackle",
+        "wood",
+        "hearth",
+        "burning",
+        "flame",
+        "cozy",
+        "logs",
+        "warmth"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "fireworks display",
+      "file": "Saved sounds/fireworks_display.mp3",
+      "keywords": [
+        "fireworks",
+        "display",
+        "boom",
+        "burst",
+        "celebration",
+        "sparkle",
+        "rocket",
+        "pop",
+        "explosive",
+        "bang"
+      ]
+    },
+    {
+      "type": "music",
+      "name": "fjaril'n vingad syns pa haga music",
+      "file": "Saved sounds/ES_Fjaril'n Vingad Syns pa Haga-music - Traditional.mp3",
+      "keywords": [
+        "folk",
+        "traditional",
+        "gentle",
+        "acoustic",
+        "peaceful",
+        "nature",
+        "calm",
+        "music"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "flame, fireball, fast x4",
+      "file": "Saved sounds/ES_Flame, Fireball, Fast x4 - Epidemic Sound.mp3",
+      "keywords": [
+        "flame",
+        "fireball",
+        "fast",
+        "fire",
+        "burst"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "flames, large, movement 01",
+      "file": "Saved sounds/ES_Flames, Large, Movement 01 - Epidemic Sound.mp3",
+      "keywords": [
+        "flames",
+        "large",
+        "movement",
+        "fire",
+        "burning"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "footsteps daytime hike",
+      "file": "Saved sounds/footsteps_daytime_hike.mp3",
+      "keywords": [
+        "footsteps",
+        "hike",
+        "trail",
+        "gravel",
+        "walking"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "footsteps grass",
+      "file": "Saved sounds/footsteps_grass.mp3",
+      "keywords": [
+        "footsteps",
+        "grass",
+        "walking",
+        "outdoor",
+        "lawn",
+        "field",
+        "steps",
+        "sneaking",
+        "stealthy",
+        "nature"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "footsteps leaves",
+      "file": "Saved sounds/footsteps_leaves.mp3",
+      "keywords": [
+        "footsteps",
+        "leaves",
+        "forest",
+        "crunch",
+        "walking"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "footsteps sand",
+      "file": "Saved sounds/footsteps_sand.mp3",
+      "keywords": [
+        "footsteps",
+        "sand",
+        "walking",
+        "beach",
+        "desert",
+        "crunch",
+        "soft",
+        "steps",
+        "shore",
+        "arid"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "footsteps snow",
+      "file": "Saved sounds/footsteps_snow.mp3",
+      "keywords": [
+        "footsteps",
+        "snow",
+        "crunch",
+        "walking",
+        "winter",
+        "cold",
+        "ice",
+        "outdoor",
+        "steps",
+        "crunching"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "footsteps water",
+      "file": "Saved sounds/footsteps_water.mp3",
+      "keywords": [
+        "footsteps",
+        "water",
+        "splash",
+        "puddle",
+        "walking",
+        "nature"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "footsteps wood stairs",
+      "file": "Saved sounds/footsteps_wood_stairs.mp3",
+      "keywords": [
+        "footsteps",
+        "wood",
+        "stairs",
+        "creaking",
+        "climbing",
+        "walking",
+        "floor",
+        "boards",
+        "step",
+        "house"
+      ]
+    },
+    {
+      "type": "music",
+      "name": "forgotten castle music",
+      "file": "Saved sounds/ES_Forgotten Castle-music - Ludvig Moulin.mp3",
+      "keywords": [
+        "forgotten",
+        "castle",
+        "music",
+        "medieval",
+        "eerie",
+        "ruins",
+        "ancient",
+        "mystery",
+        "haunting",
+        "abandoned"
+      ]
+    },
+    {
+      "type": "music",
+      "name": "forsaken scary ambience",
+      "file": "Saved sounds/ES_Forsaken-scary ambience - Luba Hilman.mp3",
+      "keywords": [
+        "forsaken",
+        "scary",
+        "ambience",
+        "horror",
+        "dark",
+        "ambient",
+        "music"
+      ]
+    },
+    {
+      "type": "music",
+      "name": "frail photographs music",
+      "file": "Saved sounds/ES_Frail Photographs-music - John Barzetti.mp3",
+      "keywords": [
+        "frail",
+        "photographs",
+        "music",
+        "emotional",
+        "sad"
+      ]
+    },
+    {
+      "type": "music",
+      "name": "fraught scary ambience",
+      "file": "Saved sounds/ES_Fraught-scary ambience - Elin Piel.mp3",
+      "keywords": [
+        "fraught",
+        "scary",
+        "ambience",
+        "horror",
+        "dark",
+        "suspense",
+        "tension",
+        "ambient",
+        "music"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "Horse Cart",
+      "file": "Saved sounds/freesound_community-horse-with-old-cart-27042.mp3",
+      "keywords": [
+        "horse",
+        "cart",
+        "wagon",
+        "carriage",
+        "wheels",
+        "cobblestone",
+        "travel",
+        "transport",
+        "medieval",
+        "vehicle"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "frost spell impact",
+      "file": "Saved sounds/dragon-studio-frost-spell-impact-499662.mp3",
+      "keywords": [
+        "frost",
+        "ice",
+        "spell",
+        "magic",
+        "impact",
+        "freeze",
+        "cold",
+        "cast"
+      ],
+      "loop": false
+    },
+    {
+      "type": "sfx",
+      "name": "futuristic explosion 04 v1",
+      "file": "Saved sounds/ES_Futuristic Explosion 04 - Epidemic Sound v1.mp3",
+      "keywords": [
+        "futuristic",
+        "explosion",
+        "blast",
+        "sci-fi",
+        "scifi"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "futuristic explosion 04 v2",
+      "file": "Saved sounds/ES_Futuristic Explosion 04 - Epidemic Sound v2.mp3",
+      "keywords": [
+        "futuristic",
+        "explosion",
+        "blast",
+        "sci-fi",
+        "scifi"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "futuristic explosion 04 v3",
+      "file": "Saved sounds/ES_Futuristic Explosion 04 - Epidemic Sound v3.mp3",
+      "keywords": [
+        "futuristic",
+        "explosion",
+        "blast",
+        "sci-fi",
+        "scifi"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "giant creature, roaring",
+      "file": "Saved sounds/ES_Giant Creature, Roaring - Epidemic Sound.mp3",
+      "keywords": [
+        "giant",
+        "creature",
+        "roaring",
+        "monster",
+        "beast",
+        "huge",
+        "massive",
+        "terrifying",
+        "powerful",
+        "roar"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "glass shatter",
+      "file": "Saved sounds/glass-shatter.mp3",
+      "keywords": [
+        "glass",
+        "shatter",
+        "break",
+        "crash",
+        "window",
+        "mirror",
+        "smash",
+        "scatter",
+        "impact",
+        "shards"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "golden retriever, barks, whimper",
+      "file": "Saved sounds/ES_Golden Retriever, Barks, Whimper - Epidemic Sound.mp3",
+      "keywords": [
+        "golden",
+        "retriever",
+        "barks",
+        "whimper",
+        "dog"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "gravel, sneaker, running 01",
+      "file": "Saved sounds/ES_Gravel, Sneaker, Running 01 - Epidemic Sound.mp3",
+      "keywords": [
+        "gravel",
+        "sneaker",
+        "running",
+        "footsteps",
+        "walking"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "gun shot",
+      "file": "Saved sounds/gun-shot.mp3",
+      "keywords": [
+        "gun",
+        "shot",
+        "fire",
+        "bang",
+        "pistol",
+        "firearm",
+        "bullet",
+        "shoot",
+        "pop",
+        "blast"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "gunshot distant",
+      "file": "Saved sounds/gunshot-distant.mp3",
+      "keywords": [
+        "gunshot",
+        "distant",
+        "far",
+        "gun",
+        "bang",
+        "shot",
+        "echo",
+        "muffled",
+        "rifle",
+        "firearm"
+      ]
+    },
+    {
+      "type": "music",
+      "name": "hall light music",
+      "file": "Saved sounds/ES_Hall Light-music (Instrumental Version) - Victor Lundberg.mp3",
+      "keywords": [
+        "hall",
+        "calm",
+        "gentle",
+        "ambient",
+        "peaceful",
+        "soft",
+        "relaxing",
+        "music"
+      ]
+    },
+    {
+      "type": "music",
+      "name": "happy trails music",
+      "file": "Saved sounds/ES_Happy Trails-music - Erik Fernholm.mp3",
+      "keywords": [
+        "happy",
+        "upbeat",
+        "adventure",
+        "journey",
+        "exploration",
+        "cheerful",
+        "country",
+        "music"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "hardwood, boots, walking by 02",
+      "file": "Saved sounds/ES_Hardwood, Boots, Walking By 02 - Epidemic Sound.mp3",
+      "keywords": [
+        "hardwood",
+        "boots",
+        "walking",
+        "footsteps"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "hardwood, female, heels, walk 03",
+      "file": "Saved sounds/ES_Hardwood, Female, Heels, Walk 03 - Epidemic Sound.mp3",
+      "keywords": [
+        "hardwood",
+        "female",
+        "heels",
+        "walk",
+        "footsteps",
+        "walking"
+      ]
+    },
+    {
+      "type": "music",
+      "name": "he said, xi said scary music",
+      "file": "Saved sounds/ES_He Said, Xi Said-scary music - August Wilhelmsson.mp3",
+      "keywords": [
+        "horror",
+        "dark",
+        "scary",
+        "tension",
+        "suspense",
+        "music"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "healing magic",
+      "file": "Saved sounds/yodguard-healing-magic-4-378668.mp3",
+      "keywords": [
+        "heal",
+        "healing",
+        "magic",
+        "spell",
+        "cast",
+        "restore",
+        "enchant",
+        "divine"
+      ],
+      "loop": false
+    },
+    {
+      "type": "sfx",
+      "name": "heart monitor dying",
+      "file": "Saved sounds/heart-beep-monitor_dieing-long-beep.mp3",
+      "keywords": [
+        "heart",
+        "monitor",
+        "flatline",
+        "hospital",
+        "beep",
+        "medical",
+        "death",
+        "dying",
+        "pulse",
+        "EKG"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "heartbeat",
+      "file": "Saved sounds/heart_beat.mp3",
+      "keywords": [
+        "heartbeat",
+        "heart",
+        "beat",
+        "pulse",
+        "thump",
+        "cardiac",
+        "boom",
+        "rhythm",
+        "alive",
+        "nervous"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "heavy breathing",
+      "file": "Saved sounds/heavy-breathing.mp3",
+      "keywords": [
+        "heavy",
+        "breathing",
+        "panting",
+        "exertion",
+        "exhausted",
+        "running",
+        "fear",
+        "gasp",
+        "labored",
+        "anxious"
+      ]
+    },
+    {
+      "type": "music",
+      "name": "here comes christmas music",
+      "file": "Saved sounds/ES_Here Comes Christmas-music - OTE.mp3",
+      "keywords": [
+        "here",
+        "comes",
+        "christmas",
+        "music",
+        "holiday",
+        "festive"
+      ]
+    },
+    {
+      "type": "music",
+      "name": "hidden in havana music",
+      "file": "Saved sounds/ES_Hidden in Havana-music - Ludvig Moulin.mp3",
+      "keywords": [
+        "latin",
+        "jazz",
+        "tropical",
+        "upbeat",
+        "dance",
+        "havana",
+        "music"
+      ]
+    },
+    {
+      "type": "music",
+      "name": "hip hop modern",
+      "file": "Saved sounds/producesplatinum-vlog-hip-hop-483574.mp3",
+      "keywords": [
+        "hip hop",
+        "modern",
+        "urban",
+        "beat",
+        "rhythm"
+      ],
+      "loop": true
+    },
+    {
+      "type": "sfx",
+      "name": "holy spell cast",
+      "file": "Saved sounds/dragon-studio-holy-spell-cast-450460.mp3",
+      "keywords": [
+        "holy",
+        "spell",
+        "cast",
+        "magic",
+        "heal",
+        "divine",
+        "light",
+        "enchant"
+      ],
+      "loop": false
+    },
+    {
+      "type": "music",
+      "name": "hope they don't see us music",
+      "file": "Saved sounds/ES_Hope They Don't See Us-music - Stationary Sign.mp3",
+      "keywords": [
+        "suspense",
+        "tension",
+        "sneaky",
+        "stealth",
+        "horror",
+        "music"
+      ]
+    },
+    {
+      "type": "music",
+      "name": "horror suspense",
+      "file": "Saved sounds/horror-suspense_music.mp3",
+      "keywords": [
+        "horror",
+        "suspense",
+        "dark",
+        "tension",
+        "ambient",
+        "music",
+        "scary"
+      ]
+    },
+    {
+      "type": "music",
+      "name": "horror suspense music",
+      "file": "Saved sounds/horror-suspense-music.mp3",
+      "keywords": [
+        "horror",
+        "suspense",
+        "music",
+        "dark",
+        "scary",
+        "tension"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "horse galloping",
+      "file": "Saved sounds/horse_galloping.mp3",
+      "keywords": [
+        "horse",
+        "galloping",
+        "hooves",
+        "riding",
+        "cavalry",
+        "racing",
+        "run",
+        "hoof",
+        "canter",
+        "steed"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "horse whinny",
+      "file": "Saved sounds/horse-whinny.mp3",
+      "keywords": [
+        "horse",
+        "whinny",
+        "neigh",
+        "equine",
+        "call",
+        "stable",
+        "surprised",
+        "alarm",
+        "alert",
+        "whinnying"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "horses army calvery galloping jennas laptop",
+      "file": "Saved sounds/horses_army_calvery_galloping-Jennas-Laptop.flac",
+      "keywords": [
+        "horses",
+        "army",
+        "calvery",
+        "galloping",
+        "jennas",
+        "laptop",
+        "horse"
+      ]
+    },
+    {
+      "type": "music",
+      "name": "house of horror music",
+      "file": "Saved sounds/ES_House of Horror-music - Experia.mp3",
+      "keywords": [
+        "house",
+        "horror",
+        "music",
+        "scary",
+        "haunting",
+        "dark",
+        "sinister",
+        "eerie",
+        "creepy",
+        "ghost"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "impact, dark, cinematic, low, explosive",
+      "file": "Saved sounds/ES_Impact, Dark, Cinematic, Low, Explosive - Epidemic Sound.mp3",
+      "keywords": [
+        "impact",
+        "dark",
+        "cinematic",
+        "low",
+        "explosive"
+      ]
+    },
+    {
+      "type": "music",
+      "name": "in the name of glory music",
+      "file": "Saved sounds/ES_In the Name of Glory-music - Christoffer Moe Ditlevsen.mp3",
+      "keywords": [
+        "name",
+        "glory",
+        "music",
+        "battle",
+        "epic",
+        "combat"
+      ]
+    },
+    {
+      "type": "music",
+      "name": "into the beyond music",
+      "file": "Saved sounds/ES_Into the Beyond-music - Christoffer Moe Ditlevsen.mp3",
+      "keywords": [
+        "adventure",
+        "epic",
+        "journey",
+        "beyond",
+        "discovery",
+        "orchestral",
+        "music"
+      ]
+    },
+    {
+      "type": "music",
+      "name": "into the west music",
+      "file": "Saved sounds/ES_Into the West-music - Jon Bjork.mp3",
+      "keywords": [
+        "adventure",
+        "journey",
+        "epic",
+        "western",
+        "exploration",
+        "music"
+      ]
+    },
+    {
+      "type": "music",
+      "name": "invasion 4 music",
+      "file": "Saved sounds/ES_Invasion 4-music - Fredrik Ekstrom.mp3",
+      "keywords": [
+        "invasion",
+        "music",
+        "battle",
+        "epic",
+        "combat"
+      ]
+    },
+    {
+      "type": "music",
+      "name": "ithaka music",
+      "file": "Saved sounds/ES_Ithaka-music - Harbours & Oceans.mp3",
+      "keywords": [
+        "epic",
+        "adventure",
+        "journey",
+        "odyssey",
+        "orchestral",
+        "mystery",
+        "music"
+      ]
+    },
+    {
+      "type": "music",
+      "name": "kveldssang for blakken music",
+      "file": "Saved sounds/ES_Kveldssang for Blakken-music - Line Neesgaard.mp3",
+      "keywords": [
+        "folk",
+        "traditional",
+        "lullaby",
+        "calm",
+        "gentle",
+        "peaceful",
+        "nordic",
+        "music"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "large dog barking",
+      "file": "Saved sounds/large_dog_barking.mp3",
+      "keywords": [
+        "large",
+        "dog",
+        "barking",
+        "canine",
+        "deep",
+        "loud",
+        "guard",
+        "growl",
+        "aggressive",
+        "bark"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "large sword swing",
+      "file": "Saved sounds/large-sword-swing.mp3",
+      "keywords": [
+        "sword",
+        "swing",
+        "large",
+        "whoosh",
+        "slash",
+        "combat",
+        "weapon"
+      ]
+    },
+    {
+      "type": "music",
+      "name": "legends awaken music",
+      "file": "Saved sounds/ES_Legends Awaken-music - Dream Cave.mp3",
+      "keywords": [
+        "legends",
+        "awaken",
+        "music",
+        "fantasy",
+        "medieval",
+        "dnd"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "light rain shower",
+      "file": "Saved sounds/light_rain_shower.mp3",
+      "keywords": [
+        "light",
+        "rain",
+        "shower",
+        "gentle",
+        "drip",
+        "drizzle",
+        "mist",
+        "patter",
+        "drops",
+        "weather"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "Lightning Spell",
+      "file": "Saved sounds/dragon-studio-lightning-spell-386163.mp3",
+      "keywords": [
+        "electric",
+        "shock",
+        "spell",
+        "zap",
+        "magic",
+        "electrocute",
+        "taser",
+        "energy",
+        "fantasy",
+        "elemental"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "lightning strike loud",
+      "file": "Saved sounds/lightning_strike_loud.mp3",
+      "keywords": [
+        "lightning",
+        "strike",
+        "loud",
+        "bolt",
+        "crack",
+        "electric",
+        "storm",
+        "thunder",
+        "flash",
+        "intense"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "lightning strike soft",
+      "file": "Saved sounds/lightning_strike_soft.mp3",
+      "keywords": [
+        "lightning",
+        "strike",
+        "soft",
+        "bolt",
+        "distant",
+        "electric",
+        "storm",
+        "rumble",
+        "gentle",
+        "flash"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "lion roar like, gugrling",
+      "file": "Saved sounds/ES_Lion Roar LIke, Gugrling - Epidemic Sound.mp3",
+      "keywords": [
+        "lion",
+        "roar",
+        "growl",
+        "beast",
+        "creature",
+        "animal",
+        "monster"
+      ]
+    },
+    {
+      "type": "music",
+      "name": "long nights calm dark ambient",
+      "file": "Saved sounds/clavier-music-long-nights-calm-dark-ambient-music-354466.mp3",
+      "keywords": [
+        "calm",
+        "dark",
+        "ambient",
+        "night",
+        "peaceful",
+        "soft",
+        "gentle",
+        "mood"
+      ],
+      "loop": true
+    },
+    {
+      "type": "sfx",
+      "name": "magic fireball",
+      "file": "Saved sounds/magic_fireball.mp3",
+      "keywords": [
+        "magic",
+        "fireball",
+        "spell",
+        "fire",
+        "explosion"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "magic heal",
+      "file": "Saved sounds/magic-heal.mp3",
+      "keywords": [
+        "magic",
+        "heal",
+        "spell",
+        "chime"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "magic missile",
+      "file": "Saved sounds/magic-missile.mp3",
+      "keywords": [
+        "magic",
+        "missile",
+        "spell",
+        "shoot"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "magic missiles",
+      "file": "Saved sounds/magic-missiles.mp3",
+      "keywords": [
+        "magic",
+        "missiles",
+        "spell",
+        "shoot",
+        "multiple"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "magic spell",
+      "file": "Saved sounds/magic-spell.mp3",
+      "keywords": [
+        "magic",
+        "spell",
+        "cast",
+        "chime"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "magic teleport whoosh",
+      "file": "Saved sounds/universfield-magic-teleport-whoosh-352764.mp3",
+      "keywords": [
+        "magic",
+        "teleport",
+        "whoosh",
+        "portal",
+        "warp",
+        "spell",
+        "transport"
+      ],
+      "loop": false
+    },
+    {
+      "type": "sfx",
+      "name": "Magic Wand",
+      "file": "Saved sounds/humordome-fairy-sparkle-451414.mp3",
+      "keywords": [
+        "magic",
+        "wand",
+        "spell",
+        "cast",
+        "enchant",
+        "fairy",
+        "sparkle",
+        "fantasy",
+        "arcane"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "medieval battlefield, medium group, sword impacts, screams, grunts",
+      "file": "Saved sounds/ES_Medieval Battlefield, Medium Group, Sword Impacts, Screams, Grunts - Epidemic Sound.mp3",
+      "keywords": [
+        "medieval",
+        "battlefield",
+        "medium",
+        "group",
+        "sword",
+        "impacts",
+        "screams",
+        "grunts",
+        "combat",
+        "weapon",
+        "scream"
+      ]
+    },
+    {
+      "type": "music",
+      "name": "medieval fantasy rpg",
+      "file": "Saved sounds/medieval-fantasy-rpg_music.flac",
+      "keywords": [
+        "medieval",
+        "fantasy",
+        "rpg",
+        "dnd",
+        "orchestral",
+        "music"
+      ]
+    },
+    {
+      "type": "music",
+      "name": "medieval village atmosphere",
+      "file": "Saved sounds/medieval_village_atmosphere.mp3",
+      "keywords": [
+        "medieval",
+        "village",
+        "atmosphere",
+        "ambient",
+        "crowd",
+        "music",
+        "fantasy",
+        "dnd"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "medieval, war, battle, armors, shields, arrows, swords layer",
+      "file": "Saved sounds/ES_Medieval, War, Battle, Armors, Shields, Arrows, Swords Layer - Epidemic Sound.mp3",
+      "keywords": [
+        "medieval",
+        "war",
+        "battle",
+        "armors",
+        "shields",
+        "arrows",
+        "swords",
+        "layer",
+        "combat",
+        "weapon",
+        "arrow"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "medieval, war, battle, many swords, layer",
+      "file": "Saved sounds/ES_Medieval, War, Battle, Many Swords, Layer - Epidemic Sound.mp3",
+      "keywords": [
+        "medieval",
+        "war",
+        "battle",
+        "many",
+        "swords",
+        "layer",
+        "combat",
+        "weapon"
+      ]
+    },
+    {
+      "type": "music",
+      "name": "merry christmas day music",
+      "file": "Saved sounds/ES_Merry Christmas Day-music - Stonekeepers.mp3",
+      "keywords": [
+        "merry",
+        "christmas",
+        "day",
+        "music",
+        "holiday",
+        "festive"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "metal impact, block, parry, sword fight, ring out 01",
+      "file": "Saved sounds/ES_Metal Impact, Block, Parry, Sword Fight, Ring Out 01 - Epidemic Sound.mp3",
+      "keywords": [
+        "metal",
+        "impact",
+        "block",
+        "parry",
+        "sword",
+        "fight",
+        "clash",
+        "combat",
+        "weapon"
+      ]
+    },
+    {
+      "type": "music",
+      "name": "miasma shapes music",
+      "file": "Saved sounds/ES_Miasma Shapes-music - Epidemic Sound.mp3",
+      "keywords": [
+        "horror",
+        "dark",
+        "eerie",
+        "ambient",
+        "scary",
+        "suspense",
+        "tension",
+        "music"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "monster breath growl",
+      "file": "Saved sounds/monster_breath_growl.mp3",
+      "keywords": [
+        "monster",
+        "breath",
+        "growl",
+        "breathing",
+        "creature"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "monster growl",
+      "file": "Saved sounds/monster-growl.flac",
+      "keywords": [
+        "monster",
+        "growl",
+        "creature",
+        "beast",
+        "snarl",
+        "fierce",
+        "roar",
+        "angry",
+        "deep",
+        "animal"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "monster vocal, screams 03",
+      "file": "Saved sounds/ES_Monster Vocal, Screams 03 - Epidemic Sound.mp3",
+      "keywords": [
+        "monster",
+        "scream",
+        "creature",
+        "horror",
+        "shriek",
+        "beast"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "newborn, maternity ward, baby crying",
+      "file": "Saved sounds/ES_Newborn, Maternity Ward, Baby Crying - Epidemic Sound.mp3",
+      "keywords": [
+        "newborn",
+        "maternity",
+        "ward",
+        "baby",
+        "crying",
+        "scream"
+      ]
+    },
+    {
+      "type": "music",
+      "name": "night ambience",
+      "file": "Saved sounds/night_ambience.mp3",
+      "keywords": [
+        "night",
+        "ambience",
+        "ambient",
+        "crickets",
+        "calm",
+        "music"
+      ]
+    },
+    {
+      "type": "music",
+      "name": "now that's an alarm! music",
+      "file": "Saved sounds/ES_Now That's an Alarm!-music - Harry Edvino.mp3",
+      "keywords": [
+        "alarm",
+        "urgent",
+        "tense",
+        "action",
+        "dramatic",
+        "warning",
+        "music"
+      ]
+    },
+    {
+      "type": "music",
+      "name": "one last battle music",
+      "file": "Saved sounds/ES_One Last Battle-music - Edgar Hopp.mp3",
+      "keywords": [
+        "one",
+        "last",
+        "battle",
+        "music",
+        "epic",
+        "combat"
+      ]
+    },
+    {
+      "type": "music",
+      "name": "only the brave music",
+      "file": "Saved sounds/ES_Only the Brave-music - Bonnie Grace.mp3",
+      "keywords": [
+        "only",
+        "brave",
+        "music",
+        "battle",
+        "epic",
+        "combat"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "owl",
+      "file": "Saved sounds/owl.mp3",
+      "keywords": [
+        "owl",
+        "hoot",
+        "bird",
+        "nocturnal",
+        "night",
+        "forest",
+        "screech",
+        "hunting",
+        "feathered",
+        "who"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "owl hoot",
+      "file": "Saved sounds/owl-hoot.mp3",
+      "keywords": [
+        "owl",
+        "hoot",
+        "bird",
+        "nocturnal",
+        "night",
+        "forest",
+        "screech",
+        "who",
+        "hollow",
+        "feathered"
+      ]
+    },
+    {
+      "type": "music",
+      "name": "past love music",
+      "file": "Saved sounds/ES_Past Love-music - Ruiqi Zhao.mp3",
+      "keywords": [
+        "past",
+        "love",
+        "music",
+        "romantic",
+        "nostalgic",
+        "sad",
+        "melancholy",
+        "bittersweet",
+        "piano",
+        "wistful"
+      ]
+    },
+    {
+      "type": "music",
+      "name": "path to the abyss music",
+      "file": "Saved sounds/ES_Path to the Abyss-music - Christoffer Moe Ditlevsen.mp3",
+      "keywords": [
+        "path",
+        "abyss",
+        "music",
+        "horror",
+        "dark",
+        "scary"
+      ]
+    },
+    {
+      "type": "music",
+      "name": "paus music",
+      "file": "Saved sounds/ES_PAUS-music - 369.mp3",
+      "keywords": [
+        "calm",
+        "ambient",
+        "gentle",
+        "quiet",
+        "transition",
+        "peaceful",
+        "relaxing",
+        "music"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "pencil writing",
+      "file": "Saved sounds/pencil_writing.mp3",
+      "keywords": [
+        "pencil",
+        "writing",
+        "paper",
+        "scribble"
+      ]
+    },
+    {
+      "type": "music",
+      "name": "pet detective music",
+      "file": "Saved sounds/ES_Pet Detective-music - Stationary Sign.mp3",
+      "keywords": [
+        "comedy",
+        "quirky",
+        "funny",
+        "detective",
+        "investigation",
+        "playful",
+        "music"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "phone ring",
+      "file": "Saved sounds/phone-ring.mp3",
+      "keywords": [
+        "phone",
+        "ring",
+        "call",
+        "bell",
+        "telephone",
+        "ringing",
+        "alert",
+        "notification",
+        "calling",
+        "landline"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "pirate ship floating",
+      "file": "Saved sounds/pirate-ship-floating-noise.mp3",
+      "keywords": [
+        "ship",
+        "pirate",
+        "boat",
+        "ocean",
+        "creaking"
+      ]
+    },
+    {
+      "type": "music",
+      "name": "pirate tavern crowd",
+      "file": "Saved sounds/pirate-tavern-croud.mp3",
+      "keywords": [
+        "pirate",
+        "tavern",
+        "crowd",
+        "chatter",
+        "music",
+        "fantasy",
+        "medieval",
+        "dnd"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "poof",
+      "file": "Saved sounds/poof.mp3",
+      "keywords": [
+        "poof",
+        "magic",
+        "smoke",
+        "disappear"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "Potion Swig",
+      "file": "Saved sounds/freesound_community-085594_potion-35983.mp3",
+      "keywords": [
+        "potion",
+        "drink",
+        "swig",
+        "gulp",
+        "elixir",
+        "magic",
+        "fantasy",
+        "brew",
+        "consume"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "punch",
+      "file": "Saved sounds/punch.mp3",
+      "keywords": [
+        "punch",
+        "hit",
+        "impact",
+        "fight",
+        "fist",
+        "strike",
+        "smack",
+        "blow",
+        "combat",
+        "connect"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "punch impact",
+      "file": "Saved sounds/punch_2.mp3",
+      "keywords": [
+        "punch",
+        "impact",
+        "hit",
+        "fight",
+        "fist",
+        "strike",
+        "smack",
+        "blow",
+        "combat",
+        "thud"
+      ]
+    },
+    {
+      "type": "music",
+      "name": "quiet my soul music",
+      "file": "Saved sounds/ES_Quiet My Soul-music - JOYSPRING.mp3",
+      "keywords": [
+        "quiet",
+        "my",
+        "soul",
+        "music",
+        "calm",
+        "gentle",
+        "peaceful"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "radio static",
+      "file": "Saved sounds/radio-static.mp3",
+      "keywords": [
+        "radio",
+        "static",
+        "noise",
+        "signal",
+        "transmission",
+        "interference",
+        "crackle",
+        "distortion",
+        "buzz",
+        "hiss"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "rat squeak",
+      "file": "Saved sounds/rat_squeak.mp3",
+      "keywords": [
+        "rat",
+        "squeak",
+        "mouse",
+        "rodent",
+        "scurry",
+        "pest",
+        "small",
+        "animal",
+        "chitter",
+        "dungeon"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "rain on windows",
+      "file": "Saved sounds/rain-on-windows-interior.mp3",
+      "keywords": [
+        "rain",
+        "windows",
+        "interior",
+        "storm"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "rewind",
+      "file": "Saved sounds/rewind.mp3",
+      "keywords": [
+        "rewind",
+        "tape",
+        "cassette",
+        "VCR",
+        "recording",
+        "spin",
+        "backward",
+        "fast",
+        "retro",
+        "whirr"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "ringing in ears",
+      "file": "Saved sounds/ringing-in-the-ears.mp3",
+      "keywords": [
+        "tinnitus",
+        "ear ringing",
+        "ears ringing",
+        "ringing ears",
+        "ringing",
+        "high pitch",
+        "explosion aftermath",
+        "blast damage",
+        "deafened"
+      ]
+    },
+    {
+      "type": "music",
+      "name": "ripples and raindrops music",
+      "file": "Saved sounds/ES_Ripples and Raindrops-music - Rachel Sandy.mp3",
+      "keywords": [
+        "rain",
+        "water",
+        "peaceful",
+        "calm",
+        "gentle",
+        "ambient",
+        "nature",
+        "music"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "river, small, distant waterfall 02",
+      "file": "Saved sounds/ES_River, Small, Distant Waterfall 02 - Epidemic Sound.mp3",
+      "keywords": [
+        "river",
+        "small",
+        "distant",
+        "waterfall",
+        "water",
+        "nature"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "roar",
+      "file": "Saved sounds/ES_Roar - Epidemic Sound (1).mp3",
+      "keywords": [
+        "roar",
+        "growl",
+        "beast",
+        "monster",
+        "creature",
+        "animal",
+        "fierce",
+        "loud",
+        "powerful",
+        "savage"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "roar v1",
+      "file": "Saved sounds/ES_Roar - Epidemic Sound v1.mp3",
+      "keywords": [
+        "roar",
+        "creature",
+        "monster",
+        "beast",
+        "animal",
+        "growl",
+        "fierce",
+        "terrifying",
+        "wild",
+        "deep"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "roar v2",
+      "file": "Saved sounds/ES_Roar - Epidemic Sound v2.mp3",
+      "keywords": [
+        "roar",
+        "creature",
+        "monster",
+        "beast",
+        "dragon",
+        "growl",
+        "powerful",
+        "intimidating",
+        "savage",
+        "loud"
+      ]
+    },
+    {
+      "type": "music",
+      "name": "romantic folksong on piano music",
+      "file": "Saved sounds/ES_Romantic Folksong on Piano-music - Traditional.mp3",
+      "keywords": [
+        "romantic",
+        "folksong",
+        "piano",
+        "music",
+        "folk",
+        "traditional",
+        "emotional",
+        "sad"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "rooster calling",
+      "file": "Saved sounds/rooster-calling-close.mp3",
+      "keywords": [
+        "rooster",
+        "calling",
+        "morning",
+        "crow",
+        "wake",
+        "farm",
+        "chicken",
+        "dawn",
+        "sunrise",
+        "cock"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "running, panting, outdoors",
+      "file": "Saved sounds/ES_Running, Panting, Outdoors - Epidemic Sound.mp3",
+      "keywords": [
+        "running",
+        "panting",
+        "outdoors",
+        "footsteps",
+        "walking",
+        "door"
+      ]
+    },
+    {
+      "type": "music",
+      "name": "santa bring my baby back music",
+      "file": "Saved sounds/ES_Santa Bring My Baby Back-music (Instrumental Version) - Zorro.mp3",
+      "keywords": [
+        "santa",
+        "christmas",
+        "holiday",
+        "festive",
+        "music"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "scratching window",
+      "file": "Saved sounds/scratching-window.mp3",
+      "keywords": [
+        "scratch",
+        "window",
+        "creepy",
+        "horror"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "scuba mask, breathing, oxygen tank",
+      "file": "Saved sounds/ES_Scuba Mask, Breathing, Oxygen Tank - Epidemic Sound.mp3",
+      "keywords": [
+        "scuba",
+        "mask",
+        "breathing",
+        "oxygen",
+        "tank"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "ships whistle  horn  three blasts",
+      "file": "Saved sounds/ES_Ships Whistle -horn- Three Blasts - Epidemic Sound.mp3",
+      "keywords": [
+        "ship",
+        "horn",
+        "whistle",
+        "nautical",
+        "signal",
+        "blast"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "shop bell ding",
+      "file": "Saved sounds/ding_shop-bell.mp3",
+      "keywords": [
+        "ding",
+        "bell",
+        "shop",
+        "store",
+        "chime",
+        "arrival"
+      ]
+    },
+    {
+      "type": "music",
+      "name": "slow christmas music",
+      "file": "Saved sounds/slow_christmas_music.mp3",
+      "keywords": [
+        "christmas",
+        "slow",
+        "calm",
+        "holiday",
+        "festive",
+        "music"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "small dog barking",
+      "file": "Saved sounds/small_dog_barking.mp3",
+      "keywords": [
+        "small",
+        "dog",
+        "barking",
+        "puppy",
+        "yap",
+        "canine",
+        "pet",
+        "yapping",
+        "little",
+        "bark"
+      ]
+    },
+    {
+      "type": "music",
+      "name": "small strokes music",
+      "file": "Saved sounds/ES_Small Strokes-music - Martin Gauffin.mp3",
+      "keywords": [
+        "calm",
+        "delicate",
+        "gentle",
+        "soft",
+        "piano",
+        "ambient",
+        "relaxing",
+        "music"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "snarling, growling 01",
+      "file": "Saved sounds/ES_Snarling, Growling 01 - Epidemic Sound.mp3",
+      "keywords": [
+        "snarling",
+        "growling",
+        "creature",
+        "monster",
+        "aggressive",
+        "feral",
+        "animal"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "something in the basement",
+      "file": "Saved sounds/ES_Something in the Basement - Lennon Hutton.mp3",
+      "keywords": [
+        "eerie",
+        "horror",
+        "dark",
+        "creepy",
+        "suspense",
+        "ghost",
+        "haunted",
+        "ambience"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "sputtering, roar",
+      "file": "Saved sounds/ES_Sputtering, Roar - Epidemic Sound.mp3",
+      "keywords": [
+        "sputtering",
+        "roar",
+        "engine",
+        "vehicle",
+        "motor",
+        "car",
+        "mechanical",
+        "start",
+        "fail",
+        "rough"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "Stand Summon",
+      "file": "Saved sounds/freesound_community-stand-summon-effect-40997.mp3",
+      "keywords": [
+        "summon",
+        "conjure",
+        "apparition",
+        "manifest",
+        "magic",
+        "fantasy",
+        "invoke",
+        "spirit",
+        "portal",
+        "creature"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "static breath",
+      "file": "Saved sounds/ES_Static Breath - Lennon Hutton.mp3",
+      "keywords": [
+        "eerie",
+        "horror",
+        "breathing",
+        "whisper",
+        "ghost",
+        "ambient",
+        "haunting",
+        "breath"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "stream water",
+      "file": "Saved sounds/stream-water.mp3",
+      "keywords": [
+        "stream",
+        "water",
+        "river",
+        "flowing",
+        "nature",
+        "trickle",
+        "trickled",
+        "babbling",
+        "brook",
+        "gentle"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "suburban kids",
+      "file": "Saved sounds/ES_Suburban Kids - Marc Torch.mp3",
+      "keywords": [
+        "children",
+        "playing",
+        "outdoor",
+        "neighborhood",
+        "casual",
+        "kids",
+        "daytime"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "sunflower dance",
+      "file": "Saved sounds/ES_Sunflower Dance - Helmut Schenker.mp3",
+      "keywords": [
+        "light",
+        "playful",
+        "ambient",
+        "peaceful",
+        "bright",
+        "dance",
+        "nature",
+        "cheerful"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "superhero story 1",
+      "file": "Saved sounds/ES_Superhero Story 1 - Fredrik Ekstrom.mp3",
+      "keywords": [
+        "action",
+        "epic",
+        "heroic",
+        "intense",
+        "dramatic",
+        "adventure",
+        "superhero"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "sword fall on dirt",
+      "file": "Saved sounds/sword-fall-on-dirt.mp3",
+      "keywords": [
+        "sword",
+        "fall",
+        "dirt",
+        "drop",
+        "metal",
+        "combat",
+        "weapon"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "sword fight, 1v1, longsword, medieval warriors, knights, in armor, schoeps",
+      "file": "Saved sounds/ES_Sword Fight, 1v1, Longsword, Medieval Warriors, Knights, In Armor, Schoeps (MS) - Epidemic Sound.mp3",
+      "keywords": [
+        "sword",
+        "fight",
+        "1v1",
+        "longsword",
+        "medieval",
+        "warriors",
+        "knights",
+        "armor",
+        "schoeps",
+        "combat",
+        "weapon"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "sword grinding sharpening",
+      "file": "Saved sounds/sword-grinding-sharpening.mp3",
+      "keywords": [
+        "sword",
+        "grind",
+        "sharpen",
+        "whetstone",
+        "metal",
+        "combat",
+        "weapon"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "sword impact flesh",
+      "file": "Saved sounds/sword-impact_flesh.mp3",
+      "keywords": [
+        "sword",
+        "impact",
+        "flesh",
+        "hit",
+        "strike",
+        "combat",
+        "weapon"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "sword sharpen",
+      "file": "Saved sounds/sword-sharpen.m4a",
+      "keywords": [
+        "sword",
+        "sharpen",
+        "stone",
+        "grind",
+        "combat",
+        "weapon"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "sword sheath",
+      "file": "Saved sounds/sword-sheath.mp3",
+      "keywords": [
+        "sword",
+        "sheath",
+        "metal",
+        "slide",
+        "combat",
+        "weapon"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "sword stab body hit",
+      "file": "Saved sounds/sword-stab-body-hit.mp3",
+      "keywords": [
+        "sword",
+        "stab",
+        "hit",
+        "impact",
+        "combat",
+        "weapon"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "sword swing",
+      "file": "Saved sounds/sword-swing.mp3",
+      "keywords": [
+        "sword",
+        "swing",
+        "whoosh",
+        "slash",
+        "combat",
+        "weapon"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "sword swing connect flesh",
+      "file": "Saved sounds/sword-swing-connect-flesh.mp3",
+      "keywords": [
+        "sword",
+        "swing",
+        "connect",
+        "flesh",
+        "hit",
+        "impact",
+        "combat",
+        "weapon"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "sword unsheath",
+      "file": "Saved sounds/sword-unsheath.mp3",
+      "keywords": [
+        "sword",
+        "unsheath",
+        "metal",
+        "slide",
+        "combat",
+        "weapon"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "swords fighting",
+      "file": "Saved sounds/swords-fighting.mp3",
+      "keywords": [
+        "swords",
+        "fighting",
+        "clash",
+        "metal",
+        "combat",
+        "weapon"
+      ]
+    },
+    {
+      "type": "music",
+      "name": "tavern crowd",
+      "file": "Saved sounds/tavern-croud_music.mp3",
+      "keywords": [
+        "tavern",
+        "crowd",
+        "chatter",
+        "ambience",
+        "music"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "textures, large fire, inferno, winds, continuously on fire",
+      "file": "Saved sounds/ES_Textures, Large Fire, Inferno, Winds, Continuously On Fire - Epidemic Sound.mp3",
+      "keywords": [
+        "textures",
+        "large",
+        "fire",
+        "inferno",
+        "winds",
+        "continuously"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "the battle with torches",
+      "file": "Saved sounds/ES_The Battle With Torches - Bonnie Grace.mp3",
+      "keywords": [
+        "battle",
+        "torches",
+        "fire",
+        "medieval",
+        "siege",
+        "warrior",
+        "combat",
+        "weapon"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "the dark wizard",
+      "file": "Saved sounds/ES_The Dark Wizard - Christoffer Moe Ditlevsen.mp3",
+      "keywords": [
+        "dark",
+        "wizard",
+        "magic",
+        "sorcery",
+        "evil",
+        "spell",
+        "fantasy",
+        "arcane",
+        "sinister"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "the fairy dance",
+      "file": "Saved sounds/ES_The Fairy Dance - Bonnie Grace.mp3",
+      "keywords": [
+        "fairy",
+        "dance",
+        "whimsical",
+        "magic",
+        "fantasy",
+        "playful",
+        "light",
+        "enchanted"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "the ghost pirate ship",
+      "file": "Saved sounds/ES_The Ghost Pirate Ship - Luella Gren.mp3",
+      "keywords": [
+        "ghost",
+        "pirate",
+        "ship",
+        "eerie",
+        "horror",
+        "nautical",
+        "haunted",
+        "ocean"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "the great war",
+      "file": "Saved sounds/ES_The Great War - Jon Bjork.mp3",
+      "keywords": [
+        "battle",
+        "combat",
+        "epic",
+        "military",
+        "war",
+        "conflict",
+        "intense"
+      ]
+    },
+    {
+      "type": "music",
+      "name": "the king's ballad",
+      "file": "Saved sounds/ES_The King's Ballad (Variation) - Traditional.mp3",
+      "keywords": [
+        "king's",
+        "ballad",
+        "fantasy",
+        "medieval",
+        "dnd",
+        "folk",
+        "traditional",
+        "music"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "the old house",
+      "file": "Saved sounds/ES_The Old House - Rikard From.mp3",
+      "keywords": [
+        "old",
+        "house",
+        "horror",
+        "creepy",
+        "haunted",
+        "spooky",
+        "eerie",
+        "ambient"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "they walk among us",
+      "file": "Saved sounds/ES_They Walk among Us - Lennon Hutton.mp3",
+      "keywords": [
+        "horror",
+        "eerie",
+        "threat",
+        "approaching",
+        "undead",
+        "zombie",
+        "footsteps",
+        "walking"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "thick wood front door, knock variations 07",
+      "file": "Saved sounds/ES_Thick Wood Front Door, Knock Variations 07 - Epidemic Sound.mp3",
+      "keywords": [
+        "door",
+        "knock",
+        "wood",
+        "thick",
+        "heavy",
+        "entrance"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "thrill of the chase",
+      "file": "Saved sounds/ES_Thrill of the Chase - Dream Cave.mp3",
+      "keywords": [
+        "action",
+        "pursuit",
+        "running",
+        "intense",
+        "chase",
+        "dramatic",
+        "hunt"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "thud",
+      "file": "Saved sounds/thud.mp3",
+      "keywords": [
+        "thud",
+        "impact",
+        "fall",
+        "bump",
+        "hit",
+        "drop",
+        "collision",
+        "boom",
+        "crash",
+        "heavy"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "thunder rumble",
+      "file": "Saved sounds/thunder_rumble.flac",
+      "keywords": [
+        "thunder",
+        "rumble",
+        "distant",
+        "storm",
+        "sky",
+        "lightning",
+        "boom",
+        "ominous",
+        "weather",
+        "rolling"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "thunder storm",
+      "file": "Saved sounds/thunder_storm.mp3",
+      "keywords": [
+        "thunder",
+        "storm",
+        "rain",
+        "lightning",
+        "weather",
+        "tempest",
+        "downpour",
+        "gale",
+        "boom",
+        "dark"
+      ]
+    },
+    {
+      "type": "music",
+      "name": "thunder storm 02",
+      "file": "Saved sounds/ES_Thunder Storm 02 - Fredrik Ekstrom.mp3",
+      "keywords": [
+        "thunder",
+        "storm",
+        "weather",
+        "dramatic",
+        "rain",
+        "music"
+      ]
+    },
+    {
+      "type": "music",
+      "name": "thunder storm 04",
+      "file": "Saved sounds/ES_Thunder Storm 04 - Fredrik Ekstrom.mp3",
+      "keywords": [
+        "thunder",
+        "storm",
+        "weather",
+        "dramatic",
+        "rain",
+        "music"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "tick tock",
+      "file": "Saved sounds/tick-tock.mp3",
+      "keywords": [
+        "tick",
+        "tock",
+        "clock",
+        "time",
+        "rhythm",
+        "metronome",
+        "mechanical",
+        "pendulum",
+        "vintage",
+        "steady"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "tiger, growls, roars, several, intimidated",
+      "file": "Saved sounds/ES_Tiger, Growls, Roars, Several, Intimidated - Epidemic Sound.mp3",
+      "keywords": [
+        "tiger",
+        "growls",
+        "roars",
+        "several",
+        "intimidated",
+        "creature",
+        "monster"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "till osterland vill jag fara",
+      "file": "Saved sounds/ES_Till Osterland Vill Jag Fara - Traditional.mp3",
+      "keywords": [
+        "folk",
+        "traditional",
+        "gentle",
+        "acoustic",
+        "nordic",
+        "calm",
+        "nature"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "toddler, male, 15 months, laugh",
+      "file": "Saved sounds/ES_Toddler, Male, 15 Months, Laugh - Epidemic Sound.mp3",
+      "keywords": [
+        "laugh",
+        "toddler",
+        "child",
+        "giggle",
+        "cute",
+        "happy",
+        "playful"
+      ]
+    },
+    {
+      "type": "music",
+      "name": "traditional folksong on piano",
+      "file": "Saved sounds/ES_Traditional Folksong on Piano - Traditional.mp3",
+      "keywords": [
+        "traditional",
+        "folksong",
+        "piano",
+        "folk",
+        "gentle",
+        "acoustic",
+        "classic",
+        "roots",
+        "ballad",
+        "simple"
+      ]
+    },
+    {
+      "type": "music",
+      "name": "traditional romantic folksong",
+      "file": "Saved sounds/ES_Traditional Romantic Folksong - Traditional.mp3",
+      "keywords": [
+        "traditional",
+        "romantic",
+        "folksong",
+        "folk",
+        "emotional",
+        "sad",
+        "music"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "train passing",
+      "file": "Saved sounds/train-passing-by.mp3",
+      "keywords": [
+        "train",
+        "passing",
+        "tracks",
+        "locomotive",
+        "railroad",
+        "chug",
+        "whistle",
+        "steam",
+        "diesel",
+        "railway"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "trapped in the sewers",
+      "file": "Saved sounds/ES_Trapped in the Sewers - Experia.mp3",
+      "keywords": [
+        "trapped",
+        "sewers",
+        "horror",
+        "underground",
+        "eerie",
+        "dark",
+        "damp",
+        "ambience"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "tree falling down",
+      "file": "Saved sounds/tree-falling-down.mp3",
+      "keywords": [
+        "tree",
+        "falling",
+        "down",
+        "crash",
+        "timber",
+        "logging",
+        "crack",
+        "snap",
+        "wood",
+        "impact"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "troll, mad, growling, pitchdown  12st 04",
+      "file": "Saved sounds/ES_Troll, Mad, Growling, Pitchdown -12st 04 - Epidemic Sound.mp3",
+      "keywords": [
+        "troll",
+        "growling",
+        "creature",
+        "monster",
+        "ogre",
+        "beast",
+        "fierce"
+      ]
+    },
+    {
+      "type": "music",
+      "name": "trombone tango",
+      "file": "Saved sounds/ES_Trombone Tango - Ludvig Moulin.mp3",
+      "keywords": [
+        "jazz",
+        "latin",
+        "upbeat",
+        "dance",
+        "playful",
+        "brass",
+        "tango",
+        "music"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "trotting horse rural road",
+      "file": "Saved sounds/trotting-horse-in-rural-road.mp3",
+      "keywords": [
+        "horse",
+        "trot",
+        "rural",
+        "road",
+        "hooves"
+      ]
+    },
+    {
+      "type": "music",
+      "name": "under the spotlight",
+      "file": "Saved sounds/ES_Under the Spotlight (Instrumental Version) - Kiddo Keys.mp3",
+      "keywords": [
+        "spotlight",
+        "performance",
+        "stage",
+        "music",
+        "dramatic",
+        "theatrical",
+        "live",
+        "show",
+        "performer",
+        "bright"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "underwater ambience",
+      "file": "Saved sounds/dragon-studio-underwater-ambience-376890.mp3",
+      "keywords": [
+        "underwater",
+        "ambience",
+        "water",
+        "ocean",
+        "deep",
+        "submerged"
+      ],
+      "loop": false
+    },
+    {
+      "type": "sfx",
+      "name": "underwater sounds",
+      "file": "Saved sounds/dragon-studio-underwater-sounds-376891.mp3",
+      "keywords": [
+        "underwater",
+        "sounds",
+        "water",
+        "bubble",
+        "ocean",
+        "deep"
+      ],
+      "loop": false
+    },
+    {
+      "type": "music",
+      "name": "vagabond's awakening",
+      "file": "Saved sounds/ES_Vagabond's Awakening - Dian Shuai.mp3",
+      "keywords": [
+        "adventure",
+        "journey",
+        "exploration",
+        "epic",
+        "awakening",
+        "music"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "waiting for you",
+      "file": "Saved sounds/ES_Waiting for You - Daniel Fridell.mp3",
+      "keywords": [
+        "emotional",
+        "sad",
+        "longing",
+        "ambient",
+        "intimate",
+        "tender"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "walk on gravel",
+      "file": "Saved sounds/ES_Walk On Gravel - Epidemic Sound.mp3",
+      "keywords": [
+        "walk",
+        "gravel",
+        "footsteps",
+        "walking"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "water dripping",
+      "file": "Saved sounds/dragon-studio-water-dripping-364450.mp3",
+      "keywords": [
+        "water",
+        "drip",
+        "dripping",
+        "drop",
+        "cave",
+        "leak"
+      ],
+      "loop": false
+    },
+    {
+      "type": "sfx",
+      "name": "water flowing, small stream 01",
+      "file": "Saved sounds/ES_Water Flowing, Small Stream 01 - Epidemic Sound.mp3",
+      "keywords": [
+        "water",
+        "flowing",
+        "stream",
+        "nature"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "waterdrop",
+      "file": "Saved sounds/dragon-studio-waterdrop-406639.mp3",
+      "keywords": [
+        "water",
+        "drop",
+        "drip",
+        "splash",
+        "droplet"
+      ],
+      "loop": false
+    },
+    {
+      "type": "sfx",
+      "name": "waves sea shore",
+      "file": "Saved sounds/waves-sea-shore.mp3",
+      "keywords": [
+        "waves",
+        "sea",
+        "shore",
+        "water",
+        "nature"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "we are the visitors",
+      "file": "Saved sounds/ES_We Are the Visitors - Curved Mirror.mp3",
+      "keywords": [
+        "mysterious",
+        "eerie",
+        "alien",
+        "sci-fi",
+        "ambient",
+        "approaching"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "whimpering, indoor",
+      "file": "Saved sounds/ES_Whimpering, Indoor - Epidemic Sound.mp3",
+      "keywords": [
+        "whimpering",
+        "indoor",
+        "crying",
+        "dog",
+        "scared",
+        "puppy",
+        "animal",
+        "sob",
+        "whine",
+        "fearful"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "whoosh",
+      "file": "Saved sounds/whoosh.flac",
+      "keywords": [
+        "whoosh",
+        "wind",
+        "fast",
+        "swoosh",
+        "swish",
+        "air",
+        "speed",
+        "fly",
+        "gust",
+        "movement"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "chimes",
+      "file": "Saved sounds/wind-chimes.mp3",
+      "keywords": [
+        "chimes",
+        "chime",
+        "bells",
+        "tinkling",
+        "porch",
+        "garden"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "wind howl",
+      "file": "Saved sounds/wind_howl.mp3",
+      "keywords": [
+        "wind",
+        "howl",
+        "blowing",
+        "gust",
+        "storm",
+        "moaning",
+        "eerie",
+        "whistle",
+        "haunting",
+        "breeze"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "wind whistling window",
+      "file": "Saved sounds/wind-whistling-through-window.mp3",
+      "keywords": [
+        "wind",
+        "whistling",
+        "window",
+        "draft",
+        "outside",
+        "blowing",
+        "haunting",
+        "eerie",
+        "storm",
+        "breeze"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "wind windy",
+      "file": "Saved sounds/wind_windy.mp3",
+      "keywords": [
+        "wind",
+        "windy",
+        "blowing",
+        "gust",
+        "breeze",
+        "outdoor",
+        "weather",
+        "howling",
+        "ambient",
+        "whoosh"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "wohoo, yay, 7 people 02",
+      "file": "Saved sounds/ES_Wohoo, Yay, 7 People 02 - Epidemic Sound.mp3",
+      "keywords": [
+        "wohoo",
+        "yay",
+        "cheer",
+        "celebration",
+        "excited",
+        "happy",
+        "crowd",
+        "victory",
+        "joy",
+        "shout"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "wolf growl",
+      "file": "Saved sounds/wolf-growl.mp3",
+      "keywords": [
+        "wolf",
+        "growl",
+        "canine",
+        "snarl",
+        "fierce",
+        "animal",
+        "beast",
+        "menacing",
+        "predator",
+        "low"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "wolf howl",
+      "file": "Saved sounds/wolf-howl.mp3",
+      "keywords": [
+        "wolf",
+        "howl",
+        "night",
+        "pack",
+        "howling",
+        "forest",
+        "moonlit",
+        "canine",
+        "bay",
+        "mournful"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "wolf howl moon",
+      "file": "Saved sounds/wolf-howl-moon.mp3",
+      "keywords": [
+        "wolf",
+        "howl",
+        "moon",
+        "full moon",
+        "midnight",
+        "pack",
+        "forest",
+        "howling",
+        "lonesome",
+        "night"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "woman scream",
+      "file": "Saved sounds/woman_scream.mp3",
+      "keywords": [
+        "woman",
+        "scream",
+        "fear",
+        "horror",
+        "female",
+        "shriek",
+        "terrified",
+        "yell",
+        "panic",
+        "piercing"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "wood ship boat floating",
+      "file": "Saved sounds/wood-ship-boat-floating-sounds.mp3",
+      "keywords": [
+        "ship",
+        "boat",
+        "wood",
+        "floating",
+        "ocean",
+        "creak"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "wood, 50's gallery open, shut",
+      "file": "Saved sounds/ES_Wood, 50's Gallery Open, Shut - Epidemic Sound.mp3",
+      "keywords": [
+        "wood",
+        "50's",
+        "gallery",
+        "open",
+        "shut",
+        "door"
+      ]
+    },
+    {
+      "type": "music",
+      "name": "woodwind reviere",
+      "file": "Saved sounds/ES_Woodwind Reviere - Daniella Ljungsberg.mp3",
+      "keywords": [
+        "woodwind",
+        "classical",
+        "peaceful",
+        "serene",
+        "gentle",
+        "flute",
+        "nature",
+        "music"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "you are near",
+      "file": "Saved sounds/ES_You Are Near - Bonn Fields.mp3",
+      "keywords": [
+        "horror",
+        "threat",
+        "eerie",
+        "suspense",
+        "close",
+        "presence"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "zombie growl",
+      "file": "Saved sounds/monster_zombie_growl.mp3",
+      "keywords": [
+        "zombie",
+        "growl",
+        "monster",
+        "undead",
+        "creature"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "zombie growl horror",
+      "file": "Saved sounds/zombie_growl.mp3",
+      "keywords": [
+        "zombie",
+        "growl",
+        "undead",
+        "horror",
+        "creature",
+        "monster"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "zombie specimen, growling, roaring 04",
+      "file": "Saved sounds/ES_Zombie Specimen, Growling, Roaring 04 - Epidemic Sound.mp3",
+      "keywords": [
+        "zombie",
+        "specimen",
+        "growling",
+        "roaring",
+        "creature",
+        "monster",
+        "undead"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "deep sea monster roar",
+      "file": "Saved sounds/dragon-studio-deep-sea-monster-roar-329857.mp3",
+      "keywords": [
+        "deep",
+        "sea",
+        "monster",
+        "roar",
+        "creature",
+        "ocean",
+        "underwater",
+        "beast"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "dragon roar",
+      "file": "Saved sounds/dragon-studio-dragon-roar-364478.mp3",
+      "keywords": [
+        "dragon",
+        "roar",
+        "creature",
+        "beast",
+        "monster",
+        "fantasy"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "epic dragon roar",
+      "file": "Saved sounds/dragon-studio-epic-dragon-roar-364481.mp3",
+      "keywords": [
+        "dragon",
+        "roar",
+        "epic",
+        "creature",
+        "beast",
+        "monster",
+        "fantasy"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "medieval horn",
+      "file": "Saved sounds/freesound_community-medieval-horn-by-kris-klavenes-wav-77565.mp3",
+      "keywords": [
+        "medieval",
+        "horn",
+        "trumpet",
+        "war",
+        "battle",
+        "signal",
+        "fanfare"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "quick lightning strike",
+      "file": "Saved sounds/freesound_community-quick-lightning-strike-29683.mp3",
+      "keywords": [
+        "lightning",
+        "strike",
+        "thunder",
+        "storm",
+        "electric",
+        "weather"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "low horn",
+      "file": "Saved sounds/trading_nation-low-horn-185556.mp3",
+      "keywords": [
+        "horn",
+        "low",
+        "deep",
+        "signal",
+        "warning",
+        "fog",
+        "brass"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "epic war combat scream",
+      "file": "Saved sounds/universfield-epic-war-combat-scream-352707.mp3",
+      "keywords": [
+        "war",
+        "combat",
+        "scream",
+        "battle",
+        "cry",
+        "epic",
+        "fight",
+        "warrior"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "fierce human roar",
+      "file": "Saved sounds/universfield-fierce-human-roar-250239.mp3",
+      "keywords": [
+        "fierce",
+        "human",
+        "roar",
+        "shout",
+        "scream",
+        "battle",
+        "warrior"
+      ]
+    },
+    {
+      "type": "music",
+      "name": "horde war drums",
+      "file": "Saved sounds/williamhector-horde-war-drums-loop-130bpm-342956.mp3",
+      "keywords": [
+        "horde",
+        "war",
+        "drums",
+        "battle",
+        "tribal",
+        "epic",
+        "march"
+      ],
+      "loop": true
+    },
+    {
+      "type": "sfx",
+      "name": "boat horn",
+      "file": "Saved sounds/dragon-studio-boat-horn-386178.mp3",
+      "keywords": [
+        "boat",
+        "horn",
+        "ship",
+        "foghorn",
+        "nautical",
+        "harbour",
+        "sea"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "rough ocean waves",
+      "file": "Saved sounds/dragon-studio-rough-ocean-waves-353203.mp3",
+      "keywords": [
+        "ocean",
+        "waves",
+        "rough",
+        "sea",
+        "storm",
+        "water",
+        "crashing"
+      ],
+      "loop": true
+    },
+    {
+      "type": "sfx",
+      "name": "pirate battle",
+      "file": "Saved sounds/freesound_community-049228_pirat-battlewav-62056.mp3",
+      "keywords": [
+        "pirate",
+        "battle",
+        "fight",
+        "combat",
+        "swords",
+        "clash"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "boat waves",
+      "file": "Saved sounds/freesound_community-boat_waves_2-6923.mp3",
+      "keywords": [
+        "boat",
+        "waves",
+        "water",
+        "ocean",
+        "sailing",
+        "gentle"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "counting coins",
+      "file": "Saved sounds/freesound_community-counting-me-shillings-106394.mp3",
+      "keywords": [
+        "coins",
+        "counting",
+        "money",
+        "gold",
+        "treasure",
+        "shillings"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "gold coins shuffle",
+      "file": "Saved sounds/freesound_community-gold-coins-shuffle-through-or-examine-on-wood-surface-25963.mp3",
+      "keywords": [
+        "gold",
+        "coins",
+        "shuffle",
+        "treasure",
+        "money",
+        "loot"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "pirate yelling",
+      "file": "Saved sounds/guywiththegoodsounds-pirate-yelling-463679.mp3",
+      "keywords": [
+        "pirate",
+        "yelling",
+        "shout",
+        "crew",
+        "sailor"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "swashbuckling pirates",
+      "file": "Saved sounds/guywiththegoodsounds-swashbuckling-pirates-463695.mp3",
+      "keywords": [
+        "swashbuckling",
+        "pirates",
+        "adventure",
+        "sword",
+        "fight",
+        "action"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "basement knocking",
+      "file": "Saved sounds/alex_jauk-basement-knocking-noises-428177.mp3",
+      "keywords": [
+        "knock",
+        "knocking",
+        "basement",
+        "bang",
+        "door",
+        "creepy",
+        "haunted",
+        "horror",
+        "thud"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "christmas wind chimes",
+      "file": "Saved sounds/bryansantosbreton-christmas-vibes-windy-whoosh-magical-chimes-180863.mp3",
+      "keywords": [
+        "christmas",
+        "chime",
+        "magic",
+        "whoosh",
+        "wind",
+        "winter",
+        "festive",
+        "bells",
+        "holiday"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "christmas wind whoosh",
+      "file": "Saved sounds/djartmusic-christmas-wind-whoosh-264370.mp3",
+      "keywords": [
+        "christmas",
+        "wind",
+        "whoosh",
+        "winter",
+        "swoosh",
+        "magical",
+        "gust",
+        "blustery"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "ghost horror sound",
+      "file": "Saved sounds/dragon-studio-ghost-horror-sound-382709.mp3",
+      "keywords": [
+        "ghost",
+        "horror",
+        "haunted",
+        "scary",
+        "spirit",
+        "apparition",
+        "eerie",
+        "otherworldly"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "scary ghost sound",
+      "file": "Saved sounds/engyclick-scary-ghost-sound-effect-322085.mp3",
+      "keywords": [
+        "ghost",
+        "scary",
+        "horror",
+        "haunted",
+        "spirit",
+        "screech",
+        "eerie",
+        "wail",
+        "specter"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "spooky wind",
+      "file": "Saved sounds/freesound_community-spooky-wind-70657.mp3",
+      "keywords": [
+        "wind",
+        "spooky",
+        "eerie",
+        "haunted",
+        "creepy",
+        "whoosh",
+        "breeze",
+        "moaning",
+        "ambient"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "sleigh bell chime",
+      "file": "Saved sounds/humordome-sleigh-bell-chime-451411.mp3",
+      "keywords": [
+        "sleigh",
+        "bells",
+        "christmas",
+        "jingle",
+        "festive",
+        "chime",
+        "winter",
+        "holiday",
+        "tinkling"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "crowd boo disapproval",
+      "file": "Saved sounds/olivia_parker-crowd-boo-disapproval-demo-309882.mp3",
+      "keywords": [
+        "boo",
+        "crowd",
+        "disapproval",
+        "audience",
+        "jeering",
+        "booing",
+        "reaction",
+        "angry"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "spooky wizard laugh",
+      "file": "Saved sounds/richardmultimedia-spooky-wizard-laugh-01-253266.mp3",
+      "keywords": [
+        "laugh",
+        "wizard",
+        "spooky",
+        "cackle",
+        "magic",
+        "witch",
+        "evil",
+        "horror",
+        "maniacal"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "chains rattling dungeon",
+      "file": "Saved sounds/chains-rattling-dungeon.mp3",
+      "keywords": [
+        "chains",
+        "rattle",
+        "dungeon",
+        "prison",
+        "iron",
+        "metal",
+        "clink",
+        "clank",
+        "captive",
+        "shackle"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "evil villain laugh",
+      "file": "Saved sounds/evil-villain-laugh.mp3",
+      "keywords": [
+        "evil",
+        "villain",
+        "laugh",
+        "maniacal",
+        "sinister",
+        "cackle",
+        "dark",
+        "menacing",
+        "mad",
+        "wicked"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "door creaking open",
+      "file": "Saved sounds/door-creaking-open.mp3",
+      "keywords": [
+        "door",
+        "creak",
+        "open",
+        "hinge",
+        "rusty",
+        "squeak",
+        "haunted",
+        "wooden",
+        "horror",
+        "entrance"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "treasure chest open",
+      "file": "Saved sounds/treasure-chest-open.mp3",
+      "keywords": [
+        "treasure",
+        "chest",
+        "open",
+        "loot",
+        "gold",
+        "discovery",
+        "reward",
+        "wooden",
+        "click",
+        "unlock"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "stone door grind",
+      "file": "Saved sounds/stone-door-grind.mp3",
+      "keywords": [
+        "stone",
+        "door",
+        "grind",
+        "slide",
+        "dungeon",
+        "secret",
+        "passage",
+        "rumble",
+        "heavy",
+        "temple"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "lockpick clicking",
+      "file": "Saved sounds/lockpick-clicking.mp3",
+      "keywords": [
+        "lockpick",
+        "click",
+        "lock",
+        "rogue",
+        "thief",
+        "pin",
+        "tumbler",
+        "sneak",
+        "picking",
+        "subtle"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "torch crackle",
+      "file": "Saved sounds/torch-crackle.mp3",
+      "keywords": [
+        "torch",
+        "crackle",
+        "flame",
+        "fire",
+        "dungeon",
+        "burning",
+        "flickering",
+        "wall",
+        "light",
+        "cave"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "spell fizzle fail",
+      "file": "Saved sounds/spell-fizzle-fail.mp3",
+      "keywords": [
+        "spell",
+        "fizzle",
+        "fail",
+        "misfire",
+        "magic",
+        "arcane",
+        "fail",
+        "pop",
+        "dissipate",
+        "miscast"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "magic portal open",
+      "file": "Saved sounds/magic-portal-open.mp3",
+      "keywords": [
+        "portal",
+        "magic",
+        "open",
+        "whoosh",
+        "arcane",
+        "rift",
+        "dimensional",
+        "swirl",
+        "gateway",
+        "energy"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "goblin chittering",
+      "file": "Saved sounds/goblin-chittering.mp3",
+      "keywords": [
+        "goblin",
+        "chitter",
+        "cackle",
+        "creature",
+        "small",
+        "monster",
+        "sneak",
+        "ambush",
+        "giggle",
+        "evil"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "snake hiss",
+      "file": "Saved sounds/snake-hiss.mp3",
+      "keywords": [
+        "snake",
+        "hiss",
+        "serpent",
+        "reptile",
+        "venom",
+        "slither",
+        "danger",
+        "coil",
+        "rattle",
+        "scare"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "bat screech",
+      "file": "Saved sounds/bat-screech.mp3",
+      "keywords": [
+        "bat",
+        "screech",
+        "cave",
+        "screech",
+        "flap",
+        "wings",
+        "dark",
+        "vampire",
+        "cavern",
+        "swarm"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "earthquake rumble",
+      "file": "Saved sounds/earthquake-rumble.mp3",
+      "keywords": [
+        "earthquake",
+        "rumble",
+        "ground",
+        "shake",
+        "tremor",
+        "collapse",
+        "cave",
+        "debris",
+        "disaster",
+        "quake"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "crowd gasp",
+      "file": "Saved sounds/crowd-gasp.mp3",
+      "keywords": [
+        "crowd",
+        "gasp",
+        "shock",
+        "surprise",
+        "audience",
+        "inhale",
+        "reaction",
+        "disbelief",
+        "horror",
+        "reveal"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "victory fanfare jingle",
+      "file": "Saved sounds/victory-fanfare-jingle.mp3",
+      "keywords": [
+        "victory",
+        "fanfare",
+        "jingle",
+        "triumph",
+        "win",
+        "level",
+        "quest",
+        "complete",
+        "celebration",
+        "brass"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "shield bash impact",
+      "file": "Saved sounds/shield-bash-impact.mp3",
+      "keywords": [
+        "shield",
+        "bash",
+        "impact",
+        "clang",
+        "armor",
+        "combat",
+        "block",
+        "slam",
+        "metal",
+        "defensive"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "bone crack",
+      "file": "Saved sounds/bone-crack.mp3",
+      "keywords": [
+        "bone",
+        "crack",
+        "snap",
+        "crunch",
+        "skeleton",
+        "undead",
+        "break",
+        "brutal",
+        "combat",
+        "grim"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "dagger unsheath",
+      "file": "Saved sounds/dagger-unsheath.mp3",
+      "keywords": [
+        "dagger",
+        "unsheath",
+        "knife",
+        "blade",
+        "draw",
+        "rogue",
+        "quick",
+        "metal",
+        "assassin",
+        "pull"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "dispel magic",
+      "file": "Saved sounds/dispel-magic.mp3",
+      "keywords": [
+        "dispel",
+        "magic",
+        "counterspell",
+        "negate",
+        "arcane",
+        "shatter",
+        "cancel",
+        "crack",
+        "dismiss",
+        "break"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "arcane explosion",
+      "file": "Saved sounds/arcane-explosion.mp3",
+      "keywords": [
+        "arcane",
+        "explosion",
+        "magic",
+        "blast",
+        "energy",
+        "spell",
+        "purple",
+        "electric",
+        "detonation",
+        "powerful"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "tavern ambience",
+      "file": "Saved sounds/tavern-ambience.mp3",
+      "keywords": [
+        "tavern",
+        "ambience",
+        "inn",
+        "background",
+        "patrons",
+        "murmur",
+        "fireplace",
+        "warm",
+        "medieval",
+        "crowd"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "crow flock scatter",
+      "file": "Saved sounds/crow-flock-scatter.mp3",
+      "keywords": [
+        "crow",
+        "flock",
+        "scatter",
+        "caw",
+        "ominous",
+        "dark",
+        "alarm",
+        "birds",
+        "startled",
+        "ravens"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "laser blaster shot",
+      "file": "Saved sounds/laser-blaster-shot.mp3",
+      "keywords": [
+        "laser",
+        "blaster",
+        "shot",
+        "sci-fi",
+        "gun",
+        "energy",
+        "bolt",
+        "pew",
+        "futuristic",
+        "fire"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "spaceship engine hum",
+      "file": "Saved sounds/spaceship-engine-hum.mp3",
+      "keywords": [
+        "spaceship",
+        "engine",
+        "hum",
+        "ambient",
+        "space",
+        "vessel",
+        "drone",
+        "vibration",
+        "ship",
+        "rumble"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "force field activate",
+      "file": "Saved sounds/force-field-activate.mp3",
+      "keywords": [
+        "force",
+        "field",
+        "shield",
+        "activate",
+        "energy",
+        "barrier",
+        "sci-fi",
+        "buzz",
+        "dome",
+        "protect"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "warp jump engage",
+      "file": "Saved sounds/warp-jump-engage.mp3",
+      "keywords": [
+        "warp",
+        "jump",
+        "hyperspace",
+        "engage",
+        "space",
+        "travel",
+        "faster",
+        "light",
+        "whoosh",
+        "acceleration"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "alien creature screech",
+      "file": "Saved sounds/alien-creature-screech.mp3",
+      "keywords": [
+        "alien",
+        "creature",
+        "screech",
+        "extraterrestrial",
+        "monster",
+        "shriek",
+        "otherworldly",
+        "xenomorph",
+        "screaming",
+        "beast"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "computer terminal beep",
+      "file": "Saved sounds/computer-terminal-beep.mp3",
+      "keywords": [
+        "computer",
+        "terminal",
+        "beep",
+        "sci-fi",
+        "interface",
+        "click",
+        "blip",
+        "panel",
+        "futuristic",
+        "digital"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "robot servo walk",
+      "file": "Saved sounds/robot-servo-walk.mp3",
+      "keywords": [
+        "robot",
+        "servo",
+        "walk",
+        "mechanical",
+        "hydraulic",
+        "mech",
+        "footsteps",
+        "whirr",
+        "machine",
+        "stomp"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "sci-fi alarm siren",
+      "file": "Saved sounds/sci-fi-alarm-siren.mp3",
+      "keywords": [
+        "alarm",
+        "siren",
+        "alert",
+        "red",
+        "klaxon",
+        "emergency",
+        "warning",
+        "spaceship",
+        "danger",
+        "blare"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "gunshot ricochet",
+      "file": "Saved sounds/gunshot-ricochet.mp3",
+      "keywords": [
+        "gunshot",
+        "ricochet",
+        "bullet",
+        "western",
+        "cowboy",
+        "spark",
+        "ping",
+        "deflect",
+        "revolver",
+        "shot"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "spur jingle walk",
+      "file": "Saved sounds/spur-jingle-walk.mp3",
+      "keywords": [
+        "spur",
+        "jingle",
+        "cowboy",
+        "boot",
+        "walk",
+        "western",
+        "sheriff",
+        "metal",
+        "clink",
+        "footstep"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "saloon ambience",
+      "file": "Saved sounds/saloon-ambience.mp3",
+      "keywords": [
+        "saloon",
+        "ambience",
+        "western",
+        "piano",
+        "bar",
+        "cowboy",
+        "drinking",
+        "glasses",
+        "old",
+        "west"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "tumbleweed desert",
+      "file": "Saved sounds/tumbleweed-desert.mp3",
+      "keywords": [
+        "tumbleweed",
+        "desert",
+        "western",
+        "wind",
+        "dry",
+        "barren",
+        "dusty",
+        "brush",
+        "desolate",
+        "classic"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "demonic voice growl",
+      "file": "Saved sounds/demonic-voice-growl.mp3",
+      "keywords": [
+        "demon",
+        "voice",
+        "growl",
+        "possessed",
+        "dark",
+        "evil",
+        "distorted",
+        "hell",
+        "snarl",
+        "creature"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "cult ritual chanting",
+      "file": "Saved sounds/cult-ritual-chanting.mp3",
+      "keywords": [
+        "cult",
+        "ritual",
+        "chanting",
+        "occult",
+        "dark",
+        "ceremony",
+        "worship",
+        "group",
+        "summoning",
+        "prayer"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "necromancer raise dead",
+      "file": "Saved sounds/necromancer-raise-dead.mp3",
+      "keywords": [
+        "necromancer",
+        "raise",
+        "dead",
+        "undead",
+        "dark",
+        "magic",
+        "bones",
+        "earth",
+        "crack",
+        "rise"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "possessed whisper",
+      "file": "Saved sounds/possessed-whisper.mp3",
+      "keywords": [
+        "possessed",
+        "whisper",
+        "ghost",
+        "eerie",
+        "creepy",
+        "entity",
+        "haunted",
+        "voice",
+        "breathe",
+        "disturbing"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "cursed bell toll",
+      "file": "Saved sounds/cursed-bell-toll.mp3",
+      "keywords": [
+        "bell",
+        "toll",
+        "cursed",
+        "ominous",
+        "church",
+        "death",
+        "knell",
+        "tower",
+        "funeral",
+        "dark"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "dark summoning energy",
+      "file": "Saved sounds/dark-summoning-energy.mp3",
+      "keywords": [
+        "dark",
+        "summoning",
+        "energy",
+        "ritual",
+        "evil",
+        "crackling",
+        "shadow",
+        "power",
+        "demon",
+        "electricity"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "blood drip silence",
+      "file": "Saved sounds/blood-drip-silence.mp3",
+      "keywords": [
+        "blood",
+        "drip",
+        "horror",
+        "silence",
+        "eerie",
+        "quiet",
+        "crimson",
+        "puddle",
+        "drops",
+        "grim"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "evil organ sting",
+      "file": "Saved sounds/evil-organ-sting.mp3",
+      "keywords": [
+        "organ",
+        "evil",
+        "sting",
+        "villain",
+        "pipe",
+        "horror",
+        "dramatic",
+        "chord",
+        "reveal",
+        "sinister"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "dungeon trap spring",
+      "file": "Saved sounds/dungeon-trap-spring.mp3",
+      "keywords": [
+        "dungeon",
+        "trap",
+        "spring",
+        "click",
+        "mechanism",
+        "pressure",
+        "plate",
+        "metal",
+        "spike",
+        "trigger"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "lever pull mechanism",
+      "file": "Saved sounds/lever-pull-mechanism.mp3",
+      "keywords": [
+        "lever",
+        "pull",
+        "mechanism",
+        "dungeon",
+        "gear",
+        "stone",
+        "grind",
+        "castle",
+        "activate",
+        "click"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "portcullis drop",
+      "file": "Saved sounds/portcullis-drop.mp3",
+      "keywords": [
+        "portcullis",
+        "drop",
+        "gate",
+        "castle",
+        "iron",
+        "chain",
+        "crash",
+        "trap",
+        "medieval",
+        "slam"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "cage door slam",
+      "file": "Saved sounds/cage-door-slam.mp3",
+      "keywords": [
+        "cage",
+        "door",
+        "slam",
+        "prison",
+        "cell",
+        "bars",
+        "captive",
+        "dungeon",
+        "clang",
+        "locked"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "drawbridge chains",
+      "file": "Saved sounds/drawbridge-chains.mp3",
+      "keywords": [
+        "drawbridge",
+        "chains",
+        "lower",
+        "castle",
+        "medieval",
+        "rattle",
+        "bridge",
+        "mechanism",
+        "entrance",
+        "creak"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "graveyard night",
+      "file": "Saved sounds/graveyard-night.mp3",
+      "keywords": [
+        "graveyard",
+        "night",
+        "cemetery",
+        "spooky",
+        "owl",
+        "wind",
+        "gravestones",
+        "eerie",
+        "dark",
+        "sinister"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "swamp ambience",
+      "file": "Saved sounds/swamp-ambience.mp3",
+      "keywords": [
+        "swamp",
+        "ambience",
+        "marsh",
+        "frogs",
+        "insects",
+        "murky",
+        "dark",
+        "water",
+        "drip",
+        "mysterious"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "jungle ambience",
+      "file": "Saved sounds/jungle-ambience.mp3",
+      "keywords": [
+        "jungle",
+        "ambience",
+        "tropical",
+        "rainforest",
+        "birds",
+        "wildlife",
+        "insects",
+        "lush",
+        "exotic",
+        "nature"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "cathedral interior",
+      "file": "Saved sounds/cathedral-interior.mp3",
+      "keywords": [
+        "cathedral",
+        "church",
+        "interior",
+        "reverb",
+        "sacred",
+        "stone",
+        "organ",
+        "echo",
+        "vast",
+        "holy"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "blacksmith forge",
+      "file": "Saved sounds/blacksmith-forge.mp3",
+      "keywords": [
+        "blacksmith",
+        "forge",
+        "hammer",
+        "anvil",
+        "fire",
+        "metal",
+        "craft",
+        "bellows",
+        "workshop",
+        "smith"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "sewer drip ambience",
+      "file": "Saved sounds/sewer-drip-ambience.mp3",
+      "keywords": [
+        "sewer",
+        "drip",
+        "underground",
+        "tunnel",
+        "damp",
+        "dark",
+        "rats",
+        "water",
+        "passage",
+        "grim"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "market crowd busy",
+      "file": "Saved sounds/market-crowd-busy.mp3",
+      "keywords": [
+        "market",
+        "crowd",
+        "busy",
+        "merchants",
+        "bazaar",
+        "haggling",
+        "outdoor",
+        "medieval",
+        "vendors",
+        "lively"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "library quiet",
+      "file": "Saved sounds/library-quiet.mp3",
+      "keywords": [
+        "library",
+        "quiet",
+        "books",
+        "pages",
+        "scholarly",
+        "dusty",
+        "study",
+        "silence",
+        "read",
+        "scroll"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "blizzard howling",
+      "file": "Saved sounds/blizzard-howling.mp3",
+      "keywords": [
+        "blizzard",
+        "howling",
+        "storm",
+        "snow",
+        "wind",
+        "freezing",
+        "arctic",
+        "gale",
+        "whiteout",
+        "winter"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "desert sandstorm",
+      "file": "Saved sounds/desert-sandstorm.mp3",
+      "keywords": [
+        "desert",
+        "sandstorm",
+        "sand",
+        "wind",
+        "dry",
+        "hot",
+        "scorching",
+        "wilderness",
+        "hissing",
+        "desolate"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "avalanche rumble",
+      "file": "Saved sounds/avalanche-rumble.mp3",
+      "keywords": [
+        "avalanche",
+        "rumble",
+        "snow",
+        "mountain",
+        "rockslide",
+        "cascade",
+        "tumble",
+        "disaster",
+        "catastrophic",
+        "deep"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "waterfall rushing",
+      "file": "Saved sounds/waterfall-rushing.mp3",
+      "keywords": [
+        "waterfall",
+        "rushing",
+        "cascade",
+        "roar",
+        "thunder",
+        "water",
+        "rocks",
+        "mist",
+        "powerful",
+        "nature"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "foghorn harbor",
+      "file": "Saved sounds/foghorn-harbor.mp3",
+      "keywords": [
+        "foghorn",
+        "harbor",
+        "fog",
+        "ship",
+        "mist",
+        "maritime",
+        "horn",
+        "warning",
+        "sea",
+        "haunting"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "branch snap forest",
+      "file": "Saved sounds/branch-snap-forest.mp3",
+      "keywords": [
+        "branch",
+        "snap",
+        "forest",
+        "crack",
+        "twig",
+        "step",
+        "silence",
+        "tense",
+        "break",
+        "woodland"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "bear growl roar",
+      "file": "Saved sounds/bear-growl-roar.mp3",
+      "keywords": [
+        "bear",
+        "growl",
+        "roar",
+        "grizzly",
+        "predator",
+        "animal",
+        "attack",
+        "warning",
+        "fierce",
+        "wild"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "eagle screech",
+      "file": "Saved sounds/eagle-screech.mp3",
+      "keywords": [
+        "eagle",
+        "screech",
+        "cry",
+        "hawk",
+        "raptor",
+        "bird",
+        "prey",
+        "majestic",
+        "freedom",
+        "piercing"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "wolf pack howling",
+      "file": "Saved sounds/wolf-pack-howling.mp3",
+      "keywords": [
+        "wolf",
+        "pack",
+        "howling",
+        "multiple",
+        "night",
+        "wilderness",
+        "predator",
+        "group",
+        "choir",
+        "valley"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "raven caw",
+      "file": "Saved sounds/raven-caw.mp3",
+      "keywords": [
+        "raven",
+        "caw",
+        "ominous",
+        "black",
+        "bird",
+        "dark",
+        "nevermore",
+        "call",
+        "foreboding",
+        "sinister"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "pig squeal farm",
+      "file": "Saved sounds/pig-squeal-farm.mp3",
+      "keywords": [
+        "pig",
+        "squeal",
+        "farm",
+        "barn",
+        "animal",
+        "oink",
+        "squeak",
+        "livestock",
+        "barnyard",
+        "surprise"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "horse scared whinny",
+      "file": "Saved sounds/horse-scared-whinny.mp3",
+      "keywords": [
+        "horse",
+        "scared",
+        "whinny",
+        "neigh",
+        "panic",
+        "fear",
+        "spook",
+        "rear",
+        "startled",
+        "animal"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "grunt pain male",
+      "file": "Saved sounds/grunt-pain-male.mp3",
+      "keywords": [
+        "grunt",
+        "pain",
+        "male",
+        "hit",
+        "combat",
+        "struck",
+        "damage",
+        "warrior",
+        "fighter",
+        "impact"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "death rattle",
+      "file": "Saved sounds/death-rattle.mp3",
+      "keywords": [
+        "death",
+        "rattle",
+        "dying",
+        "breath",
+        "last",
+        "exhale",
+        "gurgle",
+        "grim",
+        "final",
+        "gasp"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "whip crack",
+      "file": "Saved sounds/whip-crack.mp3",
+      "keywords": [
+        "whip",
+        "crack",
+        "snap",
+        "leather",
+        "bullwhip",
+        "sharp",
+        "strike",
+        "fast",
+        "lash",
+        "Indiana"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "axe chop impact",
+      "file": "Saved sounds/axe-chop-impact.mp3",
+      "keywords": [
+        "axe",
+        "chop",
+        "impact",
+        "wood",
+        "blade",
+        "weapon",
+        "strike",
+        "thud",
+        "heavy",
+        "buried"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "body fall ground",
+      "file": "Saved sounds/body-fall-ground.mp3",
+      "keywords": [
+        "body",
+        "fall",
+        "ground",
+        "collapse",
+        "thump",
+        "defeat",
+        "dead",
+        "weight",
+        "floor",
+        "drop"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "crowd brawl fight",
+      "file": "Saved sounds/crowd-brawl-fight.mp3",
+      "keywords": [
+        "brawl",
+        "fight",
+        "crowd",
+        "tavern",
+        "pub",
+        "punch",
+        "glass",
+        "crash",
+        "chaotic",
+        "melee"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "arrow hitting body",
+      "file": "Saved sounds/arrow-hitting-body.mp3",
+      "keywords": [
+        "arrow",
+        "hitting",
+        "body",
+        "pierce",
+        "flesh",
+        "thud",
+        "archery",
+        "bolt",
+        "impact",
+        "brutal"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "ice magic shatter",
+      "file": "Saved sounds/ice-magic-shatter.mp3",
+      "keywords": [
+        "ice",
+        "magic",
+        "shatter",
+        "frost",
+        "crystal",
+        "explode",
+        "cryo",
+        "cold",
+        "shards",
+        "spell"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "earth stomp spell",
+      "file": "Saved sounds/earth-stomp-spell.mp3",
+      "keywords": [
+        "earth",
+        "stomp",
+        "spell",
+        "ground",
+        "rock",
+        "erupt",
+        "seismic",
+        "crack",
+        "heave",
+        "druid"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "time stop effect",
+      "file": "Saved sounds/time-stop-effect.mp3",
+      "keywords": [
+        "time",
+        "stop",
+        "freeze",
+        "magic",
+        "temporal",
+        "hold",
+        "clock",
+        "silence",
+        "reality",
+        "spell"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "invisibility vanish",
+      "file": "Saved sounds/invisibility-vanish.mp3",
+      "keywords": [
+        "invisible",
+        "vanish",
+        "stealth",
+        "disappear",
+        "shimmer",
+        "arcane",
+        "fade",
+        "rogue",
+        "spell",
+        "magic"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "wind gust spell",
+      "file": "Saved sounds/wind-gust-spell.mp3",
+      "keywords": [
+        "wind",
+        "gust",
+        "spell",
+        "air",
+        "blast",
+        "magic",
+        "force",
+        "element",
+        "whoosh",
+        "gale"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "ancient book open",
+      "file": "Saved sounds/ancient-book-open.mp3",
+      "keywords": [
+        "book",
+        "ancient",
+        "open",
+        "tome",
+        "leather",
+        "pages",
+        "rustle",
+        "grimoire",
+        "dusty",
+        "creak"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "torch extinguish",
+      "file": "Saved sounds/torch-extinguish.mp3",
+      "keywords": [
+        "torch",
+        "extinguish",
+        "snuff",
+        "hiss",
+        "sizzle",
+        "dark",
+        "flame",
+        "out",
+        "light",
+        "dying"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "rope snap tension",
+      "file": "Saved sounds/rope-snap-tension.mp3",
+      "keywords": [
+        "rope",
+        "snap",
+        "tension",
+        "crack",
+        "cord",
+        "break",
+        "fray",
+        "sharp",
+        "taut",
+        "give"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "potion cork pop",
+      "file": "Saved sounds/potion-cork-pop.mp3",
+      "keywords": [
+        "potion",
+        "cork",
+        "pop",
+        "bottle",
+        "alchemical",
+        "vial",
+        "uncork",
+        "magic",
+        "open",
+        "brew"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "coin bag jingle",
+      "file": "Saved sounds/coin-bag-jingle.mp3",
+      "keywords": [
+        "coin",
+        "bag",
+        "jingle",
+        "purse",
+        "gold",
+        "treasure",
+        "money",
+        "pouch",
+        "clink",
+        "rattle"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "angry mob crowd",
+      "file": "Saved sounds/angry-mob-crowd.mp3",
+      "keywords": [
+        "angry",
+        "mob",
+        "crowd",
+        "riot",
+        "villagers",
+        "shout",
+        "protest",
+        "pitchfork",
+        "uprising",
+        "yell"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "funeral procession",
+      "file": "Saved sounds/funeral-procession.mp3",
+      "keywords": [
+        "funeral",
+        "procession",
+        "somber",
+        "mourning",
+        "bell",
+        "chant",
+        "ceremony",
+        "sad",
+        "grief",
+        "solemn"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "soldier march troop",
+      "file": "Saved sounds/soldier-march-troop.mp3",
+      "keywords": [
+        "soldier",
+        "march",
+        "troop",
+        "military",
+        "army",
+        "footsteps",
+        "cadence",
+        "advance",
+        "drum",
+        "synchronized"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "merchant greeting",
+      "file": "Saved sounds/merchant-greeting.mp3",
+      "keywords": [
+        "merchant",
+        "greeting",
+        "trader",
+        "market",
+        "welcome",
+        "seller",
+        "friendly",
+        "wares",
+        "shop",
+        "vendor"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "crowd prayer chant",
+      "file": "Saved sounds/crowd-prayer-chant.mp3",
+      "keywords": [
+        "crowd",
+        "prayer",
+        "chant",
+        "religious",
+        "church",
+        "congregation",
+        "holy",
+        "worship",
+        "ceremony",
+        "devout"
+      ]
+    },
+    {
+      "type": "music",
+      "name": "discovery sting",
+      "file": "Saved sounds/discovery-sting.mp3",
+      "keywords": [
+        "discovery",
+        "sting",
+        "reveal",
+        "secret",
+        "treasure",
+        "found",
+        "jingle",
+        "triumphant",
+        "flourish",
+        "short"
+      ]
+    },
+    {
+      "type": "music",
+      "name": "defeat sting",
+      "file": "Saved sounds/defeat-sting.mp3",
+      "keywords": [
+        "defeat",
+        "sting",
+        "fail",
+        "sad",
+        "loss",
+        "game",
+        "over",
+        "music",
+        "short",
+        "somber"
+      ]
+    },
+    {
+      "type": "music",
+      "name": "tension build sting",
+      "file": "Saved sounds/tension-build-sting.mp3",
+      "keywords": [
+        "tension",
+        "build",
+        "suspense",
+        "horror",
+        "mystery",
+        "sting",
+        "strings",
+        "sinister",
+        "drone",
+        "approaching"
+      ]
+    },
+    {
+      "type": "music",
+      "name": "midnight clock chime",
+      "file": "Saved sounds/midnight-clock-chime.mp3",
+      "keywords": [
+        "clock",
+        "midnight",
+        "chime",
+        "twelve",
+        "toll",
+        "tower",
+        "witching",
+        "hour",
+        "ominous",
+        "bell"
+      ]
+    },
+    {
+      "type": "music",
+      "name": "tavern song rowdy",
+      "file": "Saved sounds/tavern-song-rowdy.mp3",
+      "keywords": [
+        "tavern",
+        "song",
+        "rowdy",
+        "drinking",
+        "merry",
+        "pub",
+        "bawdy",
+        "medieval",
+        "inn",
+        "celebration"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "fire spreading crackle",
+      "file": "Saved sounds/fire-spreading-crackle.mp3",
+      "keywords": [
+        "fire",
+        "spreading",
+        "crackle",
+        "building",
+        "flames",
+        "burning",
+        "roar",
+        "intense",
+        "consume",
+        "inferno"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "underwater pressure",
+      "file": "Saved sounds/underwater-pressure.mp3",
+      "keywords": [
+        "underwater",
+        "pressure",
+        "deep",
+        "muffled",
+        "silence",
+        "creak",
+        "submarine",
+        "hull",
+        "dark",
+        "sea"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "cave echo drip",
+      "file": "Saved sounds/cave-echo-drip.mp3",
+      "keywords": [
+        "cave",
+        "echo",
+        "drip",
+        "cavern",
+        "hollow",
+        "resonance",
+        "stalactite",
+        "underground",
+        "ambient",
+        "dark"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "gallows rope creak",
+      "file": "Saved sounds/gallows-rope-creak.mp3",
+      "keywords": [
+        "gallows",
+        "rope",
+        "creak",
+        "hanging",
+        "execution",
+        "ominous",
+        "wooden",
+        "tense",
+        "dark",
+        "death"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "secret door click",
+      "file": "Saved sounds/secret-door-click.mp3",
+      "keywords": [
+        "secret",
+        "door",
+        "click",
+        "hidden",
+        "passage",
+        "bookshelf",
+        "reveal",
+        "mechanism",
+        "quiet",
+        "unlock"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "lighter click ignite",
+      "file": "Saved sounds/lighter_click.mp3",
+      "keywords": [
+        "lighter",
+        "click",
+        "ignite",
+        "zippo",
+        "spark",
+        "flame",
+        "flick",
+        "small",
+        "fire",
+        "quick"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "candle flame flicker",
+      "file": "Saved sounds/candle_flame.mp3",
+      "keywords": [
+        "candle",
+        "flame",
+        "flicker",
+        "wax",
+        "taper",
+        "gentle",
+        "soft",
+        "quiet",
+        "glow",
+        "wick"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "torch wall ignite",
+      "file": "Saved sounds/torch_ignite.mp3",
+      "keywords": [
+        "torch",
+        "wall",
+        "ignite",
+        "dungeon",
+        "burst",
+        "hiss",
+        "flare",
+        "light",
+        "cave",
+        "fire"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "campfire crackling logs",
+      "file": "Saved sounds/campfire_crackle.mp3",
+      "keywords": [
+        "campfire",
+        "crackling",
+        "logs",
+        "outdoor",
+        "cozy",
+        "warm",
+        "wood",
+        "fire",
+        "night",
+        "nature"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "fireplace hearth roar",
+      "file": "Saved sounds/fireplace_roar.mp3",
+      "keywords": [
+        "fireplace",
+        "hearth",
+        "roar",
+        "indoor",
+        "warm",
+        "wood",
+        "crackling",
+        "cozy",
+        "home",
+        "flames"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "campfire ambient gentle",
+      "file": "Saved sounds/campfire_ambient.mp3",
+      "keywords": [
+        "campfire",
+        "fireplace",
+        "hearth",
+        "fire",
+        "crackle",
+        "ambient",
+        "gentle",
+        "cozy",
+        "warm",
+        "indoor",
+        "soft",
+        "soothing",
+        "logs",
+        "burning"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "cannon fuse sizzle",
+      "file": "Saved sounds/cannon_fuse_sizzle.mp3",
+      "keywords": [
+        "cannon",
+        "fuse",
+        "sizzle",
+        "lit",
+        "burning",
+        "spark",
+        "hiss",
+        "pirate",
+        "battle",
+        "ignite",
+        "pyrotechnic"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "bonfire large roaring",
+      "file": "Saved sounds/bonfire_roar.mp3",
+      "keywords": [
+        "bonfire",
+        "large",
+        "roaring",
+        "outdoor",
+        "intense",
+        "flames",
+        "crowd",
+        "bright",
+        "fire",
+        "massive"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "embers dying glow",
+      "file": "Saved sounds/embers_dying.mp3",
+      "keywords": [
+        "embers",
+        "dying",
+        "glow",
+        "smoldering",
+        "ash",
+        "fading",
+        "quiet",
+        "end",
+        "fire",
+        "remnants"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "match strike ignite",
+      "file": "Saved sounds/match_strike.mp3",
+      "keywords": [
+        "match",
+        "strike",
+        "sulfur",
+        "ignite",
+        "tiny",
+        "spark",
+        "flame",
+        "quick",
+        "light",
+        "pop"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "oil lamp lantern light",
+      "file": "Saved sounds/oil_lamp.mp3",
+      "keywords": [
+        "lantern",
+        "lamp",
+        "oil",
+        "ignite",
+        "glow",
+        "amber",
+        "warm",
+        "hiss",
+        "flicker",
+        "light"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "wildfire inferno",
+      "file": "Saved sounds/wildfire.mp3",
+      "keywords": [
+        "wildfire",
+        "inferno",
+        "spreading",
+        "consuming",
+        "roar",
+        "intense",
+        "forest",
+        "fire",
+        "uncontrolled",
+        "catastrophic"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "female scream terror",
+      "file": "Saved sounds/scream_female.mp3",
+      "keywords": [
+        "female",
+        "woman",
+        "scream",
+        "terror",
+        "horror",
+        "shriek",
+        "high",
+        "pitched",
+        "frightened",
+        "helpless"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "male scream pain",
+      "file": "Saved sounds/scream_male.mp3",
+      "keywords": [
+        "male",
+        "man",
+        "scream",
+        "pain",
+        "agony",
+        "groan",
+        "deep",
+        "suffering",
+        "hit",
+        "warrior"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "child scream fear",
+      "file": "Saved sounds/scream_child.mp3",
+      "keywords": [
+        "child",
+        "kid",
+        "young",
+        "scream",
+        "fear",
+        "scared",
+        "high",
+        "innocent",
+        "small",
+        "cry"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "girl shriek terror",
+      "file": "Saved sounds/scream_girl.mp3",
+      "keywords": [
+        "girl",
+        "young",
+        "female",
+        "shriek",
+        "piercing",
+        "terrified",
+        "high",
+        "pitched",
+        "scream",
+        "panic"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "boy yell alarm",
+      "file": "Saved sounds/scream_boy.mp3",
+      "keywords": [
+        "boy",
+        "young",
+        "male",
+        "yell",
+        "alarm",
+        "scared",
+        "panic",
+        "surprise",
+        "shout",
+        "child"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "woman wailing grief",
+      "file": "Saved sounds/wail_woman.mp3",
+      "keywords": [
+        "woman",
+        "wail",
+        "grief",
+        "sob",
+        "moan",
+        "lament",
+        "crying",
+        "female",
+        "despair",
+        "mourning"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "man bellow rage",
+      "file": "Saved sounds/yell_rage.mp3",
+      "keywords": [
+        "man",
+        "bellow",
+        "rage",
+        "anger",
+        "yell",
+        "fierce",
+        "battle",
+        "grunt",
+        "loud",
+        "male"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "crowd screaming panic",
+      "file": "Saved sounds/scream_crowd.mp3",
+      "keywords": [
+        "crowd",
+        "screaming",
+        "panic",
+        "chaos",
+        "terror",
+        "multiple",
+        "voices",
+        "flee",
+        "mass",
+        "horror"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "baby cry scream",
+      "file": "Saved sounds/baby_cry.mp3",
+      "keywords": [
+        "baby",
+        "infant",
+        "cry",
+        "scream",
+        "wail",
+        "newborn",
+        "young",
+        "helpless",
+        "distress",
+        "small"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "warrior charge shout",
+      "file": "Saved sounds/warrior_shout.mp3",
+      "keywords": [
+        "warrior",
+        "charge",
+        "shout",
+        "battle",
+        "fierce",
+        "combat",
+        "aggression",
+        "attack",
+        "powerful",
+        "male"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "iron gate creak open",
+      "file": "Saved sounds/iron_gate_creak_open.mp3",
+      "keywords": [
+        "iron",
+        "gate",
+        "creak",
+        "open",
+        "rusty",
+        "hinge",
+        "metal",
+        "groan",
+        "gothic",
+        "horror",
+        "haunted",
+        "entrance"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "wood stair groan",
+      "file": "Saved sounds/wood_stair_groan.mp3",
+      "keywords": [
+        "wood",
+        "stair",
+        "stairs",
+        "groan",
+        "creak",
+        "floorboard",
+        "old",
+        "haunted",
+        "floor",
+        "weight",
+        "structural",
+        "house"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "gentle breeze meadow",
+      "file": "Saved sounds/gentle_breeze_meadow.mp3",
+      "keywords": [
+        "breeze",
+        "gentle",
+        "meadow",
+        "wind",
+        "soft",
+        "outdoor",
+        "calm",
+        "nature",
+        "peaceful",
+        "ambient"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "princess laugh gentle",
+      "file": "Saved sounds/princess_laugh_gentle.mp3",
+      "keywords": [
+        "princess",
+        "laugh",
+        "laughter",
+        "giggle",
+        "giggled",
+        "joyful",
+        "happy",
+        "feminine",
+        "cheerful",
+        "bright",
+        "delight"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "silence ambience room",
+      "file": "Saved sounds/silence_ambience_room.mp3",
+      "keywords": [
+        "silence",
+        "ambience",
+        "quiet",
+        "empty",
+        "room",
+        "still",
+        "calm",
+        "indoor",
+        "peaceful",
+        "tone"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "church bell toll",
+      "file": "Saved sounds/church_bell_toll.mp3",
+      "keywords": [
+        "church",
+        "bell",
+        "toll",
+        "tower",
+        "cathedral",
+        "resonant",
+        "solemn",
+        "ring",
+        "sacred",
+        "single"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "church bells chime",
+      "file": "Saved sounds/church_bells_chime.mp3",
+      "keywords": [
+        "church",
+        "bells",
+        "chime",
+        "tower",
+        "cathedral",
+        "melodic",
+        "ringing",
+        "sacred",
+        "peal",
+        "celebration"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "anchor chain drop",
+      "file": "Saved sounds/anchor_chain_drop.mp3",
+      "keywords": [
+        "anchor",
+        "chain",
+        "drop",
+        "ship",
+        "nautical",
+        "iron",
+        "rattling",
+        "water",
+        "harbor",
+        "heavy"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "magic shimmer sparkle",
+      "file": "Saved sounds/magic_shimmer_sparkle.mp3",
+      "keywords": [
+        "magic",
+        "shimmer",
+        "sparkle",
+        "fairy",
+        "enchant",
+        "glitter",
+        "twinkle",
+        "fantasy",
+        "crystal",
+        "spell"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "maniacal cackle",
+      "file": "Saved sounds/maniacal_cackle.mp3",
+      "keywords": [
+        "cackle",
+        "maniacal",
+        "evil",
+        "laugh",
+        "villain",
+        "sinister",
+        "wicked",
+        "witch",
+        "mad",
+        "theatrical"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "arrow whoosh fly",
+      "file": "Saved sounds/arrow_whoosh_fly.mp3",
+      "keywords": [
+        "arrow",
+        "whoosh",
+        "fly",
+        "bow",
+        "projectile",
+        "shot",
+        "release",
+        "flight",
+        "archery",
+        "fast"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "sword clash metal",
+      "file": "Saved sounds/sword_clash_metal.mp3",
+      "keywords": [
+        "sword",
+        "clash",
+        "metal",
+        "clashed",
+        "blade",
+        "ring",
+        "impact",
+        "combat",
+        "fight",
+        "weapon"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "applause crowd",
+      "file": "Saved sounds/applause_crowd.mp3",
+      "keywords": [
+        "applause",
+        "clapping",
+        "crowd",
+        "audience",
+        "cheer",
+        "celebrate",
+        "theater",
+        "performance",
+        "bravo",
+        "approval"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "forest ambience daytime",
+      "file": "Saved sounds/forest_ambience_daytime.mp3",
+      "keywords": [
+        "forest",
+        "ambience",
+        "daytime",
+        "birds",
+        "wind",
+        "leaves",
+        "nature",
+        "outdoor",
+        "peaceful",
+        "woods"
+      ],
+      "loop": true
+    },
+    {
+      "type": "sfx",
+      "name": "mountain wind ambience",
+      "file": "Saved sounds/mountain_wind_ambience.mp3",
+      "keywords": [
+        "mountain",
+        "wind",
+        "ambience",
+        "howling",
+        "cold",
+        "peak",
+        "altitude",
+        "outdoor",
+        "nature",
+        "gusting"
+      ],
+      "loop": true
+    },
+    {
+      "type": "sfx",
+      "name": "campfire night crickets",
+      "file": "Saved sounds/campfire_night_crickets.mp3",
+      "keywords": [
+        "campfire",
+        "crackling",
+        "night",
+        "crickets",
+        "camping",
+        "outdoor",
+        "fire",
+        "peaceful",
+        "ambient",
+        "nature"
+      ],
+      "loop": true
+    },
+    {
+      "type": "sfx",
+      "name": "dungeon stone ambience",
+      "file": "Saved sounds/dungeon_stone_ambience.mp3",
+      "keywords": [
+        "dungeon",
+        "stone",
+        "ambience",
+        "dripping",
+        "echo",
+        "underground",
+        "dark",
+        "hollow",
+        "ominous",
+        "cavern"
+      ],
+      "loop": true
+    },
+    {
+      "type": "sfx",
+      "name": "castle courtyard ambience",
+      "file": "Saved sounds/castle_courtyard_ambience.mp3",
+      "keywords": [
+        "castle",
+        "courtyard",
+        "ambience",
+        "medieval",
+        "outdoor",
+        "horses",
+        "birds",
+        "wind",
+        "fantasy",
+        "atmosphere"
+      ],
+      "loop": true
+    },
+    {
+      "type": "sfx",
+      "name": "ocean harbor ambience",
+      "file": "Saved sounds/ocean_harbor_ambience.mp3",
+      "keywords": [
+        "ocean",
+        "harbor",
+        "ambience",
+        "seagulls",
+        "waves",
+        "nautical",
+        "port",
+        "dock",
+        "sea",
+        "ship"
+      ],
+      "loop": true
+    },
+    {
+      "type": "sfx",
+      "name": "rainy forest ambience",
+      "file": "Saved sounds/rainy_forest_ambience.mp3",
+      "keywords": [
+        "rain",
+        "forest",
+        "ambience",
+        "downpour",
+        "nature",
+        "dripping",
+        "leaves",
+        "outdoor",
+        "storm",
+        "wet"
+      ],
+      "loop": true
+    },
+    {
+      "type": "sfx",
+      "name": "winter wind snow",
+      "file": "Saved sounds/winter_wind_snow.mp3",
+      "keywords": [
+        "winter",
+        "wind",
+        "snow",
+        "cold",
+        "blizzard",
+        "howling",
+        "freezing",
+        "outdoor",
+        "eerie",
+        "quiet"
+      ],
+      "loop": true
+    },
+    {
+      "type": "sfx",
+      "name": "meadow morning birds",
+      "file": "Saved sounds/meadow_morning_birds.mp3",
+      "keywords": [
+        "meadow",
+        "morning",
+        "birds",
+        "singing",
+        "peaceful",
+        "pastoral",
+        "nature",
+        "outdoor",
+        "warm",
+        "ambience"
+      ],
+      "loop": true
+    },
+    {
+      "type": "sfx",
+      "name": "underground cave river",
+      "file": "Saved sounds/underground_cave_river.mp3",
+      "keywords": [
+        "underground",
+        "cave",
+        "river",
+        "flowing",
+        "water",
+        "echo",
+        "dark",
+        "subterranean",
+        "cavern",
+        "ambient"
+      ],
+      "loop": true
+    },
+    {
+      "type": "sfx",
+      "name": "stormy ocean waves",
+      "file": "Saved sounds/stormy_ocean_waves.mp3",
+      "keywords": [
+        "stormy",
+        "ocean",
+        "waves",
+        "crashing",
+        "sea",
+        "rough",
+        "wind",
+        "turbulent",
+        "maritime",
+        "storm"
+      ],
+      "loop": true
+    },
+    {
+      "type": "sfx",
+      "name": "desert night ambience",
+      "file": "Saved sounds/desert_night_ambience.mp3",
+      "keywords": [
+        "desert",
+        "night",
+        "ambience",
+        "crickets",
+        "wind",
+        "arid",
+        "dry",
+        "quiet",
+        "outdoor",
+        "sandstorm"
+      ],
+      "loop": true
+    },
+    {
+      "type": "sfx",
+      "name": "village morning ambience",
+      "file": "Saved sounds/village_morning_ambience.mp3",
+      "keywords": [
+        "village",
+        "morning",
+        "ambience",
+        "bells",
+        "birds",
+        "rooster",
+        "peaceful",
+        "medieval",
+        "outdoor",
+        "dawn"
+      ],
+      "loop": true
+    },
+    {
+      "type": "sfx",
+      "name": "armor clank footsteps",
+      "file": "Saved sounds/armor_clank_footsteps.mp3",
+      "keywords": [
+        "armor",
+        "clank",
+        "footsteps",
+        "knight",
+        "plate",
+        "metal",
+        "walking",
+        "rattling",
+        "medieval",
+        "warrior"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "shield block sword",
+      "file": "Saved sounds/shield_block_sword.mp3",
+      "keywords": [
+        "shield",
+        "block",
+        "sword",
+        "parry",
+        "defend",
+        "deflect",
+        "metal",
+        "impact",
+        "combat",
+        "clang"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "potion bubbling brew",
+      "file": "Saved sounds/potion_bubbling_brew.mp3",
+      "keywords": [
+        "potion",
+        "bubbling",
+        "brew",
+        "cauldron",
+        "alchemist",
+        "liquid",
+        "boiling",
+        "magic",
+        "laboratory",
+        "concoction"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "holy divine chime",
+      "file": "Saved sounds/holy_divine_chime.mp3",
+      "keywords": [
+        "holy",
+        "divine",
+        "chime",
+        "sacred",
+        "radiant",
+        "light",
+        "magic",
+        "pure",
+        "blessing",
+        "celestial"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "dark curse cast",
+      "file": "Saved sounds/dark_curse_cast.mp3",
+      "keywords": [
+        "dark",
+        "curse",
+        "cast",
+        "evil",
+        "sinister",
+        "magic",
+        "incantation",
+        "hex",
+        "wicked",
+        "occult"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "ancient rune activate",
+      "file": "Saved sounds/ancient_rune_activate.mp3",
+      "keywords": [
+        "rune",
+        "ancient",
+        "activate",
+        "glow",
+        "mystical",
+        "magic",
+        "stone",
+        "inscription",
+        "arcane",
+        "awakening"
+      ]
+    }
+  ]
+}

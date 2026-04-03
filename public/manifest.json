@@ -1,0 +1,26 @@
+{
+  "name": "SoundGoblin - Intelligent Audio Companion",
+  "short_name": "SoundGoblin",
+  "description": "AI-powered ambient sound designer with performance enhancements, memory management, error handling, and accessibility features",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#0a0a0a",
+  "theme_color": "#8a2be2",
+  "orientation": "any",
+  "icons": [
+    {
+      "src": "icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "maskable"
+    }
+  ],
+  "categories": ["entertainment", "music", "productivity"],
+  "lang": "en-US"
+}

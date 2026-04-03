@@ -1,0 +1,18 @@
+# Node
+node_modules/
+.npm
+
+# Next.js
+.next/
+out/
+
+# Env files
+.env*.local
+
+# Build output
+build/
+dist/
+
+# OS
+.DS_Store
+Thumbs.db

@@ -1,0 +1,224 @@
+'use client';
+
+/** Settings section — volume, playback options, scene presets, custom triggers. */
+export default function SettingsSection() {
+  return (
+    <div id="settingsSection" className="app-section hidden">
+      <div className="section-header">
+        <h2>Settings</h2>
+      </div>
+      <div className="section-body">
+        <p className="section-intro">Adjust volume, playback options, and performance settings.</p>
+
+        {/* Subscription Management */}
+        <section className="menu-section">
+          <button className="menu-toggle" id="subscriptionMenuToggle">
+            Subscription
+            <span className="toggle-indicator">&#9660;</span>
+          </button>
+          <div className="menu-content hidden" id="subscriptionMenuContent">
+            <div id="subscriptionStatus" className="info-text" style={{ marginBottom: 10 }}>
+              Checking subscription status...
+            </div>
+            <button id="refreshTokenBtn" className="btn-secondary" style={{ width: '100%', marginTop: 4 }}>
+              Refresh Access Token
+            </button>
+            {/* TODO: Replace href with env-variable so billing URL is configurable */}
+            <button
+              id="manageSubscriptionBtn2"
+              className="btn-secondary"
+              style={{ width: '100%', marginTop: 8 }}
+              onClick={() => window.open('https://billing.stripe.com/p/login/', '_blank')}
+            >
+              Manage Billing
+            </button>
+            <button id="subscribeBtn2" className="btn-primary" style={{ width: '100%', marginTop: 8 }}>
+              Subscribe &mdash; $10/month
+            </button>
+            <p className="info-text" style={{ marginTop: 12, fontSize: '0.8rem' }}>
+              <a href="/terms" target="_blank">Terms of Service</a>
+              &nbsp;&nbsp;&middot;&nbsp;&nbsp;
+              <a href="/privacy" target="_blank">Privacy Policy</a>
+            </p>
+          </div>
+        </section>
+
+        {/* Volume Control */}
+        <section className="menu-section">
+          <button className="menu-toggle" id="volumeMenuToggle">
+            Volume Control
+            <span className="toggle-indicator">&#9660;</span>
+          </button>
+          <div className="menu-content hidden" id="volumeMenuContent">
+            <h3>Volume Range</h3>
+            <div className="slider-container">
+              <label>Minimum: <span id="minVolumeValue">20</span>%</label>
+              <input type="range" id="minVolume" min="0" max="100" defaultValue="20" />
+            </div>
+            <div className="slider-container">
+              <label>Maximum: <span id="maxVolumeValue">70</span>%</label>
+              <input type="range" id="maxVolume" min="0" max="100" defaultValue="70" />
+            </div>
+            <h3 style={{ marginTop: 20 }}>Mixer</h3>
+            <div className="slider-container">
+              <label>Music Level: <span id="musicLevelValue">50</span>%</label>
+              <input type="range" id="musicLevel" min="0" max="100" defaultValue="50" />
+            </div>
+            <div className="slider-container">
+              <label>Sound Effects Level: <span id="sfxLevelValue">90</span>%</label>
+              <input type="range" id="sfxLevel" min="0" max="100" defaultValue="90" />
+            </div>
+            <button id="testSoundBtn" className="btn-secondary" style={{ marginTop: 8, width: '100%', fontSize: '0.85rem' }}>
+              Test Sound
+            </button>
+            <h3 style={{ marginTop: 20 }}>Mood</h3>
+            <div className="slider-container">
+              <label>Mood/Intensity: <span id="moodBiasValue">50</span>%</label>
+              <input type="range" id="moodBias" min="0" max="100" defaultValue="50" />
+            </div>
+          </div>
+        </section>
+
+        {/* Playback Options */}
+        <section className="menu-section">
+          <button className="menu-toggle" id="settingsMenuToggle">
+            Settings
+            <span className="toggle-indicator">&#9660;</span>
+          </button>
+          <div className="menu-content hidden" id="settingsMenuContent">
+            <h3>Playback Options</h3>
+            <div className="toggle-row">
+              <label htmlFor="toggleMusic">Music</label>
+              <label className="switch">
+                <input type="checkbox" id="toggleMusic" defaultChecked />
+                <span className="slider" />
+              </label>
+            </div>
+            <div className="toggle-row">
+              <label htmlFor="toggleSfx">Sound Effects</label>
+              <label className="switch">
+                <input type="checkbox" id="toggleSfx" defaultChecked />
+                <span className="slider" />
+              </label>
+            </div>
+            <div className="toggle-row">
+              <label htmlFor="togglePrediction">Use AI Predictions</label>
+              <label className="switch">
+                <input type="checkbox" id="togglePrediction" defaultChecked />
+                <span className="slider" />
+              </label>
+            </div>
+
+            <h3 style={{ marginTop: 20 }}>Performance</h3>
+            <div className="toggle-row">
+              <label
+                htmlFor="lowLatencyMode"
+                id="lowLatencyTooltip"
+                className="tooltip"
+                aria-describedby="lowLatencyTip"
+              >
+                Low Latency Mode
+                <button
+                  type="button"
+                  id="lowLatencyHelp"
+                  className="tooltip-icon"
+                  aria-label="What is Low Latency Mode?"
+                  aria-describedby="lowLatencyTip"
+                >
+                  ?
+                </button>
+                <span id="lowLatencyTip" role="tooltip" className="tooltip-content">
+                  Preloads more sounds in parallel for faster reactions. Best on strong networks.
+                </span>
+              </label>
+              <label className="switch">
+                <input type="checkbox" id="lowLatencyMode" />
+                <span className="slider" />
+              </label>
+            </div>
+          </div>
+        </section>
+
+        {/* Trigger Cooldown */}
+        <section className="menu-section">
+          <button className="menu-toggle" id="triggerCooldownToggle">
+            Trigger Cooldown
+            <span className="toggle-indicator">&#9660;</span>
+          </button>
+          <div className="menu-content hidden" id="triggerCooldownContent">
+            <p className="info-text">
+              How long to wait before the same keyword can trigger a sound again. Lower = more
+              responsive, Higher = less repetitive.
+            </p>
+            <div className="slider-container">
+              <label>Cooldown: <span id="keywordCooldownValue">3</span>s</label>
+              <input type="range" id="keywordCooldown" min="1" max="30" step="1" defaultValue="3" />
+            </div>
+          </div>
+        </section>
+
+        {/* Scene Presets */}
+        <section className="menu-section">
+          <button className="menu-toggle" id="scenePresetsToggle">
+            Scene Presets
+            <span className="toggle-indicator">&#9660;</span>
+          </button>
+          <div className="menu-content hidden" id="scenePresetsContent">
+            <p className="info-text">
+              Quick-switch scene buttons shown in Auto Detect. Click a preset to instantly set the
+              mood and context. Double-click a preset name above to rename it.
+            </p>
+            <div id="scenePresetsList" />
+            <button id="addScenePresetBtn" className="btn-secondary" style={{ marginTop: 12, width: '100%', fontSize: '0.85rem' }}>
+              Add Preset
+            </button>
+          </div>
+        </section>
+
+        {/* Custom Phrase Triggers */}
+        <section className="menu-section">
+          <button className="menu-toggle" id="customPhrasesToggle">
+            Custom Phrase Triggers
+            <span className="toggle-indicator">&#9660;</span>
+          </button>
+          <div className="menu-content hidden" id="customPhrasesContent">
+            <p className="info-text">
+              Add phrases that trigger a specific sound when spoken aloud. The phrase is matched as
+              a substring — multiple variants can share one sound.
+            </p>
+            <div id="customPhrasesList" />
+            <div
+              className="custom-phrase-add-row"
+              style={{ display: 'flex', gap: 8, marginTop: 10, flexWrap: 'wrap' }}
+            >
+              <input
+                id="customPhraseInput"
+                type="text"
+                placeholder='e.g. "draws his blade"'
+                style={{ flex: 2, minWidth: 120 }}
+              />
+              <input
+                id="customPhraseQuery"
+                type="text"
+                placeholder="Sound query, e.g. sword draw"
+                style={{ flex: 2, minWidth: 120 }}
+              />
+              <input
+                id="customPhraseVolume"
+                type="number"
+                min="0"
+                max="1"
+                step="0.05"
+                defaultValue="0.8"
+                style={{ flex: '0 0 auto', minWidth: 55 }}
+              />
+              <button id="addCustomPhraseBtn" className="btn-secondary" style={{ flex: '0 0 auto' }}>
+                Add
+              </button>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+  );
+}
