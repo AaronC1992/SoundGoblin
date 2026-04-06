@@ -344,8 +344,8 @@ class SoundGoblin {
     buildSrcCandidates(u) {
         const list = [];
         const cdnBase = (typeof window !== 'undefined' && window.__R2_PUBLIC_URL) || '';
-        if (cdnBase && !/^https?:\/\//i.test(u)) {
-            // CDN is primary source for relative paths
+        if (cdnBase && !/^https?:\/\//i.test(u) && !u.startsWith(cdnBase)) {
+            // CDN is primary source for relative paths (skip if already prefixed)
             list.push(`${cdnBase.replace(/\/$/, '')}/${u.replace(/^\//, '')}`);
         }
         list.push(u); // local fallback
