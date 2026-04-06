@@ -7,18 +7,18 @@ export const metadata = {
   manifest: '/manifest.json',
   openGraph: {
     type: 'website',
-    url: 'https://soundgoblin.vercel.app/',
+    url: 'https://sound-goblin-v57t.vercel.app/',
     title: 'SoundGoblin - Intelligent Audio Companion',
     description:
       'AI-powered ambient sound designer that listens to conversations and automatically plays contextually-appropriate music and sound effects',
-    images: [{ url: 'https://soundgoblin.vercel.app/icon.svg' }],
+    images: [{ url: 'https://sound-goblin-v57t.vercel.app/icon.svg' }],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'SoundGoblin - Intelligent Audio Companion',
     description:
       'AI-powered ambient sound designer that listens to conversations and automatically plays contextually-appropriate music and sound effects',
-    images: ['https://soundgoblin.vercel.app/icon.svg'],
+    images: ['https://sound-goblin-v57t.vercel.app/icon.svg'],
   },
 };
 
