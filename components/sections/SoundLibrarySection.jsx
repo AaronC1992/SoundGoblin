@@ -42,9 +42,18 @@ export default function SoundLibrarySection() {
           <div className="sound-lib-custom">
             <h3>Custom Sounds</h3>
             <p className="info-text">
-              Record your own sounds and assign keyword tags so Effexiq can trigger them.
+              Record or upload your own sounds and assign keyword tags so Effexiq can trigger them.
             </p>
-            <button id="recordSoundBtn" className="btn-primary">Record Sound</button>
+            <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap' }}>
+              <button id="recordSoundBtn" className="btn-primary">Record Sound</button>
+              <button id="uploadSoundBtn" className="btn-secondary">Upload Sound</button>
+              <input
+                type="file"
+                id="uploadSoundInput"
+                accept="audio/mpeg,audio/wav,audio/ogg,audio/webm,.mp3,.wav,.ogg,.webm"
+                style={{ display: 'none' }}
+              />
+            </div>
             <div id="customSoundsList" className="sound-lib-list" />
           </div>
         </div>
@@ -88,6 +97,39 @@ export default function SoundLibrarySection() {
               className="record-input"
             />
             <button id="recordSaveBtn" className="btn-primary" disabled>Save Sound</button>
+          </div>
+        </div>
+      </div>
+
+      {/* Upload Sound Modal */}
+      <div
+        id="uploadSoundModal"
+        className="modal-overlay hidden"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="uploadSoundModalTitle"
+      >
+        <div className="modal-content record-modal">
+          <button className="modal-close" id="closeUploadModal">&times;</button>
+          <h2 id="uploadSoundModalTitle">Upload a Sound</h2>
+          <div id="uploadPreview" className="record-playback hidden" style={{ marginBottom: 12 }}>
+            <audio id="uploadAudio" controls style={{ width: '100%' }} />
+          </div>
+          <p id="uploadFileName" className="info-text" style={{ marginBottom: 8 }} />
+          <div className="record-form">
+            <input
+              type="text"
+              id="uploadName"
+              placeholder="Sound name (e.g. Dragon Roar)"
+              className="record-input"
+            />
+            <input
+              type="text"
+              id="uploadTags"
+              placeholder="Tags, comma separated (e.g. dragon, roar, creature)"
+              className="record-input"
+            />
+            <button id="uploadSaveBtn" className="btn-primary" disabled>Save Sound</button>
           </div>
         </div>
       </div>

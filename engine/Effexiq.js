@@ -179,6 +179,8 @@ class Effexiq {
     this.currentMusicBase = 0.5; // last intensity-derived music gain (pre-user)
     // Mood & performance
     this.moodBias = parseFloat(localStorage.getItem('Effexiq_mood_bias') ?? '0.5'); // 0..1
+    try { this.voiceDuckEnabled = JSON.parse(localStorage.getItem('Effexiq_voice_duck') ?? 'false'); } catch { this.voiceDuckEnabled = false; }
+    this._voiceDuckActive = false; // true when voice duck is currently lowering music
     try { this.lowLatencyMode = JSON.parse(localStorage.getItem('Effexiq_low_latency') ?? 'false'); } catch { this.lowLatencyMode = false; }
     this.preloadConcurrency = this.getPreloadConcurrency();
     this.keywordCooldownMs = parseInt(localStorage.getItem('Effexiq_keyword_cooldown_ms') ?? '3000');
@@ -315,6 +317,7 @@ class Effexiq {
         this.updateApiStatusIndicators();
         this.setupActivityFeed();
         this.setupDemoMode();
+        this.setupSessionRecording();
         this.setupHubNavigation();
         this.setupControlBoard();
         this.setupStoryCreator();
@@ -2519,6 +2522,18 @@ class Effexiq {
                 }
             });
         }
+
+        // Voice Ducking toggle (auto-lower music/ambience when voice detected)
+        const voiceDuckToggle = document.getElementById('voiceDuckToggle');
+        if (voiceDuckToggle) {
+            voiceDuckToggle.checked = !!this.voiceDuckEnabled;
+            voiceDuckToggle.addEventListener('change', (e) => {
+                this.voiceDuckEnabled = e.target.checked;
+                localStorage.setItem('Effexiq_voice_duck', JSON.stringify(this.voiceDuckEnabled));
+                if (!this.voiceDuckEnabled) this._restoreVoiceDuck();
+                this.updateStatus(`Voice Ducking ${this.voiceDuckEnabled ? 'enabled' : 'disabled'}`);
+            });
+        }
         
         // Trigger keyword cooldown slider
         const cooldownSlider = document.getElementById('keywordCooldown');
@@ -2763,6 +2778,9 @@ class Effexiq {
 
         // Custom Sound Recording
         this.setupRecordSound();
+
+        // Custom Sound Upload
+        this.setupUploadSound();
     }
 
     startStoryFlow(id, mode) {
@@ -3096,6 +3114,92 @@ class Effexiq {
         });
     }
 
+    // ===== CUSTOM SOUND UPLOAD =====
+    setupUploadSound() {
+        const uploadBtn = document.getElementById('uploadSoundBtn');
+        const fileInput = document.getElementById('uploadSoundInput');
+        const modal = document.getElementById('uploadSoundModal');
+        const closeBtn = document.getElementById('closeUploadModal');
+        const saveBtn = document.getElementById('uploadSaveBtn');
+        const nameInput = document.getElementById('uploadName');
+        const tagsInput = document.getElementById('uploadTags');
+        const previewEl = document.getElementById('uploadPreview');
+        const audioEl = document.getElementById('uploadAudio');
+        const fileNameEl = document.getElementById('uploadFileName');
+        if (!uploadBtn || !fileInput || !modal) return;
+
+        let uploadedFile = null;
+        let uploadBlobUrl = null;
+
+        uploadBtn.addEventListener('click', () => fileInput.click());
+
+        fileInput.addEventListener('change', (e) => {
+            const file = e.target.files?.[0];
+            if (!file) return;
+            // Validate type
+            const allowed = ['audio/mpeg', 'audio/wav', 'audio/ogg', 'audio/webm', 'audio/x-wav'];
+            if (!allowed.includes(file.type) && !file.name.match(/\.(mp3|wav|ogg|webm)$/i)) {
+                alert('Please upload an MP3, WAV, OGG, or WebM audio file.');
+                fileInput.value = '';
+                return;
+            }
+            // Validate size (max 10MB)
+            if (file.size > 10 * 1024 * 1024) {
+                alert('File is too large. Maximum size is 10 MB.');
+                fileInput.value = '';
+                return;
+            }
+            uploadedFile = file;
+            if (uploadBlobUrl) URL.revokeObjectURL(uploadBlobUrl);
+            uploadBlobUrl = URL.createObjectURL(file);
+            if (audioEl) audioEl.src = uploadBlobUrl;
+            if (previewEl) previewEl.classList.remove('hidden');
+            if (fileNameEl) fileNameEl.textContent = file.name;
+            // Pre-fill name from filename
+            if (nameInput && !nameInput.value) {
+                nameInput.value = file.name.replace(/\.[^.]+$/, '').replace(/[-_]/g, ' ');
+            }
+            if (saveBtn) saveBtn.disabled = false;
+            modal.classList.remove('hidden');
+            fileInput.value = '';
+        });
+
+        const closeModal = () => {
+            modal.classList.add('hidden');
+            if (uploadBlobUrl) { URL.revokeObjectURL(uploadBlobUrl); uploadBlobUrl = null; }
+            uploadedFile = null;
+            if (saveBtn) saveBtn.disabled = true;
+            if (nameInput) nameInput.value = '';
+            if (tagsInput) tagsInput.value = '';
+            if (previewEl) previewEl.classList.add('hidden');
+            if (fileNameEl) fileNameEl.textContent = '';
+        };
+        if (closeBtn) closeBtn.addEventListener('click', closeModal);
+        modal.addEventListener('click', (e) => { if (e.target === modal) closeModal(); });
+
+        if (saveBtn) saveBtn.addEventListener('click', () => {
+            if (!uploadedFile) return;
+            const name = (nameInput?.value || '').trim() || `Uploaded Sound ${this.customSounds.length + 1}`;
+            const tags = (tagsInput?.value || '').split(',').map(t => t.trim().toLowerCase()).filter(Boolean);
+
+            const reader = new FileReader();
+            reader.onloadend = () => {
+                const customSound = {
+                    name,
+                    tags,
+                    dataUrl: reader.result,
+                    created: Date.now()
+                };
+                this.customSounds.push(customSound);
+                localStorage.setItem('Effexiq_custom_sounds', JSON.stringify(this.customSounds));
+                this.renderCustomSounds();
+                closeModal();
+                this.updateStatus(`Uploaded sound "${name}" saved`);
+            };
+            reader.readAsDataURL(uploadedFile);
+        });
+    }
+
     async startStoryFlowAsync(id, targetMode) {
         let needWait = false;
         let waitToken = this.preloadVersion;
@@ -3229,6 +3333,18 @@ class Effexiq {
         this.masterGainNode.connect(this.analyser);
         this.analyser.connect(this.audioContext.destination);
 
+        // Session recording destination — captures all audio output
+        this.recordingDest = this.audioContext.createMediaStreamDestination();
+        this.masterGainNode.connect(this.recordingDest);
+        this._sessionRecorder = null;
+        this._sessionChunks = [];
+
+        // Multi-track recording destinations (separate stems)
+        this.musicRecordDest = this.audioContext.createMediaStreamDestination();
+        this.sfxRecordDest = this.audioContext.createMediaStreamDestination();
+        this.musicGainNode.connect(this.musicRecordDest);
+        this.sfxBusGain.connect(this.sfxRecordDest);
+
         // Global audio unlock for mobile: resume AudioContext on first user gesture
         this._setupMobileAudioUnlock();
     }
@@ -3301,6 +3417,8 @@ class Effexiq {
                 // Map: quiet ≈ 0.01 RMS → 0.4 multiplier, shouting ≈ 0.15+ RMS → 1.5 multiplier
                 const raw = Math.min(1.0, rms / 0.15);
                 this.voiceIntensity = 0.4 + raw * 1.1;
+                // Voice ducking: lower music/ambience when voice detected
+                this._processVoiceDuck(rms);
                 requestAnimationFrame(sample);
             };
             sample();
@@ -3308,6 +3426,47 @@ class Effexiq {
         } catch (e) {
             debugLog('Mic intensity analyser unavailable:', e.message);
             this.voiceIntensity = 0.7; // neutral fallback
+        }
+    }
+
+    // Voice ducking — automatically lower music & ambience when mic detects voice
+    _processVoiceDuck(rms) {
+        if (!this.voiceDuckEnabled) return;
+        const threshold = 0.02; // RMS above this = voice present
+        const voiceDetected = rms > threshold;
+
+        if (voiceDetected && !this._voiceDuckActive) {
+            this._voiceDuckActive = true;
+            this._voiceDuckRestoreTimer && clearTimeout(this._voiceDuckRestoreTimer);
+            // Fade music to 20% over 150ms
+            if (this.currentMusic && this.currentMusic._howl) {
+                const cur = this.currentMusic._howl.volume();
+                this._voiceDuckPrevMusicVol = cur;
+                this.currentMusic._howl.fade(cur, cur * 0.2, 150);
+            }
+            // Fade ambient bed to 20%
+            if (this.ambientBed) {
+                const cur = this.ambientBed.volume();
+                this._voiceDuckPrevAmbientVol = cur;
+                this.ambientBed.fade(cur, cur * 0.2, 150);
+            }
+        } else if (!voiceDetected && this._voiceDuckActive) {
+            // Restore after 600ms of silence to avoid pumping
+            this._voiceDuckRestoreTimer && clearTimeout(this._voiceDuckRestoreTimer);
+            this._voiceDuckRestoreTimer = setTimeout(() => this._restoreVoiceDuck(), 600);
+        }
+    }
+
+    _restoreVoiceDuck() {
+        if (!this._voiceDuckActive) return;
+        this._voiceDuckActive = false;
+        if (this.currentMusic && this.currentMusic._howl && this._voiceDuckPrevMusicVol != null) {
+            this.currentMusic._howl.fade(this.currentMusic._howl.volume(), this._voiceDuckPrevMusicVol, 400);
+            this._voiceDuckPrevMusicVol = null;
+        }
+        if (this.ambientBed && this._voiceDuckPrevAmbientVol != null) {
+            this.ambientBed.fade(this.ambientBed.volume(), this._voiceDuckPrevAmbientVol, 400);
+            this._voiceDuckPrevAmbientVol = null;
         }
     }
 
@@ -5628,6 +5787,21 @@ class Effexiq {
                 setTimeout(() => vizSection.classList.remove('sfx-pulse'), 400);
             }
         }
+
+        // OBS overlay mirror
+        if (typeof window !== 'undefined' && window.__OBS_MODE) {
+            const obsEl = document.getElementById('obsNowPlaying');
+            if (obsEl) {
+                const names = [];
+                if (this.currentMusic && this.currentMusic._howl && this.currentMusic._howl.playing()) {
+                    names.push(`Music: ${this.currentMusic.name || 'Unknown'}`);
+                }
+                this.activeSounds.forEach(s => {
+                    names.push(s.name || 'SFX');
+                });
+                obsEl.textContent = names.length ? names.join(' | ') : 'No sounds playing';
+            }
+        }
     }
     
     // ===== VISUALIZER =====
@@ -6159,6 +6333,12 @@ class Effexiq {
                 break;
             default:
                  debugLog('Status:', message);
+        }
+
+        // Mirror to OBS overlay
+        if (typeof window !== 'undefined' && window.__OBS_MODE) {
+            const obsStatus = document.getElementById('obsStatus');
+            if (obsStatus) obsStatus.textContent = message;
         }
     }
 
@@ -7306,6 +7486,10 @@ class Effexiq {
         if (playBtn) playBtn.addEventListener('click', () => this.scPlay());
         if (addCueBtn) addCueBtn.addEventListener('click', () => this.scAddCueRow());
 
+        // Generate Soundscape (batch mode)
+        const soundscapeBtn = document.getElementById('scSoundscapeBtn');
+        if (soundscapeBtn) soundscapeBtn.addEventListener('click', () => this.generateSoundscape());
+
         // Suggest Cues + Test Run
         const suggestBtn = document.getElementById('scSuggestCuesBtn');
         if (suggestBtn) suggestBtn.addEventListener('click', () => this.suggestCues('scTextArea', 'scCuesList', this.scAddCueRow));
@@ -7409,6 +7593,89 @@ class Effexiq {
         if (!this.stories) this.stories = {};
         this.stories[id] = { id, title, text, demo: false, theme: '', description: '' };
         this._scPlayAsync(id, 'auto').catch(e => console.warn('SC play failed:', e.message));
+    }
+
+    // ===== SCRIPT-TO-SOUNDSCAPE (BATCH MODE) =====
+    // Processes the entire story text, extracts cue keywords, resolves them to sounds,
+    // and plays them on a timed schedule — no microphone or speech recognition needed.
+    async generateSoundscape() {
+        const text = (document.getElementById('scTextArea')?.value || '').trim();
+        if (!text) { alert('Please write your story first.'); return; }
+
+        const btn = document.getElementById('scSoundscapeBtn');
+        if (btn) { btn.disabled = true; btn.textContent = 'Generating...'; }
+
+        try {
+            // Apply any custom cues first
+            this.scApplyCustomCues();
+
+            // Tokenize the story the same way startAutoRead does
+            const words = text.split(/(\s+)/);
+            const cueMap = this.getStoryCueMap();
+            const timeline = []; // { wordIndex, delay, query, volume }
+
+            // Estimate timing: ~150ms per word (natural reading pace ~160 WPM)
+            const msPerWord = 150;
+            let wordCount = 0;
+
+            for (let i = 0; i < words.length; i++) {
+                const w = words[i].trim();
+                if (!w) continue;
+                wordCount++;
+                const normalized = this.normalizeWord(w);
+                if (!normalized) continue;
+
+                // Check context overrides
+                const contextWords = new Set();
+                for (let j = Math.max(0, i - 10); j < Math.min(words.length, i + 10); j++) {
+                    const cw = words[j]?.trim()?.toLowerCase();
+                    if (cw) contextWords.add(cw);
+                }
+                let query = null;
+                if (Effexiq._contextOverrides && Effexiq._contextOverrides[normalized]) {
+                    for (const rule of Effexiq._contextOverrides[normalized]) {
+                        if (rule.near.some(n => contextWords.has(n))) {
+                            query = rule.query;
+                            break;
+                        }
+                    }
+                }
+                if (!query) query = cueMap[normalized] || null;
+                if (!query) continue;
+
+                const delay = wordCount * msPerWord;
+                timeline.push({ wordIndex: i, delay, query, volume: 0.7 });
+            }
+
+            if (timeline.length === 0) {
+                this.updateStatus('No sound cues found in the script.');
+                return;
+            }
+
+            // Start session recording if recording destination is available
+            const totalDuration = (wordCount * msPerWord) + 3000;
+            this.updateStatus(`Playing soundscape — ${timeline.length} cues over ~${Math.round(totalDuration / 1000)}s`);
+            this.logActivity(`Soundscape: ${timeline.length} cues from ${wordCount} words`, 'info');
+
+            // Schedule all sounds
+            for (const cue of timeline) {
+                setTimeout(() => {
+                    this.playSoundEffect({ query: cue.query, priority: 5, volume: cue.volume }).catch(e =>
+                        debugLog('Soundscape cue failed:', cue.query, e.message)
+                    );
+                }, cue.delay);
+            }
+
+            // Mark completion
+            setTimeout(() => {
+                this.updateStatus('Soundscape playback complete');
+                this.logActivity('Soundscape playback finished', 'info');
+            }, totalDuration);
+        } finally {
+            if (btn) {
+                setTimeout(() => { btn.disabled = false; btn.textContent = 'Generate Soundscape'; }, 2000);
+            }
+        }
     }
 
     async _scPlayAsync(id, mode) {
@@ -8195,6 +8462,125 @@ class Effexiq {
         this.cbButtons = this.cbTabs[0].buttons;
         this.cbRenderTabs();
         this.cbRender();
+    }
+
+    // ===== SESSION RECORDING (AUDIO EXPORT) =====
+    setupSessionRecording() {
+        const startBtn = document.getElementById('recStartBtn');
+        const stopBtn = document.getElementById('recStopBtn');
+        const timerEl = document.getElementById('recTimer');
+        const indicator = document.getElementById('recIndicator');
+        const downloadArea = document.getElementById('recDownload');
+        const audioEl = document.getElementById('recAudio');
+        const downloadBtn = document.getElementById('recDownloadBtn');
+        const stemsBtn = document.getElementById('recDownloadStemsBtn');
+        if (!startBtn) return;
+
+        let timerInterval = null;
+        let recStart = 0;
+        let recBlobUrl = null;
+        let recBlob = null;
+        // Multi-track stem recorders
+        let musicRecorder = null;
+        let sfxRecorder = null;
+        let musicChunks = [];
+        let sfxChunks = [];
+        let musicBlob = null;
+        let sfxBlob = null;
+
+        startBtn.addEventListener('click', () => {
+            if (!this.recordingDest) {
+                this.updateStatus('Recording not available — audio context not initialized');
+                return;
+            }
+            this._sessionChunks = [];
+            try {
+                this._sessionRecorder = new MediaRecorder(this.recordingDest.stream, {
+                    mimeType: MediaRecorder.isTypeSupported('audio/webm;codecs=opus') ? 'audio/webm;codecs=opus' : 'audio/webm'
+                });
+            } catch (_) {
+                this._sessionRecorder = new MediaRecorder(this.recordingDest.stream);
+            }
+            this._sessionRecorder.ondataavailable = (e) => { if (e.data.size > 0) this._sessionChunks.push(e.data); };
+            this._sessionRecorder.onstop = () => {
+                recBlob = new Blob(this._sessionChunks, { type: 'audio/webm' });
+                if (recBlobUrl) URL.revokeObjectURL(recBlobUrl);
+                recBlobUrl = URL.createObjectURL(recBlob);
+                if (audioEl) audioEl.src = recBlobUrl;
+                if (downloadArea) downloadArea.classList.remove('hidden');
+                clearInterval(timerInterval);
+            };
+            this._sessionRecorder.start(1000); // collect in 1s chunks
+            // Start stem recorders
+            musicChunks = []; sfxChunks = [];
+            musicBlob = null; sfxBlob = null;
+            const mimeOpts = { mimeType: MediaRecorder.isTypeSupported('audio/webm;codecs=opus') ? 'audio/webm;codecs=opus' : 'audio/webm' };
+            try {
+                musicRecorder = new MediaRecorder(this.musicRecordDest.stream, mimeOpts);
+                musicRecorder.ondataavailable = (e) => { if (e.data.size > 0) musicChunks.push(e.data); };
+                musicRecorder.onstop = () => { musicBlob = new Blob(musicChunks, { type: 'audio/webm' }); };
+                musicRecorder.start(1000);
+            } catch (_) { musicRecorder = null; }
+            try {
+                sfxRecorder = new MediaRecorder(this.sfxRecordDest.stream, mimeOpts);
+                sfxRecorder.ondataavailable = (e) => { if (e.data.size > 0) sfxChunks.push(e.data); };
+                sfxRecorder.onstop = () => { sfxBlob = new Blob(sfxChunks, { type: 'audio/webm' }); };
+                sfxRecorder.start(1000);
+            } catch (_) { sfxRecorder = null; }
+            recStart = Date.now();
+            startBtn.classList.add('hidden');
+            stopBtn.classList.remove('hidden');
+            if (timerEl) { timerEl.classList.remove('hidden'); timerEl.textContent = '0:00'; }
+            if (indicator) indicator.classList.remove('hidden');
+            if (downloadArea) downloadArea.classList.add('hidden');
+            timerInterval = setInterval(() => {
+                const elapsed = Math.floor((Date.now() - recStart) / 1000);
+                const m = Math.floor(elapsed / 60);
+                const s = elapsed % 60;
+                if (timerEl) timerEl.textContent = `${m}:${String(s).padStart(2, '0')}`;
+            }, 250);
+            this.updateStatus('Session recording started');
+            this.logActivity('Session recording started', 'info');
+        });
+
+        stopBtn.addEventListener('click', () => {
+            if (this._sessionRecorder && this._sessionRecorder.state === 'recording') {
+                this._sessionRecorder.stop();
+            }
+            if (musicRecorder && musicRecorder.state === 'recording') musicRecorder.stop();
+            if (sfxRecorder && sfxRecorder.state === 'recording') sfxRecorder.stop();
+            stopBtn.classList.add('hidden');
+            startBtn.classList.remove('hidden');
+            if (timerEl) timerEl.classList.add('hidden');
+            if (indicator) indicator.classList.add('hidden');
+            this.updateStatus('Session recording stopped');
+        });
+
+        if (downloadBtn) downloadBtn.addEventListener('click', () => {
+            if (!recBlob) return;
+            const a = document.createElement('a');
+            a.href = URL.createObjectURL(recBlob);
+            a.download = `effexiq-session-${new Date().toISOString().slice(0, 19).replace(/[T:]/g, '-')}.webm`;
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+        });
+
+        if (stemsBtn) stemsBtn.addEventListener('click', () => {
+            const ts = new Date().toISOString().slice(0, 19).replace(/[T:]/g, '-');
+            const download = (blob, suffix) => {
+                if (!blob) return;
+                const a = document.createElement('a');
+                a.href = URL.createObjectURL(blob);
+                a.download = `effexiq-${suffix}-${ts}.webm`;
+                document.body.appendChild(a);
+                a.click();
+                document.body.removeChild(a);
+            };
+            download(musicBlob, 'music');
+            download(sfxBlob, 'sfx');
+            if (recBlob) download(recBlob, 'full-mix');
+        });
     }
 
     // ===== DEMO MODE =====

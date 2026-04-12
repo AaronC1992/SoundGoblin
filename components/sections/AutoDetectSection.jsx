@@ -68,6 +68,28 @@ export default function AutoDetectSection() {
           <button id="stopAudioBtn" className="btn-stop-audio">Stop Audio</button>
         </section>
 
+        {/* Session Recording (Audio Export) */}
+        <section className="session-recording-panel">
+          <h3>Session Recording</h3>
+          <p className="info-text">
+            Record everything — all sounds, music, and ambience — into a single
+            downloadable audio file.
+          </p>
+          <div className="session-rec-controls">
+            <button id="recStartBtn" className="btn-primary">Record Session</button>
+            <button id="recStopBtn" className="btn-stop hidden">Stop Recording</button>
+            <span id="recTimer" className="rec-timer hidden">0:00</span>
+            <span id="recIndicator" className="rec-indicator hidden" />
+          </div>
+          <div id="recDownload" className="rec-download hidden">
+            <audio id="recAudio" controls style={{ width: '100%', marginBottom: 8 }} />
+            <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap' }}>
+              <button id="recDownloadBtn" className="btn-secondary" style={{ flex: 1 }}>Download Mix</button>
+              <button id="recDownloadStemsBtn" className="btn-secondary" style={{ flex: 1 }}>Download Stems</button>
+            </div>
+          </div>
+        </section>
+
         {/* Audio Controls */}
         <section className="audio-controls-panel">
           <h3 className="audio-controls-title">Audio Controls</h3>
