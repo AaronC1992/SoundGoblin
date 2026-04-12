@@ -7050,6 +7050,1437 @@
         "arcane",
         "awakening"
       ]
+    },
+    {
+      "type": "music",
+      "name": "stealth sneaking music",
+      "file": "Saved sounds/stealth-sneaking-music.mp3",
+      "keywords": [
+        "stealth",
+        "sneaking",
+        "suspense",
+        "rogue",
+        "thief",
+        "infiltration",
+        "quiet",
+        "tension"
+      ]
+    },
+    {
+      "type": "music",
+      "name": "sea shanty sailing music",
+      "file": "Saved sounds/sea-shanty-sailing-music.mp3",
+      "keywords": [
+        "sea",
+        "shanty",
+        "pirate",
+        "sailing",
+        "maritime",
+        "adventure",
+        "nautical",
+        "folk"
+      ]
+    },
+    {
+      "type": "music",
+      "name": "desert caravan music",
+      "file": "Saved sounds/desert-caravan-music.mp3",
+      "keywords": [
+        "desert",
+        "arabian",
+        "exotic",
+        "caravan",
+        "middle eastern",
+        "sand",
+        "dunes",
+        "oud"
+      ]
+    },
+    {
+      "type": "music",
+      "name": "swamp bayou music",
+      "file": "Saved sounds/swamp-bayou-music.mp3",
+      "keywords": [
+        "swamp",
+        "bayou",
+        "marsh",
+        "eerie",
+        "foggy",
+        "damp",
+        "murky",
+        "dark"
+      ]
+    },
+    {
+      "type": "music",
+      "name": "victory celebration music",
+      "file": "Saved sounds/victory-celebration-music.mp3",
+      "keywords": [
+        "victory",
+        "celebration",
+        "triumph",
+        "heroic",
+        "fanfare",
+        "win",
+        "glory",
+        "uplifting"
+      ]
+    },
+    {
+      "type": "music",
+      "name": "chase pursuit music",
+      "file": "Saved sounds/chase-pursuit-music.mp3",
+      "keywords": [
+        "chase",
+        "pursuit",
+        "action",
+        "running",
+        "escape",
+        "urgent",
+        "fast",
+        "intense"
+      ]
+    },
+    {
+      "type": "music",
+      "name": "mystery investigation music",
+      "file": "Saved sounds/mystery-investigation-music.mp3",
+      "keywords": [
+        "mystery",
+        "investigation",
+        "detective",
+        "clue",
+        "puzzle",
+        "noir",
+        "curious",
+        "intrigue"
+      ]
+    },
+    {
+      "type": "music",
+      "name": "tribal jungle drums music",
+      "file": "Saved sounds/tribal-jungle-drums-music.mp3",
+      "keywords": [
+        "tribal",
+        "jungle",
+        "drums",
+        "primal",
+        "rainforest",
+        "exotic",
+        "ritual",
+        "native"
+      ]
+    },
+    {
+      "type": "music",
+      "name": "underwater depths music",
+      "file": "Saved sounds/underwater-depths-music.mp3",
+      "keywords": [
+        "underwater",
+        "deep",
+        "ocean",
+        "mysterious",
+        "submerged",
+        "abyss",
+        "ambient",
+        "ethereal"
+      ]
+    },
+    {
+      "type": "music",
+      "name": "royal court throne music",
+      "file": "Saved sounds/royal-court-throne-music.mp3",
+      "keywords": [
+        "royal",
+        "court",
+        "throne",
+        "regal",
+        "noble",
+        "king",
+        "queen",
+        "baroque",
+        "elegant"
+      ]
+    },
+    {
+      "type": "music",
+      "name": "funeral dirge music",
+      "file": "Saved sounds/funeral-dirge-music.mp3",
+      "keywords": [
+        "funeral",
+        "dirge",
+        "mourning",
+        "somber",
+        "death",
+        "grief",
+        "loss",
+        "solemn"
+      ]
+    },
+    {
+      "type": "music",
+      "name": "dawn sunrise music",
+      "file": "Saved sounds/dawn-sunrise-music.mp3",
+      "keywords": [
+        "dawn",
+        "sunrise",
+        "morning",
+        "hopeful",
+        "new beginning",
+        "warm",
+        "peaceful",
+        "gentle"
+      ]
+    },
+    {
+      "type": "music",
+      "name": "frozen tundra music",
+      "file": "Saved sounds/frozen-tundra-music.mp3",
+      "keywords": [
+        "frozen",
+        "tundra",
+        "ice",
+        "winter",
+        "cold",
+        "arctic",
+        "desolate",
+        "harsh"
+      ]
+    },
+    {
+      "type": "music",
+      "name": "volcanic cavern music",
+      "file": "Saved sounds/volcanic-cavern-music.mp3",
+      "keywords": [
+        "volcanic",
+        "cavern",
+        "lava",
+        "fire",
+        "underground",
+        "intense",
+        "ominous",
+        "magma"
+      ]
+    },
+    {
+      "type": "music",
+      "name": "space cosmic ambient music",
+      "file": "Saved sounds/space-cosmic-ambient-music.mp3",
+      "keywords": [
+        "space",
+        "cosmic",
+        "sci-fi",
+        "ambient",
+        "stars",
+        "galaxy",
+        "ethereal",
+        "vast"
+      ]
+    },
+    {
+      "type": "music",
+      "name": "mountain summit epic music",
+      "file": "Saved sounds/mountain-summit-epic-music.mp3",
+      "keywords": [
+        "mountain",
+        "summit",
+        "epic",
+        "majestic",
+        "vast",
+        "panoramic",
+        "achievement",
+        "awe"
+      ]
+    },
+    {
+      "type": "music",
+      "name": "marketplace bazaar music",
+      "file": "Saved sounds/marketplace-bazaar-music.mp3",
+      "keywords": [
+        "marketplace",
+        "bazaar",
+        "market",
+        "trading",
+        "exotic",
+        "colorful",
+        "busy",
+        "lively"
+      ]
+    },
+    {
+      "type": "music",
+      "name": "romantic serenade music",
+      "file": "Saved sounds/romantic-serenade-music.mp3",
+      "keywords": [
+        "romantic",
+        "serenade",
+        "love",
+        "tender",
+        "intimate",
+        "gentle",
+        "beautiful",
+        "warm"
+      ]
+    },
+    {
+      "type": "music",
+      "name": "dungeon crawl dark music",
+      "file": "Saved sounds/dungeon-crawl-dark-music.mp3",
+      "keywords": [
+        "dungeon",
+        "crawl",
+        "dark",
+        "underground",
+        "foreboding",
+        "claustrophobic",
+        "dnd",
+        "exploration"
+      ]
+    },
+    {
+      "type": "music",
+      "name": "war aftermath somber music",
+      "file": "Saved sounds/war-aftermath-somber-music.mp3",
+      "keywords": [
+        "war",
+        "aftermath",
+        "somber",
+        "devastation",
+        "loss",
+        "reflection",
+        "battlefield",
+        "emotional"
+      ]
+    },
+    {
+      "type": "music",
+      "name": "enchanted garden music",
+      "file": "Saved sounds/enchanted-garden-music.mp3",
+      "keywords": [
+        "enchanted",
+        "garden",
+        "fairy",
+        "magical",
+        "whimsical",
+        "dreamy",
+        "woodland",
+        "fantasy"
+      ]
+    },
+    {
+      "type": "music",
+      "name": "ancient temple mystical music",
+      "file": "Saved sounds/ancient-temple-mystical-music.mp3",
+      "keywords": [
+        "ancient",
+        "temple",
+        "mystical",
+        "sacred",
+        "monks",
+        "chanting",
+        "mysterious",
+        "ritual"
+      ]
+    },
+    {
+      "type": "music",
+      "name": "bandit ambush music",
+      "file": "Saved sounds/bandit-ambush-music.mp3",
+      "keywords": [
+        "bandit",
+        "ambush",
+        "outlaw",
+        "danger",
+        "attack",
+        "chaotic",
+        "aggressive",
+        "combat"
+      ]
+    },
+    {
+      "type": "music",
+      "name": "drunken tavern jig music",
+      "file": "Saved sounds/drunken-tavern-jig-music.mp3",
+      "keywords": [
+        "tavern",
+        "drunk",
+        "jig",
+        "merry",
+        "pub",
+        "drinking",
+        "rowdy",
+        "medieval",
+        "jolly"
+      ]
+    },
+    {
+      "type": "music",
+      "name": "dragon lair ominous music",
+      "file": "Saved sounds/dragon-lair-ominous-music.mp3",
+      "keywords": [
+        "dragon",
+        "lair",
+        "ominous",
+        "treasure",
+        "danger",
+        "epic",
+        "fantasy",
+        "boss",
+        "dnd"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "insect buzzing swarm",
+      "file": "Saved sounds/insect-buzzing-swarm.mp3",
+      "keywords": [
+        "insect",
+        "buzzing",
+        "bee",
+        "swarm",
+        "wasp",
+        "hive",
+        "flies"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "frog croaking pond",
+      "file": "Saved sounds/frog-croaking-pond.mp3",
+      "keywords": [
+        "frog",
+        "croak",
+        "toad",
+        "pond",
+        "swamp",
+        "ribbit",
+        "night"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "hawk falcon dive screech",
+      "file": "Saved sounds/hawk-falcon-dive-screech.mp3",
+      "keywords": [
+        "hawk",
+        "falcon",
+        "dive",
+        "screech",
+        "raptor",
+        "bird",
+        "prey",
+        "hunting"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "whale song deep ocean",
+      "file": "Saved sounds/whale-song-deep-ocean.mp3",
+      "keywords": [
+        "whale",
+        "song",
+        "ocean",
+        "deep",
+        "mournful",
+        "underwater",
+        "majestic"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "seagull calls coastal",
+      "file": "Saved sounds/seagull-calls-coastal.mp3",
+      "keywords": [
+        "seagull",
+        "gull",
+        "coast",
+        "beach",
+        "harbor",
+        "ocean",
+        "bird",
+        "squawk"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "elephant trumpet call",
+      "file": "Saved sounds/elephant-trumpet-call.mp3",
+      "keywords": [
+        "elephant",
+        "trumpet",
+        "call",
+        "trunk",
+        "jungle",
+        "majestic",
+        "beast",
+        "loud"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "monkey screech jungle",
+      "file": "Saved sounds/monkey-screech-jungle.mp3",
+      "keywords": [
+        "monkey",
+        "screech",
+        "jungle",
+        "ape",
+        "primate",
+        "chatter",
+        "tropical",
+        "canopy"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "deer stag bellow",
+      "file": "Saved sounds/deer-stag-bellow.mp3",
+      "keywords": [
+        "deer",
+        "stag",
+        "bellow",
+        "elk",
+        "bugle",
+        "forest",
+        "rutting",
+        "woodland"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "cricket chorus night",
+      "file": "Saved sounds/cricket-chorus-night.mp3",
+      "keywords": [
+        "cricket",
+        "chirp",
+        "night",
+        "insect",
+        "summer",
+        "evening",
+        "chorus"
+      ],
+      "loop": true
+    },
+    {
+      "type": "sfx",
+      "name": "child laughing playing",
+      "file": "Saved sounds/child-laughing-playing.mp3",
+      "keywords": [
+        "child",
+        "laughing",
+        "playing",
+        "joyful",
+        "kids",
+        "giggle",
+        "innocent",
+        "happy"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "crossbow shot bolt",
+      "file": "Saved sounds/crossbow-shot-bolt.mp3",
+      "keywords": [
+        "crossbow",
+        "bolt",
+        "shot",
+        "twang",
+        "weapon",
+        "ranged",
+        "medieval",
+        "fire"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "mace heavy impact",
+      "file": "Saved sounds/mace-heavy-impact.mp3",
+      "keywords": [
+        "mace",
+        "impact",
+        "heavy",
+        "crush",
+        "blunt",
+        "weapon",
+        "hit",
+        "armor"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "staff ground slam",
+      "file": "Saved sounds/staff-ground-slam.mp3",
+      "keywords": [
+        "staff",
+        "slam",
+        "ground",
+        "wizard",
+        "thud",
+        "magic",
+        "stone",
+        "impact"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "arrow volley battle",
+      "file": "Saved sounds/arrow-volley-battle.mp3",
+      "keywords": [
+        "arrow",
+        "volley",
+        "rain",
+        "battle",
+        "barrage",
+        "medieval",
+        "siege",
+        "war"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "cavalry charge hooves",
+      "file": "Saved sounds/cavalry-charge-hooves.mp3",
+      "keywords": [
+        "cavalry",
+        "charge",
+        "hooves",
+        "horses",
+        "army",
+        "galloping",
+        "battle",
+        "thundering"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "catapult launch boulder",
+      "file": "Saved sounds/catapult-launch-boulder.mp3",
+      "keywords": [
+        "catapult",
+        "launch",
+        "boulder",
+        "siege",
+        "trebuchet",
+        "projectile",
+        "medieval",
+        "war"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "battering ram impact",
+      "file": "Saved sounds/battering-ram-impact.mp3",
+      "keywords": [
+        "battering",
+        "ram",
+        "gate",
+        "siege",
+        "castle",
+        "impact",
+        "war",
+        "breach"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "flail morningstar swing",
+      "file": "Saved sounds/flail-morningstar-swing.mp3",
+      "keywords": [
+        "flail",
+        "morningstar",
+        "chain",
+        "swing",
+        "weapon",
+        "medieval",
+        "spiked",
+        "heavy"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "shield wall formation",
+      "file": "Saved sounds/shield-wall-formation.mp3",
+      "keywords": [
+        "shield",
+        "wall",
+        "formation",
+        "army",
+        "soldiers",
+        "defense",
+        "brace",
+        "lock"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "bowstring draw tension",
+      "file": "Saved sounds/bowstring-draw-tension.mp3",
+      "keywords": [
+        "bowstring",
+        "draw",
+        "tension",
+        "aim",
+        "creak",
+        "bow",
+        "archer",
+        "ready"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "war horn battle signal",
+      "file": "Saved sounds/war-horn-battle-signal.mp3",
+      "keywords": [
+        "war",
+        "horn",
+        "battle",
+        "signal",
+        "blast",
+        "charge",
+        "command",
+        "resonating"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "creature death cry",
+      "file": "Saved sounds/creature-death-cry.mp3",
+      "keywords": [
+        "creature",
+        "death",
+        "dying",
+        "monster",
+        "roar",
+        "final",
+        "beast",
+        "kill"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "dragonfire breath blast",
+      "file": "Saved sounds/dragonfire-breath-blast.mp3",
+      "keywords": [
+        "dragon",
+        "fire",
+        "breath",
+        "blast",
+        "flame",
+        "roar",
+        "devastating",
+        "attack"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "armor removing clank",
+      "file": "Saved sounds/armor-removing-clank.mp3",
+      "keywords": [
+        "armor",
+        "removing",
+        "clank",
+        "metal",
+        "unbuckle",
+        "chainmail",
+        "knight",
+        "plate"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "ship cannon broadside",
+      "file": "Saved sounds/ship-cannon-broadside.mp3",
+      "keywords": [
+        "cannon",
+        "broadside",
+        "ship",
+        "naval",
+        "pirate",
+        "battle",
+        "volley",
+        "blast"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "resurrection divine magic",
+      "file": "Saved sounds/resurrection-divine-magic.mp3",
+      "keywords": [
+        "resurrection",
+        "revival",
+        "divine",
+        "life",
+        "holy",
+        "restore",
+        "raise",
+        "death"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "transformation shapeshifting",
+      "file": "Saved sounds/transformation-shapeshifting.mp3",
+      "keywords": [
+        "transformation",
+        "shapeshift",
+        "morph",
+        "polymorph",
+        "change",
+        "druid",
+        "werewolf",
+        "form"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "time stop freeze effect",
+      "file": "Saved sounds/time-stop-freeze-effect.mp3",
+      "keywords": [
+        "time",
+        "stop",
+        "freeze",
+        "temporal",
+        "distortion",
+        "halt",
+        "pause",
+        "spell"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "telekinesis force hum",
+      "file": "Saved sounds/telekinesis-force-hum.mp3",
+      "keywords": [
+        "telekinesis",
+        "force",
+        "psychic",
+        "mind",
+        "lift",
+        "hum",
+        "power",
+        "mental"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "summoning circle energy",
+      "file": "Saved sounds/summoning-circle-energy.mp3",
+      "keywords": [
+        "summoning",
+        "circle",
+        "ritual",
+        "portal",
+        "arcane",
+        "runes",
+        "energy",
+        "conjure"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "crystal magic chime",
+      "file": "Saved sounds/crystal-magic-chime.mp3",
+      "keywords": [
+        "crystal",
+        "chime",
+        "magic",
+        "gem",
+        "sparkle",
+        "resonating",
+        "enchanted",
+        "mystical"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "dark energy pulse",
+      "file": "Saved sounds/dark-energy-pulse.mp3",
+      "keywords": [
+        "dark",
+        "energy",
+        "pulse",
+        "evil",
+        "shadow",
+        "necromantic",
+        "force",
+        "blast"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "enchantment sparkle apply",
+      "file": "Saved sounds/enchantment-sparkle-apply.mp3",
+      "keywords": [
+        "enchantment",
+        "sparkle",
+        "buff",
+        "apply",
+        "weapon",
+        "item",
+        "shimmer",
+        "magic"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "ward barrier activate",
+      "file": "Saved sounds/ward-barrier-activate.mp3",
+      "keywords": [
+        "ward",
+        "barrier",
+        "shield",
+        "protection",
+        "force",
+        "defense",
+        "activate",
+        "spell"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "soul drain dark magic",
+      "file": "Saved sounds/soul-drain-dark-magic.mp3",
+      "keywords": [
+        "soul",
+        "drain",
+        "dark",
+        "life",
+        "wailing",
+        "evil",
+        "necromantic",
+        "death"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "volcano eruption rumble",
+      "file": "Saved sounds/volcano-eruption-rumble.mp3",
+      "keywords": [
+        "volcano",
+        "eruption",
+        "rumble",
+        "lava",
+        "explosion",
+        "catastrophic",
+        "disaster",
+        "earth"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "lava bubbling flow",
+      "file": "Saved sounds/lava-bubbling-flow.mp3",
+      "keywords": [
+        "lava",
+        "bubbling",
+        "magma",
+        "volcanic",
+        "molten",
+        "flow",
+        "hot",
+        "gurgling"
+      ],
+      "loop": true
+    },
+    {
+      "type": "sfx",
+      "name": "heavy rain downpour",
+      "file": "Saved sounds/heavy-rain-downpour.mp3",
+      "keywords": [
+        "rain",
+        "heavy",
+        "downpour",
+        "monsoon",
+        "torrential",
+        "deluge",
+        "storm",
+        "intense"
+      ],
+      "loop": true
+    },
+    {
+      "type": "sfx",
+      "name": "hail storm pelting",
+      "file": "Saved sounds/hail-storm-pelting.mp3",
+      "keywords": [
+        "hail",
+        "storm",
+        "ice",
+        "pelting",
+        "frozen",
+        "precipitation",
+        "harsh",
+        "weather"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "ice cracking breaking",
+      "file": "Saved sounds/ice-cracking-breaking.mp3",
+      "keywords": [
+        "ice",
+        "cracking",
+        "breaking",
+        "frozen",
+        "fracture",
+        "lake",
+        "shatter",
+        "cold"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "rockslide avalanche",
+      "file": "Saved sounds/rockslide-avalanche.mp3",
+      "keywords": [
+        "rockslide",
+        "avalanche",
+        "boulder",
+        "landslide",
+        "debris",
+        "mountain",
+        "collapse",
+        "rumble"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "quicksand sinking",
+      "file": "Saved sounds/quicksand-sinking.mp3",
+      "keywords": [
+        "quicksand",
+        "sinking",
+        "mud",
+        "trap",
+        "sucking",
+        "stuck",
+        "struggle",
+        "sand"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "splash water dive",
+      "file": "Saved sounds/splash-water-dive.mp3",
+      "keywords": [
+        "splash",
+        "dive",
+        "water",
+        "plunge",
+        "jump",
+        "lake",
+        "river",
+        "impact"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "bubbling brook gentle",
+      "file": "Saved sounds/bubbling-brook-gentle.mp3",
+      "keywords": [
+        "brook",
+        "stream",
+        "babbling",
+        "gentle",
+        "trickling",
+        "creek",
+        "peaceful",
+        "water"
+      ],
+      "loop": true
+    },
+    {
+      "type": "sfx",
+      "name": "sail canvas unfurling",
+      "file": "Saved sounds/sail-canvas-unfurling.mp3",
+      "keywords": [
+        "sail",
+        "canvas",
+        "unfurl",
+        "wind",
+        "ship",
+        "fabric",
+        "flapping",
+        "nautical"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "rowing oars water",
+      "file": "Saved sounds/rowing-oars-water.mp3",
+      "keywords": [
+        "rowing",
+        "oars",
+        "paddle",
+        "boat",
+        "water",
+        "creaking",
+        "dipping",
+        "rhythmic"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "gentle breeze wind chimes",
+      "file": "Saved sounds/gentle-breeze-wind-chimes.mp3",
+      "keywords": [
+        "breeze",
+        "wind",
+        "chimes",
+        "gentle",
+        "garden",
+        "peaceful",
+        "tinkling",
+        "soft"
+      ],
+      "loop": true
+    },
+    {
+      "type": "sfx",
+      "name": "alarm bell medieval",
+      "file": "Saved sounds/alarm-bell-medieval.mp3",
+      "keywords": [
+        "alarm",
+        "bell",
+        "warning",
+        "medieval",
+        "alert",
+        "guard",
+        "castle",
+        "urgent"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "pickaxe mining stone",
+      "file": "Saved sounds/pickaxe-mining-stone.mp3",
+      "keywords": [
+        "pickaxe",
+        "mining",
+        "stone",
+        "ore",
+        "rock",
+        "strike",
+        "mine",
+        "dig"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "boulder rolling trap",
+      "file": "Saved sounds/boulder-rolling-trap.mp3",
+      "keywords": [
+        "boulder",
+        "rolling",
+        "trap",
+        "stone",
+        "rumble",
+        "dungeon",
+        "danger",
+        "crushing"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "bridge wood creaking",
+      "file": "Saved sounds/bridge-wood-creaking.mp3",
+      "keywords": [
+        "bridge",
+        "wood",
+        "creaking",
+        "groaning",
+        "rickety",
+        "rope",
+        "swaying",
+        "precarious"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "rusty hinge squeak",
+      "file": "Saved sounds/rusty-hinge-squeak.mp3",
+      "keywords": [
+        "rusty",
+        "hinge",
+        "squeak",
+        "old",
+        "metal",
+        "door",
+        "gate",
+        "corroded"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "barrel rolling cellar",
+      "file": "Saved sounds/barrel-rolling-cellar.mp3",
+      "keywords": [
+        "barrel",
+        "rolling",
+        "cellar",
+        "wood",
+        "stone",
+        "tumbling",
+        "cobblestone",
+        "heavy"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "secret passage wall",
+      "file": "Saved sounds/secret-passage-wall.mp3",
+      "keywords": [
+        "secret",
+        "passage",
+        "wall",
+        "stone",
+        "hidden",
+        "mechanism",
+        "grinding",
+        "ancient"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "trap dart spring",
+      "file": "Saved sounds/trap-dart-spring.mp3",
+      "keywords": [
+        "trap",
+        "dart",
+        "spring",
+        "poison",
+        "dungeon",
+        "pressure",
+        "mechanism",
+        "trigger"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "dice rolling table",
+      "file": "Saved sounds/dice-rolling-table.mp3",
+      "keywords": [
+        "dice",
+        "roll",
+        "table",
+        "gambling",
+        "rpg",
+        "tabletop",
+        "tumble",
+        "chance"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "coin toss flip",
+      "file": "Saved sounds/coin-toss-flip.mp3",
+      "keywords": [
+        "coin",
+        "toss",
+        "flip",
+        "decision",
+        "spinning",
+        "metal",
+        "catch",
+        "chance"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "quill writing parchment",
+      "file": "Saved sounds/quill-writing-parchment.mp3",
+      "keywords": [
+        "quill",
+        "writing",
+        "parchment",
+        "scroll",
+        "ink",
+        "scribble",
+        "scholar",
+        "pen"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "scroll unfurling open",
+      "file": "Saved sounds/scroll-unfurling-open.mp3",
+      "keywords": [
+        "scroll",
+        "unfurl",
+        "parchment",
+        "paper",
+        "open",
+        "ancient",
+        "document",
+        "reveal"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "glass clink toast",
+      "file": "Saved sounds/glass-clink-toast.mp3",
+      "keywords": [
+        "glass",
+        "clink",
+        "toast",
+        "cheers",
+        "goblet",
+        "drink",
+        "celebration",
+        "tavern"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "cooking fire sizzle",
+      "file": "Saved sounds/cooking-fire-sizzle.mp3",
+      "keywords": [
+        "cooking",
+        "sizzle",
+        "fire",
+        "food",
+        "meat",
+        "kitchen",
+        "frying",
+        "grilling"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "wood chopping axe",
+      "file": "Saved sounds/wood-chopping-axe.mp3",
+      "keywords": [
+        "wood",
+        "chopping",
+        "axe",
+        "lumber",
+        "firewood",
+        "split",
+        "log",
+        "chop"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "treasure coins pouring",
+      "file": "Saved sounds/treasure-coins-pouring.mp3",
+      "keywords": [
+        "treasure",
+        "coins",
+        "pouring",
+        "gold",
+        "silver",
+        "chest",
+        "rich",
+        "loot",
+        "cascade"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "door slam heavy",
+      "file": "Saved sounds/door-slam-heavy.mp3",
+      "keywords": [
+        "door",
+        "slam",
+        "heavy",
+        "shut",
+        "bang",
+        "loud",
+        "force",
+        "dramatic"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "mirror shatter cursed",
+      "file": "Saved sounds/mirror-shatter-cursed.mp3",
+      "keywords": [
+        "mirror",
+        "shatter",
+        "cursed",
+        "glass",
+        "break",
+        "ominous",
+        "supernatural",
+        "bad luck"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "crowd quiet murmur",
+      "file": "Saved sounds/crowd-quiet-murmur.mp3",
+      "keywords": [
+        "crowd",
+        "murmur",
+        "quiet",
+        "chatter",
+        "background",
+        "gathering",
+        "audience",
+        "whisper"
+      ],
+      "loop": true
+    },
+    {
+      "type": "sfx",
+      "name": "eating drinking gulp",
+      "file": "Saved sounds/eating-drinking-gulp.mp3",
+      "keywords": [
+        "eating",
+        "drinking",
+        "gulp",
+        "swallow",
+        "tankard",
+        "ale",
+        "tavern",
+        "thirsty"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "snoring sleeping",
+      "file": "Saved sounds/snoring-sleeping.mp3",
+      "keywords": [
+        "snoring",
+        "sleeping",
+        "rest",
+        "loud",
+        "breathing",
+        "sleep",
+        "night",
+        "camp"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "coughing choking",
+      "file": "Saved sounds/coughing-choking.mp3",
+      "keywords": [
+        "cough",
+        "choke",
+        "gasp",
+        "smoke",
+        "dust",
+        "struggle",
+        "breath",
+        "sick"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "wagon cart cobblestone",
+      "file": "Saved sounds/wagon-cart-cobblestone.mp3",
+      "keywords": [
+        "wagon",
+        "cart",
+        "cobblestone",
+        "wheel",
+        "horse",
+        "medieval",
+        "transport",
+        "rattling"
+      ]
     }
   ]
 }
