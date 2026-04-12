@@ -269,6 +269,9 @@
 
 /* Platform mobile layout */
 @media (max-width: 900px) {
+    #platformShell {
+        flex-direction: column;
+    }
     #platformSidebar {
         position: fixed;
         left: 0; top: 0; bottom: 0;
@@ -279,8 +282,8 @@
         transform: translateX(0);
     }
     .mobile-topbar { display: flex; }
-    #platformMain { padding: 20px 20px 48px; }
-    .use-case-grid { grid-template-columns: 1fr; }
+    #platformMain { padding: 20px 20px 48px; flex: 1; min-height: 0; }
+    .use-case-grid { grid-template-columns: repeat(2, 1fr); }
 }
 @media (min-width: 901px) {
     #platformShell { flex-direction: row; }
@@ -1176,6 +1179,7 @@
     .hub-header .brand h1 { font-size: 2.2rem; }
     .hub-header { padding: 20px 16px 4px; }
     #hubScreen { min-height: auto; padding-bottom: 24px; }
+    .use-case-grid { grid-template-columns: 1fr; }
 
     .cb-header-actions { flex-wrap: wrap; }
     .section-header { flex-wrap: wrap; }
