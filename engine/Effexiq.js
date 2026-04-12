@@ -1354,7 +1354,8 @@ class Effexiq {
             // Western
             'gunshot': 'gunshot ricochet',
             'revolver': 'gunshot ricochet',
-            'pistol': 'gunshot ricochet',
+            'pistol': 'flintlock pistol shot',
+            'flintlock': 'flintlock pistol shot',
             'tumbleweed': 'tumbleweed desert',
             'spurs': 'spur jingle walk',
 

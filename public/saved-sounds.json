@@ -8481,6 +8481,19 @@
         "transport",
         "rattling"
       ]
+    },
+    {
+      "type": "sfx",
+      "name": "flintlock pistol shot",
+      "file": "Saved sounds/flintlock-pistol-shot.mp3",
+      "keywords": [
+        "flintlock",
+        "pistol",
+        "gunshot",
+        "shot",
+        "pirate",
+        "weapon"
+      ]
     }
   ]
 }
