@@ -737,7 +737,7 @@ class Effexiq {
                     const resp = await fetch(ttsUrl, {
                         method: 'POST',
                         headers: ttsHeaders,
-                        body: JSON.stringify({ text: chunk, voice: 'fable' }),
+                        body: JSON.stringify({ text: chunk }),
                         signal: this._ttsAbortCtrl.signal
                     });
                     if (!resp.ok) throw new Error(`TTS ${resp.status}`);
