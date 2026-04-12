@@ -1,18 +1,18 @@
 'use client';
 
 /**
- * AppShell — the main "use client" component for SoundGoblin.
+ * AppShell — the main "use client" component for Immersify.
  *
  * ARCHITECTURE DECISION:
- * The SoundGoblin audio engine (engine/SoundGoblin.js) is a 7,000+ line class
+ * The Immersify audio engine (engine/Immersify.js) is a 7,000+ line class
  * that orchestrates audio playback, speech recognition, and UI state through
  * direct DOM manipulation (getElementById, addEventListener, classList).
  * A full conversion to React state/hooks would be a multi-month rewrite with
  * high regression risk. Instead, this component:
  *   1. Renders the full DOM scaffold as JSX (all sections are always in the DOM,
- *      hidden via CSS, exactly as the original HTML — so SoundGoblin can find
+ *      hidden via CSS, exactly as the original HTML — so Immersify can find
  *      elements by ID at any time).
- *   2. Dynamically imports and instantiates SoundGoblin in useEffect after mount,
+ *   2. Dynamically imports and instantiates Immersify in useEffect after mount,
  *      exactly replicating the original DOMContentLoaded init sequence.
  *   3. Cleans up on unmount.
  *
@@ -50,7 +50,7 @@ export default function AppShell() {
       if (typeof window !== 'undefined') {
         const backendUrl = process.env.NEXT_PUBLIC_BACKEND_URL || '';
         if (backendUrl) {
-          window.SoundGoblin_BACKEND_URL = backendUrl;
+          window.Immersify_BACKEND_URL = backendUrl;
         }
         // R2 audio proxy path (avoids CORS issues with pub-*.r2.dev)
         window.__R2_PUBLIC_URL = '/r2-audio';
@@ -73,17 +73,17 @@ export default function AppShell() {
       }
 
       try {
-        // 3. Import and instantiate the SoundGoblin engine. Dynamic import keeps it
+        // 3. Import and instantiate the Immersify engine. Dynamic import keeps it
         //    out of the server bundle entirely (ssr:false on the dashboard page gives
         //    a second layer of protection, but being explicit here is safer).
-        const { default: SoundGoblin, initializeMenuToggles } = await import('../engine/SoundGoblin');
-        engineInstance = new SoundGoblin();
+        const { default: Immersify, initializeMenuToggles } = await import('../engine/Immersify');
+        engineInstance = new Immersify();
         window.gameInstance = engineInstance;
 
         // 4. Wire up settings accordion toggles (was a standalone function in game.js)
         initializeMenuToggles();
       } catch (e) {
-        console.error('[AppShell] SoundGoblin engine failed to start:', e);
+        console.error('[AppShell] Immersify engine failed to start:', e);
       }
 
       // 5. Safety net: if the app container ended up hidden for any reason, force it visible
@@ -134,7 +134,7 @@ export default function AppShell() {
                 <line x1="3" y1="18" x2="21" y2="18" />
               </svg>
             </button>
-            <span className="mobile-brand">SoundGoblin</span>
+            <span className="mobile-brand">Immersify</span>
             <span id="noKeyBannerMobile" className="mobile-no-key hidden">No subscription</span>
           </header>
 
@@ -156,7 +156,7 @@ export default function AppShell() {
             >
               <span>
                 Auto Detect and Story modes require Chrome or Edge for microphone access. Firefox
-                does not support the Web Speech API used by SoundGoblin.
+                does not support the Web Speech API used by Immersify.
               </span>
               <button
                 onClick={(e) => e.currentTarget.closest('#firefoxWarning')?.classList.add('hidden')}

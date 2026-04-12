@@ -1,6 +1,6 @@
 import fs from 'fs';
 
-const filePath = 'c:/Users/jenna/Desktop/Portfolio projects/soundgoblin-next/engine/SoundGoblin.js';
+const filePath = 'c:/Users/jenna/Desktop/Portfolio projects/Immersify-next/engine/Immersify.js';
 let buf = fs.readFileSync(filePath);
 
 const fixes = [

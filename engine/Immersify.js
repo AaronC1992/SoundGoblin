@@ -1,4 +1,4 @@
-﻿// ===== SoundGoblin - INTELLIGENT AUDIO COMPANION =====
+// ===== Immersify - INTELLIGENT AUDIO COMPANION =====
 // Author: Expert AI Team
 // Version: 3.0.0 - Production release with AI analysis pipeline, Stop Audio fix, and catalog ID validation
 
@@ -69,13 +69,13 @@ const storage = {
 
 // ===== SUBSCRIPTION TOKEN MANAGEMENT =====
 function getAccessToken() {
-    try { return localStorage.getItem('SoundGoblin_token') || null; } catch (_) { return null; }
+    try { return localStorage.getItem('Immersify_token') || null; } catch (_) { return null; }
 }
 
 function setAccessToken(token) {
     try {
-        if (token) { localStorage.setItem('SoundGoblin_token', token); }
-        else { localStorage.removeItem('SoundGoblin_token'); }
+        if (token) { localStorage.setItem('Immersify_token', token); }
+        else { localStorage.removeItem('Immersify_token'); }
     } catch (_) {}
 }
 
@@ -116,7 +116,7 @@ function isSpeechRecognitionAvailable() {
     return ('webkitSpeechRecognition' in window) || ('SpeechRecognition' in window);
 }
 
-class SoundGoblin {
+class Immersify {
     constructor() {
         // Backend Configuration
         this.backendUrl = this.getBackendUrl();
@@ -150,40 +150,40 @@ class SoundGoblin {
         this.analysisVersion = 0; // increment on mode changes to ignore stale AI results
         this.storyContext = ''; // User-provided story context for better AI understanding
         this.mutedCategories = new Set();
-        try { this.disabledSounds = new Set(JSON.parse(localStorage.getItem('SoundGoblin_disabled_sounds') || '[]')); } catch { this.disabledSounds = new Set(); }
+        try { this.disabledSounds = new Set(JSON.parse(localStorage.getItem('Immersify_disabled_sounds') || '[]')); } catch { this.disabledSounds = new Set(); }
         // Mood & sentiment tracking
         this.moodHistory = []; // Last N mood readings { primary, intensity, timestamp }
         this.currentMood = { primary: 'neutral', intensity: 0.5 };
-        this.sessionContext = localStorage.getItem('SoundGoblin_session_context') || '';
+        this.sessionContext = localStorage.getItem('Immersify_session_context') || '';
         // Dramatic beat detection
         this.lastSpeechTime = 0;
         this.dramaticPhrases = /^(and then|suddenly|just then|at that moment|but then|without warning|in an instant|from the shadows|out of nowhere)/i;
         // Custom recorded sounds
         try {
-            const raw = JSON.parse(localStorage.getItem('SoundGoblin_custom_sounds') || '[]');
+            const raw = JSON.parse(localStorage.getItem('Immersify_custom_sounds') || '[]');
             this.customSounds = Array.isArray(raw) ? raw.filter(s => s && typeof s.name === 'string') : [];
         } catch { this.customSounds = []; }
         // Sound history for playback feedback
         this.soundHistory = [];
     // Playback preferences
-    try { this.musicEnabled = JSON.parse(localStorage.getItem('SoundGoblin_music_enabled') ?? 'true'); } catch { this.musicEnabled = true; }
-    try { this.sfxEnabled = JSON.parse(localStorage.getItem('SoundGoblin_sfx_enabled') ?? 'true'); } catch { this.sfxEnabled = true; }
+    try { this.musicEnabled = JSON.parse(localStorage.getItem('Immersify_music_enabled') ?? 'true'); } catch { this.musicEnabled = true; }
+    try { this.sfxEnabled = JSON.parse(localStorage.getItem('Immersify_sfx_enabled') ?? 'true'); } catch { this.sfxEnabled = true; }
     // Mixer levels (user-controlled)
-    this.musicLevel = parseFloat(localStorage.getItem('SoundGoblin_music_level') ?? '0.5'); // default 50%
-    this.sfxLevel = parseFloat(localStorage.getItem('SoundGoblin_sfx_level') ?? '0.9');   // default 90%
-    this.ambientDurationMultiplier = parseFloat(localStorage.getItem('SoundGoblin_ambient_duration') ?? '1.0'); // 0.5x to 3x
-    try { this.ambienceEnabled = JSON.parse(localStorage.getItem('SoundGoblin_ambience_enabled') ?? 'true'); } catch { this.ambienceEnabled = true; }
+    this.musicLevel = parseFloat(localStorage.getItem('Immersify_music_level') ?? '0.5'); // default 50%
+    this.sfxLevel = parseFloat(localStorage.getItem('Immersify_sfx_level') ?? '0.9');   // default 90%
+    this.ambientDurationMultiplier = parseFloat(localStorage.getItem('Immersify_ambient_duration') ?? '1.0'); // 0.5x to 3x
+    try { this.ambienceEnabled = JSON.parse(localStorage.getItem('Immersify_ambience_enabled') ?? 'true'); } catch { this.ambienceEnabled = true; }
     this.voiceIntensity = 0.5; // mic loudness ratio: ~0.4 quiet → ~1.5 shouting
     this._micAnalyser = null;  // AnalyserNode connected to mic (measurement only, no echo)
     this._startupSoundPlayed = false;
     this.currentMusicBase = 0.5; // last intensity-derived music gain (pre-user)
     // Mood & performance
-    this.moodBias = parseFloat(localStorage.getItem('SoundGoblin_mood_bias') ?? '0.5'); // 0..1
-    try { this.lowLatencyMode = JSON.parse(localStorage.getItem('SoundGoblin_low_latency') ?? 'false'); } catch { this.lowLatencyMode = false; }
+    this.moodBias = parseFloat(localStorage.getItem('Immersify_mood_bias') ?? '0.5'); // 0..1
+    try { this.lowLatencyMode = JSON.parse(localStorage.getItem('Immersify_low_latency') ?? 'false'); } catch { this.lowLatencyMode = false; }
     this.preloadConcurrency = this.getPreloadConcurrency();
-    this.keywordCooldownMs = parseInt(localStorage.getItem('SoundGoblin_keyword_cooldown_ms') ?? '3000');
+    this.keywordCooldownMs = parseInt(localStorage.getItem('Immersify_keyword_cooldown_ms') ?? '3000');
     // Scene presets — lazy-init from defaults if not yet saved
-    try { this.scenePresets = JSON.parse(localStorage.getItem('SoundGoblin_scene_presets') ?? 'null') || null; } catch { this.scenePresets = null; }
+    try { this.scenePresets = JSON.parse(localStorage.getItem('Immersify_scene_presets') ?? 'null') || null; } catch { this.scenePresets = null; }
     // Control board listen mode (set after setupControlBoard)
     this.cbListenMode = false;
         
@@ -240,7 +240,7 @@ class SoundGoblin {
 
         // User-defined phrase triggers (persisted to localStorage)
         try {
-            this._customPhraseEntries = JSON.parse(localStorage.getItem('SoundGoblin_custom_phrases') || '[]');
+            this._customPhraseEntries = JSON.parse(localStorage.getItem('Immersify_custom_phrases') || '[]');
         } catch (_) {
             this._customPhraseEntries = [];
         }
@@ -282,9 +282,9 @@ class SoundGoblin {
         this.savedSounds = { files: [] };
         // Instant trigger keywords for immediate sound effects
     // AI prediction (auto analysis + auto-playback); default ON
-    this.predictionEnabled = JSON.parse(localStorage.getItem('SoundGoblin_prediction_enabled') ?? 'true');
+    this.predictionEnabled = JSON.parse(localStorage.getItem('Immersify_prediction_enabled') ?? 'true');
     // Story preferences
-    this.autoStartStoryListening = JSON.parse(localStorage.getItem('SoundGoblin_auto_start_story_listening') ?? 'false');
+    this.autoStartStoryListening = JSON.parse(localStorage.getItem('Immersify_auto_start_story_listening') ?? 'false');
             this.instantKeywords = {};
             this.instantKeywordCooldowns = new Map(); // keyword -> last trigger time
             // Will be populated by buildTriggerMap() after saved sounds load
@@ -433,7 +433,7 @@ class SoundGoblin {
                 this.instantKeywords = buildTriggerMap(this.savedSounds);
                 debugLog(`Built trigger map: ${Object.keys(this.instantKeywords).length} keywords`);
             }
-        } catch(e) { console.warn('[SoundGoblin] loadSavedSounds failed:', e.message); }
+        } catch(e) { console.warn('[Immersify] loadSavedSounds failed:', e.message); }
     }
 
     // ===== API KEY MANAGEMENT =====
@@ -723,10 +723,10 @@ class SoundGoblin {
         if (backendUrl) {
             try {
                 if (demoStatus) demoStatus.textContent = 'Generating AI narration...';
-                const ttsUrl = `${backendUrl}/tts`;
+                const ttsUrl = `${backendUrl}/api/tts`;
 
-                // OpenAI TTS has 4096 char limit — split if needed
-                const chunks = this._splitTextForTTS(textFromHere, 4096);
+                // ElevenLabs TTS has ~5000 char limit — split if needed
+                const chunks = this._splitTextForTTS(textFromHere, 5000);
                 const audioBlobs = [];
 
                 this._ttsAbortCtrl = new AbortController();
@@ -1500,7 +1500,7 @@ class SoundGoblin {
         this._fadeOutStaleStorySfx(category);
 
         // Ambient cue words loop continuously until a scene change fades them
-        const isAmbient = SoundGoblin._ambientCueWords.has(word);
+        const isAmbient = Immersify._ambientCueWords.has(word);
         // Skip ambient sounds entirely if ambience is disabled
         if (isAmbient && !this.ambienceEnabled) return;
         const baseVol = isAmbient ? 0.45 : 0.7;
@@ -1728,11 +1728,11 @@ class SoundGoblin {
                 if (resp.ok) {
                     this.backendAvailable = true;
                     try { this.backendHealth = await resp.json(); } catch (_) { this.backendHealth = null; }
-                    debugLog('[SoundGoblin] Backend connected');
+                    debugLog('[Immersify] Backend connected');
                 }
             } catch (_) {
                 this.backendAvailable = false;
-                debugLog('[SoundGoblin] Backend not reachable');
+                debugLog('[Immersify] Backend not reachable');
             }
         }
 
@@ -1752,7 +1752,7 @@ class SoundGoblin {
                     const data = await resp.json();
                     setAccessToken(data.token);
                     this.accessToken = data.token;
-                    this.updateStatus('Subscription activated! Welcome to SoundGoblin.');
+                    this.updateStatus('Subscription activated! Welcome to Immersify.');
                     this.logActivity('Subscription activated', 'success');
                 } else {
                     const err = await resp.json().catch(() => ({}));
@@ -1891,7 +1891,7 @@ class SoundGoblin {
         const type = (document.getElementById('feedbackType')?.value || 'Feedback').trim();
         const subjectInput = (document.getElementById('feedbackSubject')?.value || '').trim();
         const message = (document.getElementById('feedbackText')?.value || '').trim();
-        const subject = subjectInput || `${type} - SoundGoblin`;
+        const subject = subjectInput || `${type} - Immersify`;
         
         // Gather minimal context
         const versionText = document.querySelector('.version')?.textContent || 'v1.x';
@@ -1930,7 +1930,7 @@ class SoundGoblin {
         const type = (document.getElementById('feedbackType')?.value || 'Feedback').trim();
         const subjectInput = (document.getElementById('feedbackSubject')?.value || '').trim();
         const message = (document.getElementById('feedbackText')?.value || '').trim();
-        const subject = subjectInput || `${type} - SoundGoblin`;
+        const subject = subjectInput || `${type} - Immersify`;
         const versionText = document.querySelector('.version')?.textContent || 'v1.x';
         const ctx = [
             `Mode: ${this.currentMode}`,
@@ -1956,7 +1956,7 @@ class SoundGoblin {
         const type = (document.getElementById('feedbackType')?.value || 'Feedback').trim();
         const subjectInput = (document.getElementById('feedbackSubject')?.value || '').trim();
         const message = (document.getElementById('feedbackText')?.value || '').trim();
-        const subject = subjectInput || `${type} - SoundGoblin`;
+        const subject = subjectInput || `${type} - Immersify`;
         const versionText = document.querySelector('.version')?.textContent || 'v1.x';
         const ctx = [
             `Mode: ${this.currentMode}`,
@@ -2045,7 +2045,7 @@ class SoundGoblin {
             if (pixabayKey) sources.push('Pixabay');
             if (freesoundKey) sources.push('Freesound');
             this.updateStatus(`Audio sources enabled: ${sources.join(' + ')}`);
-            alert(`Audio Keys Saved!\n\nEnabled: ${sources.join(', ')}\n\nYou will now hear high-quality sounds when SoundGoblin analyzes your speech.`);
+            alert(`Audio Keys Saved!\n\nEnabled: ${sources.join(', ')}\n\nYou will now hear high-quality sounds when Immersify analyzes your speech.`);
         } else {
             alert('Please enter at least one valid API key (10+ characters).');
         }
@@ -2095,7 +2095,7 @@ class SoundGoblin {
             if (musicLevelValue) musicLevelValue.textContent = musicLevelSlider.value;
             musicLevelSlider.addEventListener('input', (e) => {
                 this.musicLevel = e.target.value / 100;
-                localStorage.setItem('SoundGoblin_music_level', String(this.musicLevel));
+                localStorage.setItem('Immersify_music_level', String(this.musicLevel));
                 if (musicLevelValue) musicLevelValue.textContent = e.target.value;
                 // Apply to current music (Howler or legacy Web Audio)
                 if (this.currentMusic && this.currentMusic._howl) {
@@ -2116,7 +2116,7 @@ class SoundGoblin {
             if (sfxLevelValue) sfxLevelValue.textContent = sfxLevelSlider.value;
             sfxLevelSlider.addEventListener('input', (e) => {
                 this.sfxLevel = e.target.value / 100;
-                localStorage.setItem('SoundGoblin_sfx_level', String(this.sfxLevel));
+                localStorage.setItem('Immersify_sfx_level', String(this.sfxLevel));
                 if (sfxLevelValue) sfxLevelValue.textContent = e.target.value;
                 // Update all active SFX (Howler or legacy)
                 this.activeSounds.forEach((soundObj) => {
@@ -2167,7 +2167,7 @@ class SoundGoblin {
             if (moodValue) moodValue.textContent = moodSlider.value;
             moodSlider.addEventListener('input', (e) => {
                 this.moodBias = e.target.value / 100;
-                localStorage.setItem('SoundGoblin_mood_bias', String(this.moodBias));
+                localStorage.setItem('Immersify_mood_bias', String(this.moodBias));
                 if (moodValue) moodValue.textContent = e.target.value;
             });
         }
@@ -2176,7 +2176,7 @@ class SoundGoblin {
             lowLatencyToggle.checked = !!this.lowLatencyMode;
             lowLatencyToggle.addEventListener('change', (e) => {
                 this.lowLatencyMode = e.target.checked;
-                localStorage.setItem('SoundGoblin_low_latency', JSON.stringify(this.lowLatencyMode));
+                localStorage.setItem('Immersify_low_latency', JSON.stringify(this.lowLatencyMode));
                 this.preloadConcurrency = this.getPreloadConcurrency();
                 
                 // Update analysis interval for low latency mode
@@ -2213,7 +2213,7 @@ class SoundGoblin {
             if (cooldownValue) cooldownValue.textContent = (this.keywordCooldownMs / 1000).toFixed(1) + 's';
             cooldownSlider.addEventListener('input', (e) => {
                 this.keywordCooldownMs = parseInt(e.target.value) * 1000;
-                localStorage.setItem('SoundGoblin_keyword_cooldown_ms', String(this.keywordCooldownMs));
+                localStorage.setItem('Immersify_keyword_cooldown_ms', String(this.keywordCooldownMs));
                 if (cooldownValue) cooldownValue.textContent = (this.keywordCooldownMs / 1000).toFixed(1) + 's';
             });
         }
@@ -2322,7 +2322,7 @@ class SoundGoblin {
             toggleMusic.checked = !!this.musicEnabled;
             toggleMusic.addEventListener('change', (e) => {
                 this.musicEnabled = e.target.checked;
-                localStorage.setItem('SoundGoblin_music_enabled', JSON.stringify(this.musicEnabled));
+                localStorage.setItem('Immersify_music_enabled', JSON.stringify(this.musicEnabled));
                 this.updateStatus(`Music ${this.musicEnabled ? 'enabled' : 'disabled'}`);
                 if (!this.musicEnabled && this.currentMusic) {
                     this.fadeOutAudio(this.currentMusic);
@@ -2339,7 +2339,7 @@ class SoundGoblin {
             toggleSfx.checked = !!this.sfxEnabled;
             toggleSfx.addEventListener('change', (e) => {
                 this.sfxEnabled = e.target.checked;
-                localStorage.setItem('SoundGoblin_sfx_enabled', JSON.stringify(this.sfxEnabled));
+                localStorage.setItem('Immersify_sfx_enabled', JSON.stringify(this.sfxEnabled));
                 this.updateStatus(`Sound effects ${this.sfxEnabled ? 'enabled' : 'disabled'}`);
                 if (!this.sfxEnabled && this.activeSounds.size > 0) {
                     this.activeSounds.forEach((soundObj) => {
@@ -2355,7 +2355,7 @@ class SoundGoblin {
             togglePrediction.checked = !!this.predictionEnabled; // default ON unless previously disabled
             togglePrediction.addEventListener('change', (e) => {
                 this.predictionEnabled = e.target.checked;
-                localStorage.setItem('SoundGoblin_prediction_enabled', JSON.stringify(this.predictionEnabled));
+                localStorage.setItem('Immersify_prediction_enabled', JSON.stringify(this.predictionEnabled));
                 this.updateStatus(`AI predictions ${this.predictionEnabled ? 'enabled' : 'disabled'}`);
                 // Manage timers while listening
                 if (!this.predictionEnabled) {
@@ -2432,7 +2432,7 @@ class SoundGoblin {
             autoStartStoryToggle.checked = !!this.autoStartStoryListening;
             autoStartStoryToggle.addEventListener('change', (e) => {
                 this.autoStartStoryListening = e.target.checked;
-                localStorage.setItem('SoundGoblin_auto_start_story_listening', JSON.stringify(this.autoStartStoryListening));
+                localStorage.setItem('Immersify_auto_start_story_listening', JSON.stringify(this.autoStartStoryListening));
             });
         }
         // ESC to close story overlay
@@ -2601,7 +2601,7 @@ class SoundGoblin {
         } else {
             this.disabledSounds.add(id);
         }
-        localStorage.setItem('SoundGoblin_disabled_sounds', JSON.stringify([...this.disabledSounds]));
+        localStorage.setItem('Immersify_disabled_sounds', JSON.stringify([...this.disabledSounds]));
         this.renderSoundLibrary();
     }
 
@@ -2660,7 +2660,7 @@ class SoundGoblin {
                 e.stopPropagation();
                 const idx = parseInt(deleteBtn.dataset.idx);
                 this.customSounds.splice(idx, 1);
-                localStorage.setItem('SoundGoblin_custom_sounds', JSON.stringify(this.customSounds));
+                localStorage.setItem('Immersify_custom_sounds', JSON.stringify(this.customSounds));
                 this.renderCustomSounds();
                 return;
             }
@@ -2772,7 +2772,7 @@ class SoundGoblin {
                     created: Date.now()
                 };
                 this.customSounds.push(customSound);
-                localStorage.setItem('SoundGoblin_custom_sounds', JSON.stringify(this.customSounds));
+                localStorage.setItem('Immersify_custom_sounds', JSON.stringify(this.customSounds));
                 this.renderCustomSounds();
                 closeModal();
             };
@@ -3314,13 +3314,13 @@ class SoundGoblin {
         const idx = this._customPhraseEntries.findIndex(e => e.query === entry.query);
         if (idx !== -1) this._customPhraseEntries[idx] = entry;
         else this._customPhraseEntries.push(entry);
-        localStorage.setItem('SoundGoblin_custom_phrases', JSON.stringify(this._customPhraseEntries));
+        localStorage.setItem('Immersify_custom_phrases', JSON.stringify(this._customPhraseEntries));
     }
 
     // Remove a custom phrase trigger by query string.
     removeCustomPhrase(query) {
         this._customPhraseEntries = (this._customPhraseEntries || []).filter(e => e.query !== String(query));
-        localStorage.setItem('SoundGoblin_custom_phrases', JSON.stringify(this._customPhraseEntries));
+        localStorage.setItem('Immersify_custom_phrases', JSON.stringify(this._customPhraseEntries));
     }
 
     // Return a copy of all user-defined phrase entries.
@@ -3711,7 +3711,7 @@ class SoundGoblin {
         // Handle Music (mood-adaptive: prefer mood-matching tracks)
         if (this.musicEnabled && decisions.music && decisions.music.id) {
             if (!this.soundCatalog.find(s => s.id === decisions.music.id)) {
-                console.warn(`[SoundGoblin] AI returned unknown music ID: ${decisions.music.id} — skipping`);
+                console.warn(`[Immersify] AI returned unknown music ID: ${decisions.music.id} — skipping`);
             } else {
                 this.bumpStat('transitions');
                 await this.updateMusicById(decisions.music);
@@ -3726,7 +3726,7 @@ class SoundGoblin {
             for (const sfx of decisions.sfx) {
                 // Skip sounds not found in catalog (hallucinated IDs)
                 if (sfx.id && !this.soundCatalog.find(s => s.id === sfx.id)) {
-                    console.warn(`[SoundGoblin] AI returned unknown sound ID: ${sfx.id} — skipping`);
+                    console.warn(`[Immersify] AI returned unknown sound ID: ${sfx.id} — skipping`);
                     continue;
                 }
                 // Skip disabled sounds
@@ -5851,7 +5851,7 @@ class SoundGoblin {
         }
         if (/\bquieter music\b|\bturn (the )?music down\b/.test(t)) {
             this.musicLevel = Math.max(0, this.musicLevel - 0.1);
-            localStorage.setItem('SoundGoblin_music_level', String(this.musicLevel));
+            localStorage.setItem('Immersify_music_level', String(this.musicLevel));
             say(`Music level: ${Math.round(this.musicLevel*100)}%`);
             const target = this.getMusicTargetGain();
             if (this.currentMusic?._howl) { try { this.currentMusic._howl.volume(target); } catch(_){} }
@@ -5863,7 +5863,7 @@ class SoundGoblin {
         }
         if (/\blouder music\b|\bturn (the )?music up\b/.test(t)) {
             this.musicLevel = Math.min(1, this.musicLevel + 0.1);
-            localStorage.setItem('SoundGoblin_music_level', String(this.musicLevel));
+            localStorage.setItem('Immersify_music_level', String(this.musicLevel));
             say(`Music level: ${Math.round(this.musicLevel*100)}%`);
             const target = this.getMusicTargetGain();
             if (this.currentMusic?._howl) { try { this.currentMusic._howl.volume(target); } catch(_){} }
@@ -5873,27 +5873,27 @@ class SoundGoblin {
         // SFX volume commands
         if (/\blouder (sound effects|sfx|effects)\b|\bturn (the )?(sfx|effects) up\b/.test(t)) {
             this.sfxLevel = Math.min(1, this.sfxLevel + 0.1);
-            localStorage.setItem('SoundGoblin_sfx_level', String(this.sfxLevel));
+            localStorage.setItem('Immersify_sfx_level', String(this.sfxLevel));
             say(`SFX level: ${Math.round(this.sfxLevel*100)}%`);
             handled = true;
         }
         if (/\bquieter (sound effects|sfx|effects)\b|\bturn (the )?(sfx|effects) down\b/.test(t)) {
             this.sfxLevel = Math.max(0, this.sfxLevel - 0.1);
-            localStorage.setItem('SoundGoblin_sfx_level', String(this.sfxLevel));
+            localStorage.setItem('Immersify_sfx_level', String(this.sfxLevel));
             say(`SFX level: ${Math.round(this.sfxLevel*100)}%`);
             handled = true;
         }
         if (/\bmute sfx\b|\bmute sound effects\b/.test(t)) {
-            this.sfxEnabled = false; localStorage.setItem('SoundGoblin_sfx_enabled', 'false'); say('Sound effects muted'); handled = true;
+            this.sfxEnabled = false; localStorage.setItem('Immersify_sfx_enabled', 'false'); say('Sound effects muted'); handled = true;
         }
         if (/\bunmute sfx\b|\bunmute sound effects\b/.test(t)) {
-            this.sfxEnabled = true; localStorage.setItem('SoundGoblin_sfx_enabled', 'true'); say('Sound effects unmuted'); handled = true;
+            this.sfxEnabled = true; localStorage.setItem('Immersify_sfx_enabled', 'true'); say('Sound effects unmuted'); handled = true;
         }
         if (/\bmute music\b/.test(t)) {
-            this.musicEnabled = false; localStorage.setItem('SoundGoblin_music_enabled', 'false'); if (this.currentMusic) this.fadeOutAudio(this.currentMusic, 250); say('Music muted'); handled = true;
+            this.musicEnabled = false; localStorage.setItem('Immersify_music_enabled', 'false'); if (this.currentMusic) this.fadeOutAudio(this.currentMusic, 250); say('Music muted'); handled = true;
         }
         if (/\bunmute music\b/.test(t)) {
-            this.musicEnabled = true; localStorage.setItem('SoundGoblin_music_enabled', 'true'); say('Music unmuted'); handled = true;
+            this.musicEnabled = true; localStorage.setItem('Immersify_music_enabled', 'true'); say('Music unmuted'); handled = true;
         }
         // Replay last sound
         if (/\b(play (that |it )?(again|once more)|(repeat|replay) (that |the )?(last |that )?(sound|effect)?s?)\b/.test(t)) {
@@ -6252,7 +6252,7 @@ class SoundGoblin {
             sfxToggle.checked = this.sfxEnabled;
             sfxToggle.addEventListener('change', () => {
                 this.sfxEnabled = sfxToggle.checked;
-                localStorage.setItem('SoundGoblin_sfx_enabled', JSON.stringify(this.sfxEnabled));
+                localStorage.setItem('Immersify_sfx_enabled', JSON.stringify(this.sfxEnabled));
                 if (!this.sfxEnabled) {
                     // Stop all active SFX
                     this.activeSounds.forEach((snd, id) => {
@@ -6273,7 +6273,7 @@ class SoundGoblin {
             musicToggle.checked = this.musicEnabled;
             musicToggle.addEventListener('change', () => {
                 this.musicEnabled = musicToggle.checked;
-                localStorage.setItem('SoundGoblin_music_enabled', JSON.stringify(this.musicEnabled));
+                localStorage.setItem('Immersify_music_enabled', JSON.stringify(this.musicEnabled));
                 if (!this.musicEnabled && this.currentMusic && this.currentMusic._howl) {
                     this.currentMusic._howl.fade(this.currentMusic._howl.volume(), 0, 500);
                     setTimeout(() => {
@@ -6291,7 +6291,7 @@ class SoundGoblin {
             ambienceToggle.checked = this.ambienceEnabled;
             ambienceToggle.addEventListener('change', () => {
                 this.ambienceEnabled = ambienceToggle.checked;
-                localStorage.setItem('SoundGoblin_ambience_enabled', JSON.stringify(this.ambienceEnabled));
+                localStorage.setItem('Immersify_ambience_enabled', JSON.stringify(this.ambienceEnabled));
                 if (!this.ambienceEnabled) {
                     // Stop ambient bed
                     if (this.ambientBed && this.ambientBed._howl) {
@@ -6318,7 +6318,7 @@ class SoundGoblin {
             if (ambientDurValue) ambientDurValue.textContent = this.ambientDurationMultiplier.toFixed(1) + 'x';
             ambientDurSlider.addEventListener('input', (e) => {
                 this.ambientDurationMultiplier = parseInt(e.target.value) / 100;
-                localStorage.setItem('SoundGoblin_ambient_duration', String(this.ambientDurationMultiplier));
+                localStorage.setItem('Immersify_ambient_duration', String(this.ambientDurationMultiplier));
                 if (ambientDurValue) ambientDurValue.textContent = this.ambientDurationMultiplier.toFixed(1) + 'x';
             });
         }
@@ -6433,14 +6433,14 @@ class SoundGoblin {
 
         if (parent === 'storySection') {
             if (title) title.textContent = 'Create Your Story';
-            if (intro) intro.textContent = 'Write your stories and play them with SoundGoblin\'s real-time sound engine.';
+            if (intro) intro.textContent = 'Write your stories and play them with Immersify\'s real-time sound engine.';
             if (savedTitle) savedTitle.textContent = 'Your Stories';
             if (titleInput) titleInput.placeholder = 'Story Title...';
             if (textArea) textArea.placeholder = 'Write your story here...\n\nThe rain tapped against the window as she opened the old letter...';
             if (playBtn) playBtn.textContent = 'Play Story';
         } else {
             if (title) title.textContent = 'Create Your Campaign';
-            if (intro) intro.textContent = 'Write your campaigns and play them with SoundGoblin\'s real-time sound engine.';
+            if (intro) intro.textContent = 'Write your campaigns and play them with Immersify\'s real-time sound engine.';
             if (savedTitle) savedTitle.textContent = 'Your Campaigns';
             if (titleInput) titleInput.placeholder = 'Campaign Title...';
             if (textArea) textArea.placeholder = 'Write your campaign here...\n\nThe adventurers gathered at the tavern as thunder rolled across the darkened sky...';
@@ -6500,7 +6500,7 @@ class SoundGoblin {
 
         // Only show user-created stories from localStorage
         try {
-            const userStories = JSON.parse(localStorage.getItem('SoundGoblin_sc_stories') || '[]');
+            const userStories = JSON.parse(localStorage.getItem('Immersify_sc_stories') || '[]');
             for (let i = 0; i < userStories.length; i++) {
                 const s = userStories[i];
                 if (!s.title || !s.text) continue;
@@ -6517,7 +6517,7 @@ class SoundGoblin {
                 this._addStoryCard(container, userStoryId, s.title, s.text, i);
             }
         } catch (e) {
-            console.warn('[SoundGoblin] Failed to load user stories:', e);
+            console.warn('[Immersify] Failed to load user stories:', e);
         }
 
         if (container.children.length === 0) {
@@ -6542,7 +6542,7 @@ class SoundGoblin {
         // Edit: load story into editor
         card.querySelector('.story-card-edit').addEventListener('click', (e) => {
             e.stopPropagation();
-            const saved = JSON.parse(localStorage.getItem('SoundGoblin_sc_stories') || '[]');
+            const saved = JSON.parse(localStorage.getItem('Immersify_sc_stories') || '[]');
             const s = saved[storageIndex];
             if (!s) return;
             document.getElementById('scTitleInput').value = s.title;
@@ -6560,9 +6560,9 @@ class SoundGoblin {
         card.querySelector('.story-card-delete').addEventListener('click', (e) => {
             e.stopPropagation();
             if (!confirm(`Delete "${title}"?`)) return;
-            const saved = JSON.parse(localStorage.getItem('SoundGoblin_sc_stories') || '[]');
+            const saved = JSON.parse(localStorage.getItem('Immersify_sc_stories') || '[]');
             saved.splice(storageIndex, 1);
-            localStorage.setItem('SoundGoblin_sc_stories', JSON.stringify(saved));
+            localStorage.setItem('Immersify_sc_stories', JSON.stringify(saved));
             this.populateStoriesSection();
         });
         container.appendChild(card);
@@ -6584,13 +6584,13 @@ class SoundGoblin {
         const draft = {};
         if (scTitle || scText) draft.sc = { title: scTitle, text: scText };
         if (Object.keys(draft).length > 0) {
-            localStorage.setItem('SoundGoblin_draft', JSON.stringify(draft));
+            localStorage.setItem('Immersify_draft', JSON.stringify(draft));
         }
     }
 
     _restoreDraft() {
         try {
-            const draft = JSON.parse(localStorage.getItem('SoundGoblin_draft') || '{}');
+            const draft = JSON.parse(localStorage.getItem('Immersify_draft') || '{}');
             if (draft.sc) {
                 const scTitle = document.getElementById('scTitleInput');
                 const scText = document.getElementById('scTextArea');
@@ -6604,12 +6604,12 @@ class SoundGoblin {
 
     _clearDraft(section) {
         try {
-            const draft = JSON.parse(localStorage.getItem('SoundGoblin_draft') || '{}');
+            const draft = JSON.parse(localStorage.getItem('Immersify_draft') || '{}');
             delete draft[section];
             if (Object.keys(draft).length === 0) {
-                localStorage.removeItem('SoundGoblin_draft');
+                localStorage.removeItem('Immersify_draft');
             } else {
-                localStorage.setItem('SoundGoblin_draft', JSON.stringify(draft));
+                localStorage.setItem('Immersify_draft', JSON.stringify(draft));
             }
         } catch (_) {}
     }
@@ -6800,7 +6800,7 @@ class SoundGoblin {
                     this.storyContext = contextInput ? contextInput.value.trim() : '';
                     // Persist as session context for AI prompt
                     this.sessionContext = this.storyContext;
-                    localStorage.setItem('SoundGoblin_session_context', this.sessionContext);
+                    localStorage.setItem('Immersify_session_context', this.sessionContext);
                     if (!this.currentMode) this.selectMode('auto');
                     this.startListeningWithContext().catch(e => debugLog('Listen start failed:', e.message));
                     return;
@@ -7006,17 +7006,17 @@ class SoundGoblin {
 
     _migrateWyoData() {
         try {
-            const old = localStorage.getItem('SoundGoblin_wyo_campaigns');
+            const old = localStorage.getItem('Immersify_wyo_campaigns');
             if (!old) return;
             const campaigns = JSON.parse(old);
-            if (!Array.isArray(campaigns) || campaigns.length === 0) { localStorage.removeItem('SoundGoblin_wyo_campaigns'); return; }
-            const existing = JSON.parse(localStorage.getItem('SoundGoblin_sc_stories') || '[]');
+            if (!Array.isArray(campaigns) || campaigns.length === 0) { localStorage.removeItem('Immersify_wyo_campaigns'); return; }
+            const existing = JSON.parse(localStorage.getItem('Immersify_sc_stories') || '[]');
             const existingTitles = new Set(existing.map(s => s.title));
             for (const c of campaigns) {
                 if (!existingTitles.has(c.title)) existing.push(c);
             }
-            localStorage.setItem('SoundGoblin_sc_stories', JSON.stringify(existing));
-            localStorage.removeItem('SoundGoblin_wyo_campaigns');
+            localStorage.setItem('Immersify_sc_stories', JSON.stringify(existing));
+            localStorage.removeItem('Immersify_wyo_campaigns');
         } catch (_) {}
     }
 
@@ -7025,11 +7025,11 @@ class SoundGoblin {
         const text = (document.getElementById('scTextArea')?.value || '').trim();
         if (!title || !text) { alert('Please enter a title and story text.'); return; }
         const cues = this.scGetCues();
-        const saved = JSON.parse(localStorage.getItem('SoundGoblin_sc_stories') || '[]');
+        const saved = JSON.parse(localStorage.getItem('Immersify_sc_stories') || '[]');
         const idx = saved.findIndex(s => s.title === title);
         const entry = { title, text, cues, savedAt: Date.now() };
         if (idx >= 0) saved[idx] = entry; else saved.push(entry);
-        localStorage.setItem('SoundGoblin_sc_stories', JSON.stringify(saved));
+        localStorage.setItem('Immersify_sc_stories', JSON.stringify(saved));
         this._clearDraft('sc');
         alert('Story saved!');
         this.populateStoriesSection();
@@ -7040,7 +7040,7 @@ class SoundGoblin {
         if (!listEl) return;
         if (!listEl.classList.contains('hidden')) { listEl.classList.add('hidden'); return; }
         const items = document.getElementById('scSavedItems');
-        const saved = JSON.parse(localStorage.getItem('SoundGoblin_sc_stories') || '[]');
+        const saved = JSON.parse(localStorage.getItem('Immersify_sc_stories') || '[]');
         items.innerHTML = '';
         if (saved.length === 0) {
             items.innerHTML = '<p class="info-text">No saved campaigns yet.</p>';
@@ -7063,7 +7063,7 @@ class SoundGoblin {
                 delBtn.setAttribute('aria-label', `Delete story: ${s.title}`);
                 delBtn.addEventListener('click', () => {
                     saved.splice(i, 1);
-                    localStorage.setItem('SoundGoblin_sc_stories', JSON.stringify(saved));
+                    localStorage.setItem('Immersify_sc_stories', JSON.stringify(saved));
                     this.scToggleSaved();
                 });
                 row.appendChild(titleSpan);
@@ -7159,12 +7159,12 @@ class SoundGoblin {
     }
 
     _saveScenePresets() {
-        localStorage.setItem('SoundGoblin_scene_presets', JSON.stringify(this.scenePresets));
+        localStorage.setItem('Immersify_scene_presets', JSON.stringify(this.scenePresets));
     }
 
     applyScenePreset(preset) {
         this.moodBias = preset.moodBias;
-        localStorage.setItem('SoundGoblin_mood_bias', String(this.moodBias));
+        localStorage.setItem('Immersify_mood_bias', String(this.moodBias));
         const moodSlider = document.getElementById('moodBias');
         const moodValue = document.getElementById('moodBiasValue');
         if (moodSlider) moodSlider.value = Math.round(preset.moodBias * 100);
@@ -7300,7 +7300,7 @@ class SoundGoblin {
     // ===== CONTROL BOARD (Soundboard) =====
     setupControlBoard() {
         // Initialize tab structure (migrate legacy flat board data if present)
-        const savedTabs = JSON.parse(localStorage.getItem('SoundGoblin_cb_tabs') || 'null');
+        const savedTabs = JSON.parse(localStorage.getItem('Immersify_cb_tabs') || 'null');
         if (savedTabs && Array.isArray(savedTabs) && savedTabs.length > 0) {
             this.cbTabs = savedTabs.map(t => ({
                 id: t.id || 'tab_' + Date.now(),
@@ -7319,7 +7319,7 @@ class SoundGoblin {
 
         this.cbDragging = null;
         this.cbResizing = null;
-        this.cbRecentSounds = JSON.parse(localStorage.getItem('SoundGoblin_cb_recent') || '[]');
+        this.cbRecentSounds = JSON.parse(localStorage.getItem('Immersify_cb_recent') || '[]');
         this.cbUndoStack = [];
 
         const addBtn = document.getElementById('cbAddBtn');
@@ -7477,7 +7477,7 @@ class SoundGoblin {
             id: t.id, name: t.name,
             buttons: t.buttons.map(b => ({ label: b.label, type: b.type, file: b.file, name: b.name, group: b.group || '', x: b.x, y: b.y, w: b.w, h: b.h }))
         }));
-        localStorage.setItem('SoundGoblin_cb_tabs', JSON.stringify(data));
+        localStorage.setItem('Immersify_cb_tabs', JSON.stringify(data));
     }
 
     cbToggleListenMode() {
@@ -7605,7 +7605,7 @@ class SoundGoblin {
         this.cbRecentSounds = this.cbRecentSounds.filter(r => r.file !== file);
         this.cbRecentSounds.unshift({ name: label, file, type });
         if (this.cbRecentSounds.length > 10) this.cbRecentSounds.length = 10;
-        localStorage.setItem('SoundGoblin_cb_recent', JSON.stringify(this.cbRecentSounds));
+        localStorage.setItem('Immersify_cb_recent', JSON.stringify(this.cbRecentSounds));
 
         const modal = document.getElementById('cbAddModal');
         if (modal) modal.classList.add('hidden');
@@ -7799,7 +7799,7 @@ class SoundGoblin {
     cbSaveBoard() {
         const name = prompt('Enter a name for this soundboard:');
         if (!name) return;
-        const boards = JSON.parse(localStorage.getItem('SoundGoblin_cb_boards') || '[]');
+        const boards = JSON.parse(localStorage.getItem('Immersify_cb_boards') || '[]');
         const tabs = this.cbTabs.map(t => ({
             id: t.id, name: t.name,
             buttons: t.buttons.map(b => ({ label: b.label, type: b.type, file: b.file, name: b.name, group: b.group || '', x: b.x, y: b.y, w: b.w, h: b.h }))
@@ -7807,7 +7807,7 @@ class SoundGoblin {
         const idx = boards.findIndex(b => b.name === name);
         const entry = { name, tabs, savedAt: Date.now() };
         if (idx >= 0) boards[idx] = entry; else boards.push(entry);
-        localStorage.setItem('SoundGoblin_cb_boards', JSON.stringify(boards));
+        localStorage.setItem('Immersify_cb_boards', JSON.stringify(boards));
         alert('Soundboard saved!');
     }
 
@@ -7815,7 +7815,7 @@ class SoundGoblin {
         const modal = document.getElementById('cbLoadModal');
         const container = document.getElementById('cbSavedBoards');
         if (!modal || !container) return;
-        const boards = JSON.parse(localStorage.getItem('SoundGoblin_cb_boards') || '[]');
+        const boards = JSON.parse(localStorage.getItem('Immersify_cb_boards') || '[]');
         container.innerHTML = '';
         if (boards.length === 0) {
             container.innerHTML = '<p class="info-text">No saved soundboards.</p>';
@@ -7833,7 +7833,7 @@ class SoundGoblin {
                 delBtn.addEventListener('click', (e) => {
                     e.stopPropagation();
                     boards.splice(i, 1);
-                    localStorage.setItem('SoundGoblin_cb_boards', JSON.stringify(boards));
+                    localStorage.setItem('Immersify_cb_boards', JSON.stringify(boards));
                     this.cbShowLoadModal();
                 });
                 row.appendChild(delBtn);
@@ -8226,6 +8226,6 @@ function initializeMenuToggles() {
 
 // ===== EXPORTS FOR NEXT.JS =====
 // Auto-initialization via DOMContentLoaded is replaced by explicit init in AppShell.jsx useEffect.
-// Call initSoundGoblin() after the React component has mounted and the DOM is ready.
+// Call initImmersify() after the React component has mounted and the DOM is ready.
 export { initializeMenuToggles };
-export default SoundGoblin;
+export default Immersify;

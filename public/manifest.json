@@ -1,6 +1,6 @@
 {
-  "name": "SoundGoblin - Intelligent Audio Companion",
-  "short_name": "SoundGoblin",
+  "name": "Immersify - Intelligent Audio Companion",
+  "short_name": "Immersify",
   "description": "AI-powered ambient sound designer with performance enhancements, memory management, error handling, and accessibility features",
   "start_url": "./",
   "display": "standalone",

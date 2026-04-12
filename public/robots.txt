@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 Disallow: /api/
 
-Sitemap: https://sound-goblin.vercel.app/sitemap.xml
+Sitemap: https://immersify.vercel.app/sitemap.xml
