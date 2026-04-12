@@ -722,7 +722,7 @@ class Effexiq {
         const backendUrl = typeof getBackendUrl === 'function' ? getBackendUrl() : '';
         {
             try {
-                if (demoStatus) demoStatus.textContent = 'Generating AI narration...';
+                if (demoStatus) demoStatus.textContent = 'Generating AI narration — this may take 30+ seconds, please wait...';
                 const ttsUrl = `${backendUrl}/api/tts`;
 
                 // ElevenLabs TTS has ~5000 char limit — split if needed
