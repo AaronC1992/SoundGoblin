@@ -1689,6 +1689,96 @@ class Effexiq {
         }
     }
 
+    /**
+     * Contextual disambiguation map — when an ambiguous keyword is found,
+     * nearby words (±5 in the story) can override the default sound query.
+     * Each entry maps a keyword to an array of { context: Set, query: string }.
+     * First matching context wins; if none match, the cueMap default is used.
+     */
+    static _contextOverrides = {
+        'roar':   [
+            { context: new Set(['wind', 'winds', 'gale', 'storm', 'storms', 'stormy', 'hurricane', 'tornado', 'breeze', 'gust', 'gusts', 'blizzard', 'tempest']), query: 'wind howling storm' },
+            { context: new Set(['sea', 'seas', 'ocean', 'waves', 'wave', 'water', 'tide', 'surf', 'shore', 'coast']), query: 'ocean waves crashing' },
+            { context: new Set(['fire', 'fires', 'flame', 'flames', 'bonfire', 'inferno', 'blaze', 'burning', 'furnace', 'hearth']), query: 'fire roaring crackling' },
+            { context: new Set(['crowd', 'crowds', 'audience', 'stadium', 'arena', 'fans', 'spectators', 'mob', 'cheering']), query: 'crowd cheering' },
+            { context: new Set(['engine', 'engines', 'car', 'truck', 'motor', 'vehicle', 'machine', 'plane']), query: 'engine roar' },
+            { context: new Set(['cannon', 'cannons', 'guns', 'artillery', 'battery']), query: 'cannon fire blast' },
+            { context: new Set(['thunder', 'lightning', 'thunderstorm']), query: 'thunder rumble' },
+        ],
+        'roared': [
+            { context: new Set(['wind', 'winds', 'gale', 'storm', 'storms', 'stormy', 'hurricane', 'tornado', 'breeze', 'gust', 'gusts', 'blizzard', 'tempest']), query: 'wind howling storm' },
+            { context: new Set(['sea', 'seas', 'ocean', 'waves', 'wave', 'water', 'tide', 'surf']), query: 'ocean waves crashing' },
+            { context: new Set(['fire', 'fires', 'flame', 'flames', 'bonfire', 'inferno', 'blaze', 'burning']), query: 'fire roaring crackling' },
+            { context: new Set(['crowd', 'crowds', 'audience', 'stadium', 'arena', 'mob']), query: 'crowd cheering' },
+            { context: new Set(['cannon', 'cannons', 'guns', 'artillery']), query: 'cannon fire blast' },
+            { context: new Set(['thunder', 'lightning', 'thunderstorm']), query: 'thunder rumble' },
+        ],
+        'howl':   [
+            { context: new Set(['wind', 'winds', 'gale', 'storm', 'storms', 'blizzard', 'tempest', 'breeze', 'gust']), query: 'wind howling' },
+        ],
+        'howled': [
+            { context: new Set(['wind', 'winds', 'gale', 'storm', 'storms', 'blizzard', 'tempest']), query: 'wind howling' },
+        ],
+        'howling': [
+            { context: new Set(['wind', 'winds', 'gale', 'storm', 'storms', 'blizzard', 'tempest']), query: 'wind howling' },
+        ],
+        'crack':  [
+            { context: new Set(['thunder', 'lightning', 'storm', 'sky', 'storms']), query: 'thunder crack' },
+            { context: new Set(['whip', 'whips', 'lash']), query: 'whip crack' },
+            { context: new Set(['ice', 'frozen', 'glacier', 'frost']), query: 'ice crack' },
+            { context: new Set(['bone', 'bones', 'neck', 'skull', 'knuckles']), query: 'bone crack snap' },
+        ],
+        'cracked': [
+            { context: new Set(['thunder', 'lightning', 'storm', 'sky']), query: 'thunder crack' },
+            { context: new Set(['whip', 'whips', 'lash']), query: 'whip crack' },
+            { context: new Set(['ice', 'frozen', 'glacier']), query: 'ice crack' },
+        ],
+        'rumble': [
+            { context: new Set(['thunder', 'lightning', 'storm', 'sky', 'storms']), query: 'thunder rumble' },
+            { context: new Set(['stomach', 'belly', 'hunger', 'hungry']), query: 'stomach growl' },
+            { context: new Set(['earth', 'ground', 'earthquake', 'quake', 'cave', 'mountain']), query: 'earthquake rumble' },
+        ],
+        'hiss':   [
+            { context: new Set(['fire', 'flame', 'torch', 'ember', 'embers', 'steam', 'kettle', 'pot', 'water']), query: 'steam hiss' },
+            { context: new Set(['cat', 'cats', 'feline']), query: 'cat hiss' },
+        ],
+        'screech': [
+            { context: new Set(['tire', 'tires', 'car', 'brakes', 'vehicle', 'wheels']), query: 'tire screech' },
+            { context: new Set(['owl', 'bird', 'hawk', 'eagle', 'falcon', 'raven']), query: 'owl screech' },
+        ],
+        'crash':  [
+            { context: new Set(['wave', 'waves', 'sea', 'ocean', 'shore', 'surf', 'tide', 'water']), query: 'ocean waves crashing' },
+            { context: new Set(['thunder', 'lightning', 'storm']), query: 'thunder crash' },
+        ],
+        'crashed': [
+            { context: new Set(['wave', 'waves', 'sea', 'ocean', 'shore', 'surf']), query: 'ocean waves crashing' },
+            { context: new Set(['thunder', 'lightning', 'storm']), query: 'thunder crash' },
+        ],
+        'ring':   [
+            { context: new Set(['bell', 'bells', 'church', 'tower', 'alarm']), query: 'bell toll' },
+            { context: new Set(['ear', 'ears', 'head', 'ringing']), query: 'ringing in ears tinnitus' },
+        ],
+        'sang':   [
+            { context: new Set(['bird', 'birds', 'robin', 'lark', 'songbird', 'sparrow', 'nightingale']), query: 'bird whistling chirping' },
+            { context: new Set(['crew', 'sailor', 'sailors', 'shanty', 'shanties', 'pirate', 'pirates', 'tavern', 'inn', 'men', 'man', 'bard', 'song', 'choir', 'chorus']), query: 'tavern singing drinking' },
+        ],
+    };
+
+    /**
+     * Look at ±N words around the current story position to find context.
+     */
+    _getStoryContextWords(radius = 5) {
+        if (!this.storyNorm || this.storyIndex == null) return new Set();
+        const start = Math.max(0, this.storyIndex - radius);
+        const end = Math.min(this.storyNorm.length, this.storyIndex + radius + 1);
+        const ctx = new Set();
+        for (let i = start; i < end; i++) {
+            const w = this.storyNorm[i];
+            if (w) ctx.add(w);
+        }
+        return ctx;
+    }
+
     maybeTriggerStorySfx(word) {
         if (!this.sfxEnabled) return;
         // Per-cue-word cooldown: each keyword only triggers once (reset on new story)
@@ -1698,6 +1788,24 @@ class Effexiq {
         const cueMap = this.getStoryCueMap();
         if (!(word in cueMap)) return;
         this._storyCueFired.add(word);
+
+        // --- Contextual disambiguation ---
+        // For ambiguous keywords, check surrounding words to pick the right sound
+        const overrides = Effexiq._contextOverrides[word];
+        let queryOverride = null;
+        if (overrides) {
+            const nearby = this._getStoryContextWords(5);
+            for (const rule of overrides) {
+                for (const ctxWord of rule.context) {
+                    if (nearby.has(ctxWord)) {
+                        queryOverride = rule.query;
+                        debugLog(`Context override: "${word}" + nearby "${ctxWord}" -> "${rule.query}"`);
+                        break;
+                    }
+                }
+                if (queryOverride) break;
+            }
+        }
 
         // Determine scene category for this cue
         const category = this.getStoryCueCategory(word);
@@ -1718,7 +1826,8 @@ class Effexiq {
         const maxDur = isAmbient ? null : baseDur * this.ambientDurationMultiplier;
 
         // In demo mode, use pre-resolved URLs + buffer cache for instant playback
-        if (this.demoRunning && this.demoCueCache && this.demoCueCache[word]) {
+        // (context overrides don't apply to demo cache since URLs are pre-resolved)
+        if (!queryOverride && this.demoRunning && this.demoCueCache && this.demoCueCache[word]) {
             const url = this.demoCueCache[word];
             const buf = this.getFromBufferCache(url);
             if (buf) {
@@ -1733,7 +1842,7 @@ class Effexiq {
                 return;
             }
         }
-        const q = cueMap[word];
+        const q = queryOverride || cueMap[word];
         if (q) {
             const searchAndPlay = async () => {
                 const soundUrl = await this.searchAudio(q, 'sfx');
@@ -3464,6 +3573,13 @@ class Effexiq {
         // Phrase table: each entry is { patterns[], query, volume, category }
         // Patterns are checked as substrings (order matters: more specific first)
         const phraseTable = [
+            // Wind & weather context (must be before creature/combat to win priority)
+            { patterns: ['roar of the wind', 'roar of the storm', 'roar of the gale', 'wind roared', 'storm roared', 'gale roared', 'wind roars', 'storm roars', 'roaring wind', 'roaring storm', 'roaring gale', 'roaring tempest'], query: 'wind howling storm', volume: 0.7 },
+            { patterns: ['roar of the sea', 'roar of the ocean', 'roar of the waves', 'sea roared', 'ocean roared', 'waves roared', 'roaring sea', 'roaring ocean', 'roaring waves', 'roar of the surf'], query: 'ocean waves crashing', volume: 0.7 },
+            { patterns: ['roar of the fire', 'roar of the flames', 'roar of the blaze', 'fire roars', 'flames roar', 'fire roared', 'flames roared', 'roaring fire', 'roaring flames', 'roaring inferno'], query: 'fire roaring crackling', volume: 0.7 },
+            { patterns: ['roar of the crowd', 'crowd roars', 'crowd roared', 'roaring crowd', 'roaring audience', 'audience roared'], query: 'crowd cheering', volume: 0.7 },
+            { patterns: ['wind howled', 'wind was howling', 'howl of the wind', 'howling wind', 'wind howling', 'howling gale', 'gale howled'], query: 'wind howling', volume: 0.7 },
+            { patterns: ['waves crashed', 'waves crashing', 'crash of the waves', 'sea crashed', 'surf crashed', 'waves crash'], query: 'ocean waves crashing', volume: 0.7 },
             // Combat actions
             { patterns: ['drew his sword', 'drew her sword', 'drew their sword', 'draws his sword', 'draws her sword', 'pulled out his sword', 'pulled out her sword'], query: 'sword draw', volume: 0.8 },
             { patterns: ['swings his sword', 'swings her sword', 'slashes with', 'brings his blade', 'brings her blade', 'blade cuts', 'sword slices'], query: 'sword slash', volume: 0.85 },
