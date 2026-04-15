@@ -4682,6 +4682,10 @@ class Effexiq {
             if (/cave|cavern|grotto/i.test(sceneStr)) bedCats.push('atmosphere');
             if (/river|lake|waterfall|stream/i.test(sceneStr)) bedCats.push('water');
             if (/battle|combat|fight|war/i.test(sceneStr)) bedCats.push('combat');
+            if (/cottage|cabin|hut|hearth|home/i.test(sceneStr)) bedCats.push('fire');
+            if (/castle|throne|palace|tower|hall/i.test(sceneStr)) bedCats.push('atmosphere');
+            if (/magic|enchant|spell|fairy|witch/i.test(sceneStr)) bedCats.push('atmosphere');
+            if (/garden|meadow|clearing|field/i.test(sceneStr)) bedCats.push('forest');
             this._updateSceneBed(bedCats).catch(e => debugLog('Scene bed update failed:', e.message));
 
             // --- Predictive preloading for current scene category ---
@@ -6893,6 +6897,32 @@ class Effexiq {
             }
             if (/dragon|beast|monster/.test(t)) {
                 contextPredictions.push('monster roar', 'dragon roar');
+            }
+        } else if (this.currentMode === 'fairytale') {
+            if (/forest|wood|tree|path/.test(t)) {
+                contextPredictions.push('bird chirp', 'wind soft', 'leaves rustle');
+            }
+            if (/wolf|danger|dark|shadow/.test(t)) {
+                contextPredictions.push('wolf howl', 'twig snap', 'wind howl');
+            }
+            if (/cottage|home|fire|warm/.test(t)) {
+                contextPredictions.push('fire crackling', 'door knock', 'wood creak');
+            }
+            if (/castle|king|queen|prince|princess/.test(t)) {
+                contextPredictions.push('door creak', 'bell chime', 'footsteps');
+            }
+        } else if (this.currentMode === 'creator') {
+            if (/fail|lost|died|wrong|bad|oops|no way/.test(t)) {
+                contextPredictions.push('sad trombone', 'fail buzzer', 'crowd boo');
+            }
+            if (/win|won|yes|let.*go|nice|perfect|clutch/.test(t)) {
+                contextPredictions.push('crowd cheer', 'win fanfare', 'applause');
+            }
+            if (/funny|lol|haha|laugh|hilarious/.test(t)) {
+                contextPredictions.push('laugh', 'rim shot', 'comedy sting');
+            }
+            if (/anyway|moving on|next|so basically|alright/.test(t)) {
+                contextPredictions.push('whoosh', 'transition swoosh', 'pop');
             }
         }
         

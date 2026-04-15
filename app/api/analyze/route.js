@@ -9,6 +9,7 @@
 import { NextResponse } from 'next/server';
 import OpenAI from 'openai';
 import crypto from 'crypto';
+import { MODE_CONTEXTS, MODE_RULES } from '../../../lib/modules/ai-director.js';
 
 let _openai;
 function getOpenAI() {
@@ -68,10 +69,64 @@ function setCache(key, data) {
   responseCache.set(key, { data, expiresAt: Date.now() + CACHE_TTL_MS });
 }
 
-const SYSTEM_PROMPT = `You are Effexiq, an AI sound director for tabletop RPG sessions.
-Given a transcript of what's happening in the story, respond with a JSON object describing
-the ideal sound to play. Include: action (play/stop/fade), type (music/sfx), name, mood,
-intensity (0-1), and tags (array of keywords). Be concise and atmospheric.`;
+const SYSTEM_PROMPT = `You are Effexiq, an AI sound director for live narration sessions.
+Given a transcript of what is being narrated, respond with a JSON object that drives a layered audio engine.
+
+RESPONSE FORMAT (strict JSON):
+{
+  "scene": "short description of the current scene/setting",
+  "mood": {
+    "primary": "one of: calm, tense, happy, sad, angry, fearful, mysterious, excited, ominous, neutral",
+    "intensity": 0.0 to 1.0
+  },
+  "confidence": 0.0 to 1.0,
+  "music": {
+    "id": "catalog ID or null",
+    "action": "play_or_continue",
+    "volume": 0.0 to 1.0
+  },
+  "sfx": [
+    {
+      "id": "catalog ID",
+      "when": "immediate",
+      "volume": 0.0 to 1.0,
+      "tags": ["keyword1", "keyword2"]
+    }
+  ]
+}
+
+RULES:
+- "scene" drives ambient bed selection. Use descriptive keywords: forest, cave, tavern, cottage, castle, ocean, rain, battle, etc.
+- "mood.primary" + "mood.intensity" drive the emotional arc and scene state machine. Be consistent — don't flip moods every response.
+- "confidence" reflects how certain you are about the scene/mood. Set lower (0.3-0.5) when the transcript is ambiguous.
+- "music" — only suggest a change when the scene or mood shifts significantly. Use "action": "play_or_continue" to keep current music playing. Set to null if no change needed.
+- "sfx" — array of sound effects. Only include sounds that are clearly described or implied in the transcript. Max 2 per response. Use descriptive tags so the engine can search for them. Do NOT hallucinate sounds that weren't mentioned.
+- Prioritize atmosphere over action. Ambient context (forest sounds, wind, fire) is more important than one-off SFX.
+- Avoid repeating the same SFX across consecutive responses.
+- Never include sounds that contradict the current scene (e.g. no crowd noise in a lonely forest).`;
+
+function buildUserMessage(transcript, mode, context) {
+  const modeContext = MODE_CONTEXTS[mode] || MODE_CONTEXTS.auto;
+  const modeRule = MODE_RULES[mode] || MODE_RULES.auto;
+
+  const parts = [
+    `Transcript: "${transcript.trim()}"`,
+    `Mode: ${mode || 'auto'} (${modeContext})`,
+    modeRule,
+  ];
+
+  if (context) {
+    if (context.sceneState) parts.push(`Current scene state: ${context.sceneState}`);
+    if (context.sceneMemory) parts.push(`Scene history: ${context.sceneMemory}`);
+    if (context.moodHistory) parts.push(`Mood history: ${context.moodHistory}`);
+    if (context.recentMusic) parts.push(`Currently playing music: ${context.recentMusic}`);
+    if (context.recentSounds?.length) parts.push(`Recent SFX: ${context.recentSounds.join(', ')}`);
+    if (context.storyTitle) parts.push(`Story: ${context.storyTitle}`);
+    if (context.sessionContext) parts.push(`Session context: ${context.sessionContext}`);
+  }
+
+  return parts.join('\n');
+}
 
 export async function POST(request) {
   if (!process.env.OPENAI_API_KEY) {
@@ -118,11 +173,7 @@ export async function POST(request) {
     return res;
   }
 
-  const userMessage = [
-    `Transcript: "${transcript.trim()}"`,
-    mode ? `Mode: ${mode}` : '',
-    context ? `Context: ${JSON.stringify(context)}` : '',
-  ].filter(Boolean).join('\n');
+  const userMessage = buildUserMessage(transcript, mode, context);
 
   try {
     const completion = await getOpenAI().chat.completions.create({
