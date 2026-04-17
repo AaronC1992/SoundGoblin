@@ -355,6 +355,36 @@ class Effexiq {
     // SFX anti-repeat
         this.sfxCooldownMs = 3500; // minimum gap between same-category SFX
         this.sfxCooldowns = new Map(); // bucket -> nextAllowedTime
+
+        // --- Per-ID dedup (prevents the AI from re-triggering the SAME sound file repeatedly,
+        //     which was the root cause of "train kept playing" after a single passing train)
+        this._lastPlayedById = new Map();    // sound.id -> timestamp of last play
+        this._perIdDedupMs = 25000;          // 25s hard block on exact-same SFX id
+
+        // --- Consumed events: transient one-shots (door slam, train passing) get marked
+        //     consumed when they fire. Sent to the AI so it stops picking them.
+        this._consumedEvents = new Map();    // keyword/id -> timestamp
+        this._consumedEventTTL = 45000;
+
+        // --- Scene stability: timestamp of the last scene_state change.
+        //     When a scene just changed, raise SFX confidence threshold.
+        this._sceneStartedAt = Date.now();
+
+        // --- Keyword-suppress: after a dramatic-keyword instant SFX fires, squelch
+        //     AI SFX for a few seconds so the two don't step on each other.
+        this._keywordSuppressUntil = 0;
+        this._keywordSuppressMs = 2500;
+
+        // --- Transcript timestamps (parallel to transcriptBuffer) for TIME-based pruning.
+        this._transcriptTimes = [];
+        this._transcriptMaxAgeMs = 25000;    // drop finalized phrases older than 25s
+        this._lastAnalyzedTranscriptLen = 0; // tracks newSpeech delta sent to AI
+
+        // --- Persistent world state; updated from AI responses and sent back as context.
+        this._worldState = { location: null, weather: null, timeOfDay: null };
+
+        // --- Creator / live-streamer mode: shorter cooldowns, slightly lower confidence gate.
+        this.creatorMode = JSON.parse(localStorage.getItem('Effexiq_creator_mode') ?? 'false');
         // Saved sounds (local quick-access library)
         this.savedSounds = { files: [] };
         // Instant trigger keywords for immediate sound effects
@@ -1676,8 +1706,17 @@ class Effexiq {
         return 'other';
     }
 
-    // Max duration (seconds) before auto-fadeout per category
-    _storySfxMaxDuration(category) {
+    // Max duration (seconds) before auto-fadeout per category.
+    // If we have the real audio duration cached, prefer that (plus a small buffer)
+    // so one-shots like "train passing" end naturally instead of being cut short
+    // or artificially padded.
+    _storySfxMaxDuration(category, soundId = null) {
+        if (soundId) {
+            const realDur = this.durationCache?.get(soundId);
+            if (typeof realDur === 'number' && realDur > 0 && realDur < 120) {
+                return Math.ceil(realDur + 1); // +1s tail buffer
+            }
+        }
         switch (category) {
             case 'combat':     return 20;
             case 'weather':    return 60;
@@ -1693,6 +1732,77 @@ class Effexiq {
             case 'western':    return 15;
             case 'social':     return 25;
             default:           return 12;
+        }
+    }
+
+    // --- Lifecycle role inference: oneshot | loop | bed | stinger | music.
+    // Prefers explicit sound.role, then sound.loop flag, then type/name heuristics.
+    _inferRole(sound) {
+        if (!sound) return 'oneshot';
+        if (sound.role) return sound.role;
+        if (sound.type === 'music') return 'music';
+        if (sound.loop === true) {
+            const name = (sound.name || sound.id || '').toLowerCase();
+            if (/ambience|ambient|forest|cave|tavern|crowd|city|wind|rain(?!drop)|ocean|beach|market/.test(name)) return 'bed';
+            return 'loop';
+        }
+        const name = (sound.name || sound.id || '').toLowerCase();
+        if (/\b(stinger|hit|accent|whoosh|riser|impact sting)\b/.test(name)) return 'stinger';
+        return 'oneshot';
+    }
+
+    // --- Collect ids of SFX currently playing (used for AI context and dedup).
+    _getActiveSfxIds() {
+        const ids = [];
+        if (!this.activeSounds) return ids;
+        for (const [, s] of this.activeSounds) {
+            if (s && s.type === 'sfx' && s.name) ids.push(s.name);
+        }
+        return ids;
+    }
+
+    // --- Consumed events (one-shot SFX the engine has already fired).
+    _markEventConsumed(key) {
+        if (!key) return;
+        this._consumedEvents.set(String(key).toLowerCase(), Date.now());
+    }
+    _isEventConsumed(key) {
+        if (!key) return false;
+        const ts = this._consumedEvents.get(String(key).toLowerCase());
+        if (!ts) return false;
+        if (Date.now() - ts > this._consumedEventTTL) {
+            this._consumedEvents.delete(String(key).toLowerCase());
+            return false;
+        }
+        return true;
+    }
+    _pruneConsumedEvents() {
+        const now = Date.now();
+        for (const [k, ts] of this._consumedEvents) {
+            if (now - ts > this._consumedEventTTL) this._consumedEvents.delete(k);
+        }
+    }
+
+    // --- Time-based transcript buffer pruning.
+    // Drops finalized phrases older than _transcriptMaxAgeMs so the AI doesn't
+    // keep seeing stale words like "train" in the rolling window.
+    _pruneTranscriptBuffer() {
+        if (!Array.isArray(this._transcriptTimes) || !Array.isArray(this.transcriptBuffer)) return;
+        const cutoff = Date.now() - this._transcriptMaxAgeMs;
+        while (this._transcriptTimes.length && this._transcriptTimes[0] < cutoff) {
+            this._transcriptTimes.shift();
+            this.transcriptBuffer.shift();
+        }
+        // Keep indices in sync if they ever drift (defensive)
+        while (this._transcriptTimes.length > this.transcriptBuffer.length) this._transcriptTimes.shift();
+    }
+
+    // --- Merge AI-reported world state into our persistent world state.
+    _updateWorldState(aiWorldState) {
+        if (!aiWorldState || typeof aiWorldState !== 'object') return;
+        for (const k of ['location', 'weather', 'timeOfDay']) {
+            const v = aiWorldState[k];
+            if (v && typeof v === 'string' && v !== 'null') this._worldState[k] = v;
         }
     }
 
@@ -2359,7 +2469,8 @@ class Effexiq {
         const rawVol = isAmbient ? baseVol : Math.min(1.0, baseVol * Math.max(0.5, this.voiceIntensity));
         // Apply pacing + intensity curve multipliers
         const vol = Math.min(1.0, rawVol * this._getPacingVolumeMultiplier() * this._getIntensityCurveMultiplier());
-        // Apply user's ambient duration multiplier to non-looping SFX timers
+        // Apply user's ambient duration multiplier to non-looping SFX timers.
+        // (Real per-sound duration is applied later via the durationCache lookup when available.)
         const baseDur = this._storySfxMaxDuration(category) * 1000;
         const maxDur = isAmbient ? null : baseDur * this.ambientDurationMultiplier * this._getPacingDurationMultiplier();
 
@@ -3042,6 +3153,19 @@ class Effexiq {
                 localStorage.setItem('Effexiq_voice_duck', JSON.stringify(this.voiceDuckEnabled));
                 if (!this.voiceDuckEnabled) this._restoreVoiceDuck();
                 this.updateStatus(`Voice Ducking ${this.voiceDuckEnabled ? 'enabled' : 'disabled'}`);
+            });
+        }
+
+        // Live Streamer / Creator Mode toggle (shorter cooldowns, snappier SFX)
+        const creatorModeToggle = document.getElementById('creatorModeToggle');
+        if (creatorModeToggle) {
+            creatorModeToggle.checked = !!this.creatorMode;
+            creatorModeToggle.addEventListener('change', (e) => {
+                this.creatorMode = e.target.checked;
+                localStorage.setItem('Effexiq_creator_mode', JSON.stringify(this.creatorMode));
+                // Immediately re-apply cooldowns so the change takes effect now
+                try { this.adaptCooldownsToMood(); } catch (_) {}
+                this.updateStatus(`Live Streamer Mode ${this.creatorMode ? 'enabled' : 'disabled'}`);
             });
         }
         
@@ -4075,11 +4199,14 @@ class Effexiq {
             if (this._sceneBreakRegex.test(trimmed)) {
                 debugLog('Scene-break anchor detected, resetting transcript window:', trimmed.substring(0, 40));
                 this.transcriptBuffer = [trimmed];
+                this._transcriptTimes = [Date.now()];
                 this._lastAnalyzedText = null; // force re-analysis with clean slate
+                this._lastAnalyzedTranscriptLen = 0;
                 this.rollingSceneSummary = ''; // scene memory resets too
                 this._analysisCountSinceLastSummary = 0;
             } else {
                 this.transcriptBuffer.push(trimmed);
+                this._transcriptTimes.push(Date.now());
             }
 
             this.currentInterim = '';
@@ -4113,9 +4240,13 @@ class Effexiq {
                 }
             }
             
-            // Keep only last 30 seconds of transcript (approx 150 words)
+            // Time-based transcript pruning: drop finalized phrases older than _transcriptMaxAgeMs
+            // so stale words like "train" or "door" don't linger in the AI's rolling window.
+            this._pruneTranscriptBuffer();
+            // Keep a hard upper bound as a safety net.
             if (this.transcriptBuffer.length > 50) {
                 this.transcriptBuffer.shift();
+                if (this._transcriptTimes) this._transcriptTimes.shift();
             }
 
             // Silence-triggered analysis: schedule analysis ~1.2s after speech goes quiet
@@ -4238,6 +4369,8 @@ class Effexiq {
                 // Per-keyword cooldown to prevent spam from repeated interim transcripts
                 const lastTrigger = this.instantKeywordCooldowns.get(keyword) || 0;
                 if (now - lastTrigger < KEYWORD_COOLDOWN) continue;
+                // Skip keywords whose event was already consumed (e.g. the train already passed)
+                if (this._isEventConsumed(keyword)) continue;
                 const escapedKw = keyword.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
                 const regex = new RegExp(`\\b${escapedKw}\\b`, 'i');
                 // Check primary transcript, alternative transcriptions, AND synonym expansions
@@ -4251,6 +4384,11 @@ class Effexiq {
                     const intensityMul = Math.max(0.4, Math.min(1.5, this.voiceIntensity))
                         * this._getPacingVolumeMultiplier() * this._getIntensityCurveMultiplier();
                     this.playInstantSound(config, keyword, intensityMul);
+                    // Keyword-suppress: silence AI SFX for a moment so they don't step on this hit
+                    this._keywordSuppressUntil = now + (this._keywordSuppressMs || 2500);
+                    // Mark this keyword (and its underlying sound file) as a consumed event
+                    this._markEventConsumed(keyword);
+                    if (config.file) this._markEventConsumed(config.file);
                     triggered++;
                 }
             }
@@ -4534,6 +4672,13 @@ class Effexiq {
         const moodSummary = this.moodHistory.length
             ? this.moodHistory.slice(-5).map(m => `${m.primary}(${m.intensity})`).join(' → ')
             : null;
+        // Prune stale consumed events before building context
+        this._pruneConsumedEvents();
+        // Build delta ("newSpeech") — just the tail since the last analyzed length
+        const fullJoined = this.transcriptBuffer.join(' ');
+        const newSpeech = fullJoined.slice(this._lastAnalyzedTranscriptLen || 0).trim().slice(-400);
+        this._lastAnalyzedTranscriptLen = fullJoined.length;
+
         const context = {
             mode: this.currentMode,
             musicEnabled: this.musicEnabled,
@@ -4546,7 +4691,14 @@ class Effexiq {
             sessionContext: this.sessionContext || null,
             moodHistory: moodSummary,
             sceneMemory: this.rollingSceneSummary || null,
-            sceneState: this.sceneState || null
+            sceneState: this.sceneState || null,
+            // New: reactive context so the AI stops re-picking active/consumed sounds
+            activeSfx: this._getActiveSfxIds(),
+            consumedEvents: Array.from(this._consumedEvents.keys()).slice(-10),
+            sceneStabilityMs: Date.now() - (this._sceneStartedAt || Date.now()),
+            worldState: this._worldState,
+            creatorMode: !!this.creatorMode,
+            newSpeech: newSpeech || null
         };
         
         // Use centralized API service (from api.js)
@@ -4788,9 +4940,26 @@ class Effexiq {
                     debugLog('Skipping disabled sound:', sfx.id);
                     continue;
                 }
-                // Skip low-confidence SFX (below 0.4 threshold)
-                if (typeof sfx.confidence === 'number' && sfx.confidence < 0.4) {
-                    debugLog('Skipping low-confidence SFX:', sfx.id, sfx.confidence);
+                // Scene-stability-aware confidence gate.
+                // Right after a scene change, be pickier (0.6). Once the scene is stable,
+                // the normal 0.4 threshold applies. Creator mode relaxes slightly (0.35 / 0.55).
+                const stabilityMs = Date.now() - (this._sceneStartedAt || 0);
+                const unstable = stabilityMs < 10000;
+                const baseThreshold = this.creatorMode ? 0.35 : 0.4;
+                const unstableThreshold = this.creatorMode ? 0.55 : 0.6;
+                const confThreshold = unstable ? unstableThreshold : baseThreshold;
+                if (typeof sfx.confidence === 'number' && sfx.confidence < confThreshold) {
+                    debugLog('Skipping low-confidence SFX:', sfx.id, sfx.confidence, 'thr=' + confThreshold);
+                    continue;
+                }
+                // Already-active gate: if this exact sound is currently playing, don't re-trigger.
+                if (sfx.id && this._getActiveSfxIds().includes(sfx.id)) {
+                    debugLog('SFX already active, skipping:', sfx.id);
+                    continue;
+                }
+                // Consumed-event gate (mirrors the one in playSoundEffectById so we short-circuit earlier).
+                if (sfx.id && this._isEventConsumed(sfx.id)) {
+                    debugLog('SFX already consumed, skipping:', sfx.id);
                     continue;
                 }
                 // Check semantic cooldown (tag-based similarity)
@@ -5117,7 +5286,30 @@ class Effexiq {
         if (sfxData.id && this.disabledSounds.has(sfxData.id)) {
             return;
         }
-        
+
+        // Keyword-suppress gate: a dramatic-keyword instant SFX just fired,
+        // skip AI-driven SFX for a moment so they don't overlap.
+        if (Date.now() < this._keywordSuppressUntil) {
+            debugLog('Keyword-suppress active, skipping AI SFX:', sfxData.id);
+            return;
+        }
+
+        // Per-ID hard dedup: never replay the EXACT same sound within _perIdDedupMs.
+        if (sfxData.id) {
+            const lastPlayed = this._lastPlayedById.get(sfxData.id) || 0;
+            const dedupMs = this.creatorMode ? Math.round(this._perIdDedupMs * 0.5) : this._perIdDedupMs;
+            if (Date.now() - lastPlayed < dedupMs) {
+                debugLog('Per-ID dedup active for:', sfxData.id, `(${Date.now() - lastPlayed}ms ago)`);
+                return;
+            }
+        }
+
+        // Consumed-event gate: AI asked for a one-shot we already fired recently. Skip.
+        if (sfxData.id && this._isEventConsumed(sfxData.id)) {
+            debugLog('Event already consumed, skipping:', sfxData.id);
+            return;
+        }
+
         // Find sound in catalog
         let sound = this.soundCatalog.find(s => s.id === sfxData.id);
         if (!sound) {
@@ -5176,6 +5368,16 @@ class Effexiq {
         if (played) {
             // Start cooldown for this bucket
             this.sfxCooldowns.set(bucket, Date.now() + this.sfxCooldownMs);
+            // Per-ID dedup timestamp
+            this._lastPlayedById.set(sound.id, Date.now());
+            // If this is a one-shot (event), mark it consumed so the AI doesn't re-pick it.
+            const role = this._inferRole(sound);
+            if (role === 'oneshot' || role === 'stinger') {
+                this._markEventConsumed(sound.id);
+                // Also mark the first keyword as consumed (helps filter stale transcript mentions)
+                const firstKw = Array.isArray(sound.keywords) && sound.keywords[0];
+                if (firstKw) this._markEventConsumed(firstKw);
+            }
         } else {
             // Mark as failed to avoid retrying 404s
             this.soundFailureCache.set(failKey, Date.now());
@@ -5263,9 +5465,11 @@ class Effexiq {
         const mul = moodMultipliers[mood] || 1.0;
         // Intensity further scales: high intensity = even shorter cooldowns
         const intensityScale = 1.0 - (intensity - 0.5) * 0.4; // 0.5 int → 1.0, 1.0 int → 0.8
-        this.sfxCooldownMs = Math.round(baseSfx * mul * intensityScale);
-        this.musicChangeThreshold = Math.round(baseMusic * mul * intensityScale);
-        debugLog(`Cooldowns adapted: mood=${mood} sfx=${this.sfxCooldownMs}ms music=${this.musicChangeThreshold}ms`);
+        // Creator/streamer mode: halve cooldowns for snappier reactivity.
+        const creatorMul = this.creatorMode ? 0.5 : 1.0;
+        this.sfxCooldownMs = Math.round(baseSfx * mul * intensityScale * creatorMul);
+        this.musicChangeThreshold = Math.round(baseMusic * mul * intensityScale * creatorMul);
+        debugLog(`Cooldowns adapted: mood=${mood} sfx=${this.sfxCooldownMs}ms music=${this.musicChangeThreshold}ms${this.creatorMode ? ' [creator]' : ''}`);
     }
     
     // ===== SCENE STATE MACHINE =====
@@ -5298,6 +5502,9 @@ class Effexiq {
             const prev = this.sceneState;
             this.sceneState = newState;
             this._sceneStateConfidence = (this._sceneStateConfidence || 0) + 1;
+            this._sceneStartedAt = Date.now(); // reset stability clock for the confidence gate
+            // Update persistent world state from this decision if the AI supplied one
+            if (decisions && decisions.worldState) this._updateWorldState(decisions.worldState);
             debugLog(`Scene state: ${prev} → ${newState} (intensity=${intensity.toFixed(2)})`);
             this.logActivity(`Scene state: ${newState}`, 'scene');
 
@@ -9374,6 +9581,7 @@ class Effexiq {
         const transcriptEl = document.getElementById('transcript');
         if (transcriptEl) transcriptEl.textContent = text;
         this.transcriptBuffer.push(text);
+        if (this._transcriptTimes) this._transcriptTimes.push(Date.now());
         this.updateTranscriptDisplay();
         this.logActivity(`Simulated: "${text.substring(0, 60)}..."`, 'info');
         if (!this.demoRunning) this.checkInstantKeywords(text);

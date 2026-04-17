@@ -145,6 +145,16 @@ export default function SettingsSection() {
             <p className="info-text" style={{ fontSize: '0.78rem', marginTop: -4, marginBottom: 12 }}>
               Automatically lower music &amp; ambience when your voice is detected, then restore during pauses.
             </p>
+            <div className="toggle-row">
+              <label htmlFor="creatorModeToggle">Live Streamer Mode</label>
+              <label className="switch">
+                <input type="checkbox" id="creatorModeToggle" />
+                <span className="slider" />
+              </label>
+            </div>
+            <p className="info-text" style={{ fontSize: '0.78rem', marginTop: -4, marginBottom: 12 }}>
+              Shorter cooldowns and snappier SFX triggering for live streams. Leave off for story narration.
+            </p>
 
             <h3 style={{ marginTop: 20 }}>Performance</h3>
             <div className="toggle-row">

@@ -106,6 +106,11 @@ RESPONSE FORMAT (strict JSON):
     "intensity": 0.0 to 1.0
   },
   "confidence": 0.0 to 1.0,
+  "worldState": {
+    "location": "short location tag if detected, else null",
+    "weather": "clear|rain|storm|snow|fog|wind|null",
+    "timeOfDay": "dawn|day|dusk|night|null"
+  },
   "music": {
     "id": "exact name from AVAILABLE MUSIC list, or null",
     "action": "play_or_continue",
@@ -114,9 +119,11 @@ RESPONSE FORMAT (strict JSON):
   "sfx": [
     {
       "id": "exact name from AVAILABLE SFX list",
+      "intent": "event | state | continuing",
       "when": "immediate",
       "volume": 0.0 to 1.0,
-      "tags": ["keyword1", "keyword2"]
+      "tags": ["keyword1", "keyword2"],
+      "confidence": 0.0 to 1.0
     }
   ]
 }
@@ -128,9 +135,21 @@ CRITICAL RULES:
 - "confidence" reflects how certain you are. Set 0.3-0.5 when transcript is ambiguous.
 - "music" — only change when scene/mood shifts significantly. Use null if current music should keep playing. Pick music that matches the mood and setting.
 - "sfx" — max 2 per response. Only include sounds CLEARLY described or implied in the transcript. Never hallucinate sounds not mentioned.
+
+VERB TENSE & INTENT (important for not repeating one-shot sounds):
+- "intent": "event"      — a NEW discrete action happening now ("a door slams", "the train passes"). Play once.
+- "intent": "state"      — an ongoing condition ("it is raining", "fire crackles"). Engine will loop it.
+- "intent": "continuing" — already established ambience that should keep going. Rarely needed; prefer omitting sfx entirely.
+- If a transcript is PAST TENSE describing something that already finished ("the train passed", "the door had slammed"), DO NOT include an sfx for it. Those are narration of past events, not current events.
+- If a sound id appears in "activeSfx" (currently playing) or "consumedEvents" (already fired recently), DO NOT pick it again. Choose silence, a related-but-different sound, or an ambient bed instead.
+- If a sound id appears in "recentSounds" (played in the last few turns), only pick it again if the transcript clearly describes a NEW instance of that event.
+
+OTHER RULES:
 - Prioritize atmosphere over action. Ambient context (forest sounds, wind, fire crackling) matters more than one-off SFX.
 - Never include sounds that contradict the scene (no crowd noise in a lonely forest, no birds in a dungeon).
-- If no SFX are warranted, return an empty array. Silence is better than wrong sounds.`;
+- If no SFX are warranted, return an empty array. Silence is better than wrong sounds.
+- When "sceneStabilityMs" is low (< 10000), be cautious: set sfx confidence 0.5+ only if you are sure, else drop the sfx.
+- When "creatorMode" is true (live streamer context), you may be slightly more responsive with SFX, but still never duplicate active or consumed sounds.`;
 
 function buildSystemPrompt() {
   return SYSTEM_PROMPT + getCatalogSummary();
@@ -151,7 +170,20 @@ function buildUserMessage(transcript, mode, context) {
     if (context.sceneMemory) parts.push(`Scene history: ${context.sceneMemory}`);
     if (context.moodHistory) parts.push(`Mood history: ${context.moodHistory}`);
     if (context.recentMusic) parts.push(`Currently playing music: ${context.recentMusic}`);
-    if (context.recentSounds?.length) parts.push(`Recent SFX: ${context.recentSounds.join(', ')}`);
+    if (context.recentSounds?.length) parts.push(`recentSounds (played in last few turns): ${context.recentSounds.join(', ')}`);
+    if (context.activeSfx?.length) parts.push(`activeSfx (still playing right now — DO NOT re-pick): ${context.activeSfx.join(', ')}`);
+    if (context.consumedEvents?.length) parts.push(`consumedEvents (already fired, do not repeat): ${context.consumedEvents.join(', ')}`);
+    if (typeof context.sceneStabilityMs === 'number') parts.push(`sceneStabilityMs: ${context.sceneStabilityMs} (ms since last scene change)`);
+    if (context.worldState) {
+      const ws = context.worldState;
+      const bits = [];
+      if (ws.location) bits.push(`location=${ws.location}`);
+      if (ws.weather) bits.push(`weather=${ws.weather}`);
+      if (ws.timeOfDay) bits.push(`timeOfDay=${ws.timeOfDay}`);
+      if (bits.length) parts.push(`worldState: ${bits.join(', ')}`);
+    }
+    if (context.creatorMode) parts.push(`creatorMode: true (live streamer — slightly more responsive is ok)`);
+    if (context.newSpeech) parts.push(`newSpeechSinceLastTurn: "${context.newSpeech}"`);
     if (context.storyTitle) parts.push(`Story: ${context.storyTitle}`);
     if (context.sessionContext) parts.push(`Session context: ${context.sessionContext}`);
   }

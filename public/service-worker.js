@@ -1,5 +1,5 @@
 // Effexiq Service Worker
-const CACHE_NAME = 'Effexiq-v15'; // Bumped: mobile mic fix + auth
+const CACHE_NAME = 'Effexiq-v16'; // Bumped: reactive sound engine (dedup, consumed events, world state, creator mode)
 
 // Note: Sound files are served via /r2-audio/* proxy (Cloudflare R2) and NOT cached here
 // because they are:
