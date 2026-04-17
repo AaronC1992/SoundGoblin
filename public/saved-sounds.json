@@ -12173,7 +12173,10 @@
         "romantic",
         "love",
         "relaxed",
-        "tender"
+        "tender",
+        "gentle",
+        "calm",
+        "soft"
       ],
       "loop": true,
       "bpm": 72
@@ -12221,7 +12224,10 @@
         "epic",
         "grand",
         "heroic",
-        "relaxed"
+        "relaxed",
+        "brave",
+        "majestic",
+        "regal"
       ],
       "loop": true,
       "bpm": 66
@@ -12271,7 +12277,8 @@
         "calm",
         "relaxed",
         "serene",
-        "soft"
+        "soft",
+        "quiet"
       ],
       "loop": true,
       "bpm": 70
@@ -12382,7 +12389,11 @@
         "scifi",
         "futuristic",
         "relaxed",
-        "sci-fi"
+        "sci-fi",
+        "science fiction",
+        "space",
+        "cosmic",
+        "stars"
       ],
       "loop": true,
       "bpm": 64
@@ -12408,7 +12419,8 @@
         "joyful",
         "jungle",
         "rainforest",
-        "relaxed"
+        "relaxed",
+        "celebration"
       ],
       "loop": true,
       "bpm": 76
@@ -12552,7 +12564,9 @@
         "love",
         "relaxed",
         "slow",
-        "tender"
+        "tender",
+        "gentle",
+        "calm"
       ],
       "loop": true,
       "bpm": 70
@@ -12575,7 +12589,9 @@
         "tempo-slow",
         "mystical",
         "folk",
-        "relaxed"
+        "relaxed",
+        "acoustic",
+        "traditional"
       ],
       "loop": true,
       "bpm": 68
@@ -12602,7 +12618,9 @@
         "heroic",
         "power",
         "relaxed",
-        "slow"
+        "slow",
+        "brave",
+        "majestic"
       ],
       "loop": true,
       "bpm": 76
@@ -12625,7 +12643,8 @@
         "happy",
         "cheerful",
         "joyful",
-        "mid"
+        "mid",
+        "celebration"
       ],
       "loop": true,
       "bpm": 96
@@ -12649,7 +12668,11 @@
         "scifi",
         "futuristic",
         "mid",
-        "sci-fi"
+        "sci-fi",
+        "science fiction",
+        "space",
+        "cosmic",
+        "stars"
       ],
       "loop": true,
       "bpm": 88
@@ -12737,7 +12760,10 @@
         "cowboy",
         "desert",
         "frontier",
-        "mid"
+        "mid",
+        "arid",
+        "dry",
+        "sand"
       ],
       "loop": true,
       "bpm": 98
@@ -12785,7 +12811,8 @@
         "indie",
         "joyful",
         "mid",
-        "traditional"
+        "traditional",
+        "celebration"
       ],
       "loop": true,
       "bpm": 100
@@ -12937,7 +12964,13 @@
         "tempo-mid",
         "love",
         "mid",
-        "tender"
+        "tender",
+        "gentle",
+        "calm",
+        "soft",
+        "peaceful",
+        "quiet",
+        "serene"
       ],
       "loop": true,
       "bpm": 88
@@ -13026,7 +13059,11 @@
         "hop",
         "mid",
         "ominous",
-        "sinister"
+        "sinister",
+        "horror",
+        "creepy",
+        "fear",
+        "foreboding"
       ],
       "loop": true,
       "bpm": 140
@@ -13158,7 +13195,9 @@
         "tempo-mid",
         "ballad",
         "folk",
-        "mid"
+        "mid",
+        "acoustic",
+        "traditional"
       ],
       "loop": true,
       "bpm": 92
@@ -13203,7 +13242,11 @@
         "scifi",
         "futuristic",
         "mid",
-        "sci-fi"
+        "sci-fi",
+        "science fiction",
+        "space",
+        "cosmic",
+        "stars"
       ],
       "loop": true,
       "bpm": 100
@@ -13291,7 +13334,8 @@
         "happy",
         "cheerful",
         "joyful",
-        "upbeat"
+        "upbeat",
+        "celebration"
       ],
       "loop": true,
       "bpm": 116
@@ -13315,7 +13359,8 @@
         "joyful",
         "pop",
         "rock",
-        "upbeat"
+        "upbeat",
+        "celebration"
       ],
       "loop": true,
       "bpm": 122
@@ -13360,7 +13405,10 @@
         "cinematic",
         "grand",
         "heroic",
-        "upbeat"
+        "upbeat",
+        "brave",
+        "majestic",
+        "regal"
       ],
       "loop": true,
       "bpm": 126
@@ -13513,7 +13561,8 @@
         "happy",
         "cheerful",
         "joyful",
-        "upbeat"
+        "upbeat",
+        "celebration"
       ],
       "loop": true,
       "bpm": 114
@@ -13620,7 +13669,11 @@
         "futuristic",
         "pop",
         "sci-fi",
-        "upbeat"
+        "upbeat",
+        "science fiction",
+        "space",
+        "cosmic",
+        "stars"
       ],
       "loop": true,
       "bpm": 126
@@ -13645,7 +13698,11 @@
         "nature",
         "futuristic",
         "sci-fi",
-        "upbeat"
+        "upbeat",
+        "science fiction",
+        "space",
+        "cosmic",
+        "stars"
       ],
       "loop": true,
       "bpm": 118
@@ -13690,7 +13747,11 @@
         "hip",
         "hop",
         "sci-fi",
-        "upbeat"
+        "upbeat",
+        "science fiction",
+        "space",
+        "cosmic",
+        "stars"
       ],
       "loop": true,
       "bpm": 120
@@ -13714,7 +13775,8 @@
         "clap",
         "hand",
         "happy",
-        "upbeat"
+        "upbeat",
+        "cheerful"
       ],
       "loop": true,
       "bpm": 112
@@ -13801,7 +13863,9 @@
         "bpm-116",
         "tempo-upbeat",
         "folk",
-        "upbeat"
+        "upbeat",
+        "acoustic",
+        "traditional"
       ],
       "loop": true,
       "bpm": 116
@@ -13990,7 +14054,11 @@
         "fast",
         "ominous",
         "quick",
-        "sinister"
+        "sinister",
+        "horror",
+        "creepy",
+        "fear",
+        "foreboding"
       ],
       "loop": true,
       "bpm": 140
@@ -14150,7 +14218,9 @@
         "energetic",
         "fast",
         "folk",
-        "quick"
+        "quick",
+        "acoustic",
+        "traditional"
       ],
       "loop": true,
       "bpm": 140
@@ -14306,7 +14376,8 @@
         "action",
         "onomatopoeia",
         "combat",
-        "battle"
+        "battle",
+        "war"
       ]
     },
     {
@@ -14325,7 +14396,8 @@
         "superhero",
         "onomatopoeia",
         "combat",
-        "battle"
+        "battle",
+        "war"
       ]
     },
     {
@@ -14346,7 +14418,8 @@
         "combat",
         "battle",
         "intense",
-        "powerful"
+        "powerful",
+        "war"
       ]
     },
     {
@@ -14368,7 +14441,8 @@
         "onomatopoeia",
         "combat",
         "battle",
-        "punch"
+        "punch",
+        "war"
       ]
     },
     {
@@ -14388,7 +14462,8 @@
         "combat",
         "battle",
         "hit",
-        "light"
+        "light",
+        "war"
       ]
     },
     {
@@ -14441,7 +14516,8 @@
         "fight",
         "onomatopoeia",
         "combat",
-        "battle"
+        "battle",
+        "war"
       ]
     },
     {
@@ -14526,7 +14602,10 @@
         "onomatopoeia",
         "cowboy",
         "desert",
-        "frontier"
+        "frontier",
+        "arid",
+        "dry",
+        "sand"
       ]
     },
     {
@@ -14562,7 +14641,10 @@
         "transition",
         "onomatopoeia",
         "combat",
-        "evade"
+        "evade",
+        "battle",
+        "fight",
+        "war"
       ]
     },
     {
@@ -14608,7 +14690,9 @@
         "medieval",
         "melee",
         "quick",
-        "weapon"
+        "weapon",
+        "arcane",
+        "battle"
       ]
     },
     {
@@ -14628,7 +14712,9 @@
         "energetic",
         "magic",
         "portal",
-        "quick"
+        "quick",
+        "arcane",
+        "spell"
       ]
     },
     {
@@ -14650,7 +14736,10 @@
         "arcane",
         "spell",
         "storm",
-        "thunder"
+        "thunder",
+        "weather",
+        "rain",
+        "water"
       ]
     },
     {
@@ -14674,7 +14763,9 @@
         "gun",
         "ray",
         "science fiction",
-        "space"
+        "space",
+        "cosmic",
+        "stars"
       ]
     },
     {
@@ -14694,7 +14785,9 @@
         "scifi",
         "futuristic",
         "science fiction",
-        "space"
+        "space",
+        "cosmic",
+        "stars"
       ]
     },
     {
@@ -15081,7 +15174,8 @@
         "melancholy",
         "sad",
         "sorrow",
-        "trombone"
+        "trombone",
+        "reflective"
       ]
     }
   ]
