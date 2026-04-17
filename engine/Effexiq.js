@@ -249,6 +249,11 @@ class Effexiq {
     try { this.lowLatencyMode = JSON.parse(localStorage.getItem('Effexiq_low_latency') ?? 'false'); } catch { this.lowLatencyMode = false; }
     this.preloadConcurrency = this.getPreloadConcurrency();
     this.keywordCooldownMs = parseInt(localStorage.getItem('Effexiq_keyword_cooldown_ms') ?? '3000');
+    // Cross-session ambient restore is OPT-IN and only honors snapshots <2 min old.
+    // Prevents the "sounds mysteriously playing from a previous session" bug where
+    // a day-old snapshot would auto-play on page load.
+    try { this.restoreAmbientOnStart = JSON.parse(localStorage.getItem('Effexiq_restore_ambient_on_start') ?? 'false'); } catch { this.restoreAmbientOnStart = false; }
+    this._sessionRestoreMaxAgeMs = 2 * 60 * 1000; // 2 minutes
     // Scene presets — lazy-init from defaults if not yet saved
     try { this.scenePresets = JSON.parse(localStorage.getItem('Effexiq_scene_presets') ?? 'null') || null; } catch { this.scenePresets = null; }
     // Control board listen mode (set after setupControlBoard)
@@ -2193,9 +2198,13 @@ class Effexiq {
             snapshot.push({ category: cat, url: layer.url, volume: layer.volume });
         }
         this._lastActiveSceneBedSnapshot = snapshot;
-        // Also persist to localStorage for previously-on restore
+        // Also persist to localStorage for previously-on restore.
+        // Tagged with a timestamp so stale snapshots can be rejected on load.
         try {
-            localStorage.setItem('Effexiq_scene_bed_snapshot', JSON.stringify(snapshot));
+            localStorage.setItem('Effexiq_scene_bed_snapshot', JSON.stringify({
+                savedAt: Date.now(),
+                layers: snapshot,
+            }));
         } catch (e) { debugLog('Snapshot save failed:', e.message); }
     }
 
@@ -2343,11 +2352,35 @@ class Effexiq {
         try {
             const raw = localStorage.getItem('Effexiq_scene_bed_snapshot');
             if (!raw) return;
-            const snapshot = JSON.parse(raw);
-            if (!Array.isArray(snapshot) || snapshot.length === 0) return;
-            debugLog('Restoring previous session ambient bed:', snapshot.map(s => s.category));
+
+            // Opt-in only. Default is OFF so sounds never auto-play on page load
+            // without user intent.
+            if (!this.restoreAmbientOnStart) {
+                localStorage.removeItem('Effexiq_scene_bed_snapshot');
+                return;
+            }
+
+            // Must be actively listening. Prevents ghost playback before the
+            // user clicks Start Listening.
+            if (!this.isListening) return;
+
+            const parsed = JSON.parse(raw);
+            // Back-compat: old snapshots were a bare array.
+            const layers = Array.isArray(parsed) ? parsed : parsed?.layers;
+            const savedAt = Array.isArray(parsed) ? 0 : (parsed?.savedAt || 0);
+            if (!Array.isArray(layers) || layers.length === 0) return;
+
+            // Only restore if the snapshot is recent (covers accidental refresh,
+            // rejects day-old leftovers).
+            const age = Date.now() - savedAt;
+            if (!savedAt || age > this._sessionRestoreMaxAgeMs) {
+                localStorage.removeItem('Effexiq_scene_bed_snapshot');
+                return;
+            }
+
+            debugLog('Restoring previous session ambient bed:', layers.map(s => s.category));
             this.logActivity('Restoring ambient from last session', 'info');
-            await this._restoreSceneBedFromSnapshot(snapshot);
+            await this._restoreSceneBedFromSnapshot(layers);
         } catch (_) {}
     }
 
