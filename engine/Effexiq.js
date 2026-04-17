@@ -163,6 +163,16 @@ class Effexiq {
                     Howler._howls.forEach(h => { try { h.stop(); } catch (_) {} });
                 }
             } catch (_) {}
+            // Also close the engine's AudioContext on true teardown so the OS
+            // releases the audio graph (prevents ghost audio on tab restore).
+            try {
+                if (this.audioContext && this.audioContext.state !== 'closed') {
+                    this.audioContext.close().catch(() => {});
+                }
+                if (window.__effexiqAudioCtx === this.audioContext) {
+                    window.__effexiqAudioCtx = null;
+                }
+            } catch (_) {}
         };
         this._pageHideHandler = () => killAllAudio();
         this._pageShowHandler = (e) => {
@@ -4052,6 +4062,9 @@ class Effexiq {
             this.updateStatus('Audio library failed to load. Check your internet connection.', 'error');
         }
         this.audioContext = new (window.AudioContext || window.webkitAudioContext)();
+        // Expose so the root-layout GlobalAudioKill can close the graph on
+        // tab close / bfcache restore even when the engine module is gone.
+        try { window.__effexiqAudioCtx = this.audioContext; } catch (_) {}
         
         // Create gain nodes for mixing and ducking
         this.masterGainNode = this.audioContext.createGain();

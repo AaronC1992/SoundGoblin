@@ -1,4 +1,5 @@
 import './globals.css';
+import GlobalAudioKill from '../components/GlobalAudioKill';
 
 export const metadata = {
   title: 'Effexiq - Intelligent Audio Companion',
@@ -37,6 +38,8 @@ export default function RootLayout({ children }) {
         <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
       </head>
       <body>
+        {/* Global zombie-audio killer — runs on every route, including landing. */}
+        <GlobalAudioKill />
         {children}
         {/* Toast notification container — rendered at body level so toasts layer over modals */}
         <div id="toastContainer" className="toast-container" aria-live="polite" />

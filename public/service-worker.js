@@ -1,5 +1,5 @@
 // Effexiq Service Worker
-const CACHE_NAME = 'Effexiq-v20'; // Bumped: zombie-audio guard on pagehide/bfcache restore
+const CACHE_NAME = 'Effexiq-v21'; // Bumped: global audio-kill + SW skipWaiting/claim
 
 // Note: Sound files are served via /r2-audio/* proxy (Cloudflare R2) and NOT cached here
 // because they are:
@@ -19,6 +19,9 @@ const urlsToCache = [
 
 // Install event - cache core files
 self.addEventListener('install', (event) => {
+  // Immediately take over on next load so updates don't sit in "waiting"
+  // and serve stale code across hard reloads.
+  self.skipWaiting();
   event.waitUntil(
     caches.open(CACHE_NAME)
       .then((cache) => {
@@ -112,14 +115,25 @@ self.addEventListener('fetch', (event) => {
 self.addEventListener('activate', (event) => {
   const cacheWhitelist = [CACHE_NAME];
   event.waitUntil(
-    caches.keys().then((cacheNames) => {
-      return Promise.all(
-        cacheNames.map((cacheName) => {
-          if (cacheWhitelist.indexOf(cacheName) === -1) {
-            return caches.delete(cacheName);
-          }
-        })
-      );
-    })
+    Promise.all([
+      // Drop any cache that isn't the current version.
+      caches.keys().then((cacheNames) =>
+        Promise.all(
+          cacheNames.map((cacheName) => {
+            if (cacheWhitelist.indexOf(cacheName) === -1) {
+              return caches.delete(cacheName);
+            }
+          })
+        )
+      ),
+      // Take control of uncontrolled clients right away so the new SW
+      // serves the next fetch (including the page the user is on).
+      self.clients.claim(),
+    ])
   );
+});
+
+// Allow the page to force an activation ("reload now") if desired.
+self.addEventListener('message', (event) => {
+  if (event.data === 'SKIP_WAITING') self.skipWaiting();
 });
