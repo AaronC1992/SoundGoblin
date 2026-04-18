@@ -18,7 +18,6 @@ export default function PrivacyPage() {
         <li>
           <strong>Transcripts:</strong> Sent to our server-side API for scene analysis using a
           language model. Not stored permanently &mdash; used only for the duration of the request.
-          No audio output is AI-generated; all sounds come from a human-curated library.
         </li>
         <li>
           <strong>Account data:</strong> Email address and subscription status if you create an
