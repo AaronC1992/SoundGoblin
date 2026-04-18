@@ -16,7 +16,7 @@ export default function Sidebar() {
           <span className="sidebar-logo-text">SuiteRhythm</span>
           <EngineStatusDot />
         </div>
-        <span className="sidebar-tagline">AI Sound Design</span>
+        <span className="sidebar-tagline">Reactive Sound Design</span>
       </div>
 
       <nav className="sidebar-nav" aria-label="Main navigation">

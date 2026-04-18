@@ -87,7 +87,7 @@ export default function AutoDetectSection() {
             placeholder="Example: 'A dark medieval dungeon crawl beneath a cursed castle' or 'A tavern scene in a bustling port city'"
           />
           <p className="info-text">
-            Describe the setting, genre, or mood to help the AI choose better sounds.
+            Describe the setting, genre, or mood to help SuiteRhythm choose better sounds.
           </p>
         </div>
 
@@ -111,7 +111,7 @@ export default function AutoDetectSection() {
           </div>
           <div className="stat-item">
             <span className="stat-value" id="statAnalyses">0</span>
-            <span className="stat-label">AI Calls</span>
+            <span className="stat-label">Scenes</span>
           </div>
         </section>
 
@@ -262,7 +262,7 @@ export default function AutoDetectSection() {
         {/* AI Activity Feed */}
         <section className="activity-feed-section">
           <h3 id="activityFeedToggle">
-            AI Activity <span className="toggle-indicator">&#9660;</span>
+            Engine Activity <span className="toggle-indicator">&#9660;</span>
           </h3>
           <div id="activityLog" className="activity-log" />
         </section>

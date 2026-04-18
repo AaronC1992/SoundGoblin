@@ -7,7 +7,7 @@ export default function DashboardSection() {
       <div className="dashboard-hero">
         <h1 className="dashboard-title">SuiteRhythm</h1>
         <p className="dashboard-sub">
-          AI-powered sound design for storytellers, dungeon masters, and creators.
+          Reactive sound design for storytellers, dungeon masters, and creators.
         </p>
         <button id="demoBtn" className="hub-hero-cta" data-section="demoMode">
           Watch It In Action
@@ -16,7 +16,7 @@ export default function DashboardSection() {
 
       <div id="noKeyBanner" className="no-key-banner hidden">
         <span>
-          Running without AI — instant keyword triggers active. Subscribe for full AI analysis.
+          Running in keyword-only mode — instant triggers active. Subscribe to unlock full scene listening.
         </span>
         <button id="showSubscribeModal">Subscribe</button>
       </div>
@@ -102,7 +102,7 @@ export default function DashboardSection() {
                 <path d="M12 8h.01" />
               </svg>
             </div>
-            <h3>AI Analyzes Context</h3>
+            <h3>Scene Is Detected</h3>
             <p>SuiteRhythm detects mood, setting, and action in real time.</p>
           </div>
           <div className="hub-hiw-arrow">

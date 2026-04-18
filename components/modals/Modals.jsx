@@ -18,9 +18,9 @@ export function SubscribeModal() {
     >
       <div className="modal-content">
         <h2 id="subscribeModalTitle">Welcome to SuiteRhythm</h2>
-        <p><strong>AI-Powered Sound Design Platform</strong></p>
+        <p><strong>Reactive Sound Design for Storytellers</strong></p>
         <p className="info-text">
-          Get unlimited AI sound analysis for storytelling, D&amp;D, and content creation &mdash;
+          Unlimited live scene listening for storytelling, D&amp;D, and content creation &mdash;
           $10/month.
         </p>
 
@@ -66,7 +66,7 @@ export function SubscribeModal() {
           className="btn-secondary"
           style={{ width: '100%', marginTop: 8 }}
         >
-          Try Without AI
+          Try Keyword-Only Mode
         </button>
 
         <p className="info-text" style={{ marginTop: 14, fontSize: '0.8rem', textAlign: 'center' }}>
@@ -120,12 +120,12 @@ export function TutorialModal() {
           <p><strong>Music Toggle:</strong> Turn background music on/off.</p>
           <p><strong>SFX Toggle:</strong> Turn sound effects on/off.</p>
           <p>
-            <strong>AI Predictions:</strong> When enabled, SuiteRhythm analyzes what you say and
+            <strong>Auto Scene Detection:</strong> When enabled, SuiteRhythm analyzes what you say and
             auto-plays matching music/SFX. Default is off. Turn off to prevent any automatic sounds;
             instant keyword triggers (e.g., &quot;bang&quot;, &quot;knock&quot;, &quot;bark&quot;)
             still work.
           </p>
-          <p className="info-text">Tip: Turn one off to have the AI play only music or only SFX.</p>
+          <p className="info-text">Tip: Turn one off to play only music or only SFX.</p>
         </div>
 
         <div className="tutorial-section">
@@ -147,7 +147,7 @@ export function TutorialModal() {
           <p><strong>Crossfades:</strong> Music transitions smoothly without abrupt cuts.</p>
           <p>
             <strong>Stingers:</strong> Periodic ambient sounds play every 20-45 seconds for variety
-            (only when <em>AI Predictions</em> is enabled).
+            (only when <em>Auto Scene Detection</em> is enabled).
           </p>
         </div>
 
@@ -158,7 +158,7 @@ export function TutorialModal() {
             <li>Instant triggers: Words like &quot;bang&quot;, &quot;crash&quot;, &quot;knock&quot;, &quot;bark&quot; play sounds immediately</li>
             <li>Use the Mood slider to match your story&apos;s intensity</li>
             <li>Enable Low Latency Mode for split-second reactions</li>
-            <li>The AI learns context over time - keep talking for better sound matching</li>
+            <li>The engine learns context over time - keep talking for better sound matching</li>
           </ul>
         </div>
 
@@ -248,7 +248,7 @@ export function StoryContextModal() {
       <div className="modal-content">
         <h2 id="storyContextModalTitle">Set the Scene</h2>
         <p className="info-text">
-          Give the AI some context about your story to help it choose better sounds and music!
+          Give SuiteRhythm some context about your story to help it choose better sounds and music!
         </p>
 
         <div className="story-context-body">
@@ -262,7 +262,7 @@ export function StoryContextModal() {
             placeholder="Example: 'A dark medieval fantasy adventure in a haunted castle' or 'A cheerful children's story in a magical forest'"
           />
           <p className="info-text story-context-tip">
-            Tip: Mention the setting, genre, mood, or time period. The AI will use this to better
+            Tip: Mention the setting, genre, mood, or time period. SuiteRhythm will use this to better
             understand your story and choose appropriate sounds.
           </p>
         </div>

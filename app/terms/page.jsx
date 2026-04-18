@@ -16,9 +16,10 @@ export default function TermsPage() {
 
       <h2>2. Description of Service</h2>
       <p>
-        SuiteRhythm is an AI-powered ambient sound design platform for tabletop RPG sessions,
-        storytelling, and content creation. The Service analyses spoken audio via your microphone
-        (with your permission) and plays contextual music and sound effects.
+        SuiteRhythm is a reactive sound design platform for tabletop RPG sessions, storytelling,
+        and content creation. The Service analyses spoken audio via your microphone (with your
+        permission) and plays contextual music and sound effects from a human-curated library.
+        Scene detection is performed by a language model; no audio content is AI-generated.
       </p>
 
       <h2>3. User Responsibilities</h2>

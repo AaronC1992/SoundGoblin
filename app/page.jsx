@@ -13,7 +13,7 @@ export default function Home() {
         </nav>
         <div className="landing-hero-content">
           <h1 className="landing-h1">
-            AI-Powered Sound Design<br />for Storytellers
+            Reactive Sound Design<br />for Storytellers
           </h1>
           <p className="landing-tagline">
             SuiteRhythm listens to your voice and layers music, ambience, and sound
@@ -58,9 +58,9 @@ export default function Home() {
                 <path d="M12 8h.01" />
               </svg>
             </div>
-            <h3>AI Analysis</h3>
+            <h3>Scene Listener</h3>
             <p>
-              GPT-powered scene understanding picks the perfect sounds for
+              Context-aware scene understanding picks the perfect sounds for
               every moment of your story.
             </p>
           </div>
@@ -91,7 +91,7 @@ export default function Home() {
             <h3>9 Themed Modes</h3>
             <p>
               D&amp;D, horror, fairytale, bedtime, creator, and more — each
-              with tailored AI rules and sound palettes.
+              with tailored rules and curated sound palettes.
             </p>
           </div>
 
@@ -155,7 +155,7 @@ export default function Home() {
         <div className="landing-usecase-grid">
           <div className="landing-usecase">
             <h3>Dungeon Masters</h3>
-            <p>Build a custom soundboard or let AI score your campaign in real time.</p>
+            <p>Build a custom soundboard or let SuiteRhythm score your campaign in real time.</p>
           </div>
           <div className="landing-usecase">
             <h3>Storytellers &amp; Authors</h3>

@@ -127,7 +127,7 @@ export default function SettingsSection() {
               </label>
             </div>
             <div className="toggle-row">
-              <label htmlFor="togglePrediction">Use AI Predictions</label>
+              <label htmlFor="togglePrediction">Auto Scene Detection</label>
               <label className="switch">
                 <input type="checkbox" id="togglePrediction" defaultChecked />
                 <span className="slider" />
@@ -313,7 +313,7 @@ export default function SettingsSection() {
             </div>
             <h3 style={{ marginTop: 16 }}>Scene Mapping</h3>
             <p className="info-text">
-              Map moods to OBS scene names. When the AI detects a mood change, OBS will switch
+              Map moods to OBS scene names. When SuiteRhythm detects a mood change, OBS will switch
               automatically.
             </p>
             <div id="obsSceneMapList" style={{ marginTop: 8 }} />

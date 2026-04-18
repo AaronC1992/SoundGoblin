@@ -13,11 +13,12 @@ export default function PrivacyPage() {
         <li>
           <strong>Microphone audio:</strong> Processed locally in your browser via the Web Speech
           API. Raw audio is <em>never</em> sent to our servers. Only the resulting text transcript
-          is sent to our API for AI analysis.
+          is sent to our API for scene analysis.
         </li>
         <li>
-          <strong>Transcripts:</strong> Sent to our server-side API for AI sound analysis. Not
-          stored permanently &mdash; used only for the duration of the request.
+          <strong>Transcripts:</strong> Sent to our server-side API for scene analysis using a
+          language model. Not stored permanently &mdash; used only for the duration of the request.
+          No audio output is AI-generated; all sounds come from a human-curated library.
         </li>
         <li>
           <strong>Account data:</strong> Email address and subscription status if you create an

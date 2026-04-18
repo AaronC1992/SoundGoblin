@@ -1,7 +1,7 @@
 {
-  "name": "SuiteRhythm - Intelligent Audio Companion",
+  "name": "SuiteRhythm - Reactive Sound Design",
   "short_name": "SuiteRhythm",
-  "description": "AI-powered ambient sound designer with performance enhancements, memory management, error handling, and accessibility features",
+  "description": "Reactive ambient sound designer that listens to your voice and plays music, ambience, and SFX in real time.",
   "start_url": "/dashboard",
   "display": "standalone",
   "background_color": "#0a0a0a",

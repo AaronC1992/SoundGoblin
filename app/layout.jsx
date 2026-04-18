@@ -3,23 +3,23 @@ import GlobalAudioKill from '../components/GlobalAudioKill';
 import DebugPerfPanel from '../components/DebugPerfPanel';
 
 export const metadata = {
-  title: 'SuiteRhythm - Intelligent Audio Companion',
+  title: 'SuiteRhythm - Reactive Sound Design for Storytellers',
   description:
-    'AI-powered ambient sound designer that listens to conversations and automatically plays contextually-appropriate music and sound effects',
+    'SuiteRhythm listens to your voice and plays the perfect music, ambience, and sound effects in real time — built for tabletop RPGs, storytelling, and live streaming.',
   manifest: '/manifest.json',
   openGraph: {
     type: 'website',
     url: 'https://suiterhythm.vercel.app/',
-    title: 'SuiteRhythm - Intelligent Audio Companion',
+    title: 'SuiteRhythm - Reactive Sound Design for Storytellers',
     description:
-      'AI-powered ambient sound designer that listens to conversations and automatically plays contextually-appropriate music and sound effects',
+      'SuiteRhythm listens to your voice and plays the perfect music, ambience, and sound effects in real time — built for tabletop RPGs, storytelling, and live streaming.',
     images: [{ url: 'https://suiterhythm.vercel.app/og-image.png', width: 1200, height: 630 }],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'SuiteRhythm - Intelligent Audio Companion',
+    title: 'SuiteRhythm - Reactive Sound Design for Storytellers',
     description:
-      'AI-powered ambient sound designer that listens to conversations and automatically plays contextually-appropriate music and sound effects',
+      'SuiteRhythm listens to your voice and plays the perfect music, ambience, and sound effects in real time — built for tabletop RPGs, storytelling, and live streaming.',
     images: ['https://suiterhythm.vercel.app/og-image.png'],
   },
 };
